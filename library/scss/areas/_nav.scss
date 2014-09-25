@@ -1,0 +1,259 @@
+/*********************
+NAVIGATION STYLES
+*********************/
+
+#menu-social-menu {
+	margin-top:0em;
+}
+
+#my-content #my-menu {
+  /* display: none; */
+}
+
+#my-menu:not( .mm-menu ) {
+ /* display: none; */
+}
+.topbar {
+	background-color:$red;
+	padding:.25em 1em;
+	margin-bottom:1em;
+	text-align: center;
+	vertical-align: top;
+	position: relative;
+
+
+	@include breakpoint(laptop) {
+		padding: 5px 0 4px;
+		background-color:$gray;
+		text-align: right;
+		/* position:absolute;
+		top:.25em;
+		right:0; */
+		font-size:.8em;	
+		line-height: 1em;
+	}
+
+	.login, input, .social-nav > li > a {
+		display: inline-block;
+		height:40px;
+		line-height: 40px;
+		vertical-align: top;
+	}
+
+	.social-nav li a {
+		padding: 0 .75em;
+		vertical-align: middle;
+
+		i {
+			display: inline-block;
+			line-height: 40px;
+		}
+
+	}
+
+	.login {
+		border:none;
+		background-color:$link-color;
+		color:$white;
+		font-size:1.1em;
+		padding-left:.5em;
+		padding-right: .5em;
+	}
+
+	.searchform {
+		width: 30%;
+		position:relative;
+		display: inline-block;
+
+		input, button {
+			margin:0;
+			float:left;
+		}
+
+		input {
+			width: 82%;
+			margin-right:2%;
+		}
+
+		button {
+			position: relative;
+			background-color:transparent;
+			border: none;
+			font-size: 26px;
+			line-height: 40px;
+		}
+	}
+
+}
+.menu-toggler {
+	border: none;
+	font-size:2em;
+	color:$white;
+
+	@include breakpoint(laptop) {
+		display:none;
+	}
+}
+
+#menu-social-menu {
+	display:none;
+	@include breakpoint(laptop) {
+		display:inline-block;
+	}
+}
+
+.topmenu {
+	background-color:$blue;
+	margin:1em 0 0 ;
+}
+
+.top-nav {
+	.menu-item-has-children {
+		& > a:after {
+			padding-left:.5em;
+			content:"\f101";
+			font-family: FontAwesome;
+		}
+	}
+
+	& > .menu-item-has-children {
+		&:hover {
+			> a:after {
+				content:"\f103";
+			}
+		}
+	}
+}
+
+
+.nav {
+	border-bottom: 0;
+	margin: 0;
+	font-family:$title-family;
+
+	&.top-nav {
+		width:100%;
+		padding:0;
+		display: none;
+		line-height: .5em;
+		margin-left:-.75em;
+
+		@include breakpoint(laptop) {
+			display:block;
+		}
+	}
+
+	/* equally spaces out list items in main menu, see http://css-tricks.com/equidistant-objects-with-css/ */
+	/* &.top-nav:after {
+		content:'';
+		width:100%;
+		display: inline-block;
+		height:0;
+		line-height: 0;
+		font-size:0;
+	} */
+
+	li {
+
+		a, a:visited {
+			display: block;
+			color: $white;
+			border: none;
+			padding: 0.75em;
+
+			&:hover, &:focus {
+				color: $white;
+			}
+		}
+
+		&.current-menu-ancestor, &.current-menu-item {
+			> a {
+				font-weight: 700;	
+			}
+			
+		}
+
+		@include breakpoint(laptop) {
+			float: left;
+			position: relative;
+
+			ul.sub-menu,
+			ul.children {
+				background-color: $link-color;
+				display: none;
+				padding:0;
+				margin:0;
+				width:auto;
+				border-top: 0;
+				position: absolute;
+				z-index: 8999;
+				text-align:left;
+				box-shadow: .2em .2em .2em rgba(102, 102, 102, .3);
+
+				li {
+
+					a {
+						padding-left: 1em;
+						border-right: 0;
+						display: block;
+						width: 180px;
+						border-bottom: 1px dotted $white;
+
+						&:hover,
+						&:focus {}
+
+						&:link {}
+					}
+
+					&:first-child {}
+
+					&:last-child {
+
+						a {
+							border-bottom: 0;
+						}
+					}
+					ul, ul ul {
+						top:0;
+						left:100%;
+
+						li:last-child {
+							a {
+								margin-bottom:0;
+								border-color: transparent;	
+							}
+							
+						}
+						
+					}
+				}
+
+				/* highlight sub-menu current page */
+				li.current-menu-item,
+				li.current_page_item,
+				li.current-page-ancestor {
+					& > a {
+						border: none;
+					}
+				}
+			}
+
+			&:hover > ul {
+				display: block;
+				visibility: visible;
+				top:98%;
+				left:0;
+				@include transition(all .5s ease);
+			}
+
+			&:last-of-type:hover > ul {
+				display: block;
+				visibility: visible;
+				right:0;
+				left:auto;
+			}
+		}
+	} /* end .menu li */
+
+
+} /* end .nav */
