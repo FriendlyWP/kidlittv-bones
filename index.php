@@ -6,39 +6,15 @@
 
 						<div id="main" class="main-content cf" role="main">
 
-							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+							<?php if (have_posts()) :  ?>
+								<div id="masonry-loop">
 
-							<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article">
+								<?php while (have_posts()) : the_post(); ?>
 
-								<header class="article-header">
+									<?php get_template_part( 'content', 'masonry'); ?>
 
-									<h1 class="h2 entry-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
-									<p class="byline vcard">
-										<?php printf( __( 'Posted <time class="updated" datetime="%1$s" pubdate>%2$s</time> by <span class="author">%3$s</span>', 'bonestheme' ), get_the_time('Y-m-j'), get_the_time(get_option('date_format')), get_the_author_link( get_the_author_meta( 'ID' ) )); ?>
-									</p>
-
-								</header>
-
-								<section class="entry-content cf">
-									<?php the_content(); ?>
-								</section>
-
-								<footer class="article-footer cf">
-									<p class="footer-comment-count">
-										<?php comments_number( __( '<span>No</span> Comments', 'bonestheme' ), __( '<span>One</span> Comment', 'bonestheme' ), _n( '<span>%</span> Comments', '<span>%</span> Comments', get_comments_number(), 'bonestheme' ) );?>
-									</p>
-
-
-                 	<?php printf( __( '<p class="footer-category">Filed under: %1$s</p>', 'bonestheme' ), get_the_category_list(', ') ); ?>
-
-                  <?php the_tags( '<p class="footer-tags tags"><span class="tags-title">' . __( 'Tags:', 'bonestheme' ) . '</span> ', ', ', '</p>' ); ?>
-
-
-								</footer>
-
-							</article>
-
-							<?php endwhile; ?>
+								<?php endwhile; ?>
+								</div>
 
 									<?php bones_page_navi(); ?>
 

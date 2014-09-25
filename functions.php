@@ -58,12 +58,13 @@ add_action( 'after_setup_theme', 'bones_ahoy' );
 /************* THUMBNAIL SIZE OPTIONS *************/
 
 // Thumbnail sizes
+add_image_size('masonry-thumb', 412, 0 );
 
 add_filter( 'image_size_names_choose', 'bones_custom_image_sizes' );
 
 function bones_custom_image_sizes( $sizes ) {
     return array_merge( $sizes, array(
-        //'bones-thumb-600' => __('600px by 150px'),
+        'masonry-thumb' => __('412px wide'),
         //'bones-thumb-300' => __('300px by 100px'),
     ) );
 }
@@ -170,3 +171,8 @@ if( function_exists('acf_add_options_sub_page') )
 
 /**** MENU SOCIAL ICONS ****/
 add_filter( 'storm_social_icons_use_latest', '__return_true' );
+
+function custom_excerpt_length( $length ) {
+  return 20;
+}
+add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );

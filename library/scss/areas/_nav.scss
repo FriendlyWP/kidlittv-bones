@@ -14,21 +14,13 @@ NAVIGATION STYLES
  /* display: none; */
 }
 .topbar {
-	background-color:$red;
-	padding:.25em 1em;
-	margin-bottom:1em;
 	text-align: center;
 	vertical-align: top;
 	position: relative;
 
 
 	@include breakpoint(laptop) {
-		padding: 5px 0 4px;
-		background-color:$gray;
 		text-align: right;
-		/* position:absolute;
-		top:.25em;
-		right:0; */
 		font-size:.8em;	
 		line-height: 1em;
 	}
@@ -102,10 +94,7 @@ NAVIGATION STYLES
 	}
 }
 
-.topmenu {
-	background-color:$blue;
-	margin:1em 0 0 ;
-}
+
 
 .top-nav {
 	.menu-item-has-children {
@@ -129,7 +118,7 @@ NAVIGATION STYLES
 .nav {
 	border-bottom: 0;
 	margin: 0;
-	font-family:$title-family;
+	font-family:$subtitle-family;
 
 	&.top-nav {
 		width:100%;

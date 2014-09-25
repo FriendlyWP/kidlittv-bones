@@ -77,11 +77,10 @@
 						</nav>
 					<?php } ?>   
 				</div>
+				<div class="topspacer wrap"></div>
 					<div class="topbar">
 						<div class="wrap">
 							<a href="#my-menu" class="menu-toggler"><i class="fa fa-bars"></i></a>
-
-							<a class="login"><span>Member </span>Login</a>
 						
 							<form role="search" class="searchform" method="get" id="searchform-head" action="<?php echo home_url( '/' ); ?>">
 							    <div class="head-search">
@@ -111,7 +110,7 @@
 				<div id="inner-header" class="wrap cf">
 					
 
-					<a href="<?php echo home_url(); ?>" id="logo" rel="nofollow" title="<?php bloginfo('name'); ?>"><img itemprop="logo" src="<?php echo get_template_directory_uri(); ?>/library/images/logo-friendly-300w-white.png" alt="<?php bloginfo('name'); ?>" /></a>
+					<a href="<?php echo home_url(); ?>" id="logo" rel="nofollow" title="<?php bloginfo('name'); ?>"><img itemprop="logo" src="<?php echo get_template_directory_uri(); ?>/library/images/logo-kidlittv.png" alt="<?php bloginfo('name'); ?>" /></a>
 
 					<?php $desc = get_bloginfo('description'); 
 					if ($desc) { ?>

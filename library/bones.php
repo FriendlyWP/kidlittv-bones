@@ -106,6 +106,9 @@ function bones_scripts_and_styles() {
 		// ie-only style sheet
 		wp_register_style( 'bones-ie-only', get_stylesheet_directory_uri() . '/library/css/ie.css', array(), '' );
 
+		wp_enqueue_script('masonry');
+    	wp_enqueue_style('masonry', get_stylesheet_directory_uri() .'/library/css/');
+
     // comment reply script for threaded comments
     if ( is_singular() AND comments_open() AND (get_option('thread_comments') == 1)) {
 		  wp_enqueue_script( 'comment-reply' );
@@ -138,6 +141,25 @@ function bones_scripts_and_styles() {
 	}
 }
 
+if ( ! function_exists( 'slug_masonry_init' )) :
+function slug_masonry_init() { ?>
+<script>
+    //set the container that Masonry will be inside of in a var
+    var container = document.querySelector('#masonry-loop');
+    //create empty var msnry
+    var msnry;
+    // initialize Masonry after all images have loaded
+    imagesLoaded( container, function() {
+        msnry = new Masonry( container, {
+            itemSelector: '.masonry-entry',
+        });
+    });
+</script>
+<?php }
+//add to wp_footer
+add_action( 'wp_footer', 'slug_masonry_init', 99 );
+endif; // ! slug_masonry_init exists
+
 /*********************
 THEME SUPPORT
 *********************/
@@ -168,7 +190,7 @@ function bones_theme_support() {
 	// to add header image support go here: http://themble.com/support/adding-header-background-image-support/
 
 	// adding post format support
-	/* add_theme_support( 'post-formats',
+	add_theme_support( 'post-formats',
 		array(
 			'aside',             // title less blurb
 			'gallery',           // gallery of images
@@ -180,7 +202,7 @@ function bones_theme_support() {
 			'audio',             // audio
 			'chat'               // chat transcript
 		)
-	); */
+	); 
 
 	// Use HTML5 Galleries, which don't include style tags
 	// see http://make.wordpress.org/core/2014/04/15/html5-galleries-captions-in-wordpress-3-9/

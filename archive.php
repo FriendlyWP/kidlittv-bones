@@ -50,34 +50,15 @@
 							    	<h1 class="page-title"><?php post_type_archive_title(); ?></h1>
 							    <?php } ?>
 
-							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+							<?php if (have_posts()) :  ?>
+								<div id="masonry-loop">
 
-							<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article">
+								<?php while (have_posts()) : the_post(); ?>
 
-								<header class="article-header">
+									<?php get_template_part( 'content', 'masonry'); ?>
 
-									<h3 class="h2 entry-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
-									<p class="byline vcard"><?php
-										printf(__( 'Posted <time class="updated" datetime="%1$s" pubdate>%2$s</time> by <span class="author">%3$s</span> <span class="amp">&</span> filed under %4$s.', 'bonestheme' ), get_the_time('Y-m-j'), get_the_time(__( 'F jS, Y', 'bonestheme' )), get_author_posts_url( get_the_author_meta( 'ID' ) ), get_the_category_list(', '));
-									?></p>
-
-								</header>
-
-								<section class="entry-content cf">
-
-									<?php the_post_thumbnail( 'bones-thumb-300' ); ?>
-
-									<?php the_excerpt(); ?>
-
-								</section>
-
-								<footer class="article-footer">
-
-								</footer>
-
-							</article>
-
-							<?php endwhile; ?>
+								<?php endwhile; ?>
+								</div>
 
 									<?php bones_page_navi(); ?>
 
