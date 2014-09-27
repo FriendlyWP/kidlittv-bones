@@ -32,15 +32,18 @@ NAVIGATION STYLES
 		vertical-align: top;
 	}
 
-	.social-nav li a {
-		padding: 0 .75em;
-		vertical-align: middle;
+	.social-nav {
+		display: inline-block;
 
-		i {
-			display: inline-block;
-			line-height: 40px;
+		li a {
+			padding: 0 .75em;
+			vertical-align: middle;
+
+			i {
+				display: inline-block;
+				line-height: 40px;
+			}
 		}
-
 	}
 
 	.login {
@@ -60,6 +63,8 @@ NAVIGATION STYLES
 		input, button {
 			margin:0;
 			float:left;
+			height:20px;
+			line-height: 1em;
 		}
 
 		input {
@@ -72,7 +77,6 @@ NAVIGATION STYLES
 			background-color:transparent;
 			border: none;
 			font-size: 26px;
-			line-height: 40px;
 		}
 	}
 
@@ -96,23 +100,7 @@ NAVIGATION STYLES
 
 
 
-.top-nav {
-	.menu-item-has-children {
-		& > a:after {
-			padding-left:.5em;
-			content:"\f101";
-			font-family: FontAwesome;
-		}
-	}
 
-	& > .menu-item-has-children {
-		&:hover {
-			> a:after {
-				content:"\f103";
-			}
-		}
-	}
-}
 
 
 .nav {
@@ -246,3 +234,27 @@ NAVIGATION STYLES
 
 
 } /* end .nav */
+
+.main-nav {
+	li {
+		a, a:visited {
+			text-transform: uppercase;
+			color:lighten($purple, 25%);
+		}
+	}
+	.menu-item-has-children {
+		& > a:after {
+			padding-left:.5em;
+			content:"\f101";
+			font-family: FontAwesome;
+		}
+	}
+
+	& > .menu-item-has-children {
+		&:hover {
+			> a:after {
+				content:"\f103";
+			}
+		}
+	}
+}

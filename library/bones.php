@@ -215,6 +215,7 @@ function bones_theme_support() {
 	register_nav_menus(
 		array(
 			'main-nav' => __( 'The Main Menu', 'bonestheme' ),   // main nav in header
+			'section-nav' => __( 'The Section Menu', 'bonestheme' ),   // section nav in header
 			'social-nav' => __( 'The Social Menu', 'bonestheme' ),   // social nav
 			'footer-nav' => __( 'The Footer Menu', 'bonestheme' ) // secondary nav in footer
 		)

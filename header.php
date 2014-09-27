@@ -59,7 +59,7 @@
 			<header class="header" role="banner">
 
 				<div class="toggle-content clearfix">
-						<?php if ( has_nav_menu( 'main-nav' ) ) { ?>
+					<?php if ( has_nav_menu( 'main-nav' ) ) { ?>
 						<nav role="navigation" id="my-menu">
 							<?php wp_nav_menu(array(
 	    					'container' => false,                           // remove nav container
@@ -81,29 +81,48 @@
 					<div class="topbar">
 						<div class="wrap">
 							<a href="#my-menu" class="menu-toggler"><i class="fa fa-bars"></i></a>
-						
-							<form role="search" class="searchform" method="get" id="searchform-head" action="<?php echo home_url( '/' ); ?>">
-							    <div class="head-search">
-							    	<label class="screen-reader-text" for="s">Search this site</label>
-							        <input type="text" value="" placeholder="Search" name="s" id="s" />
-							        <button type="submit" id="searchsubmit-head" value="Search"  /><i class="fa fa-search"></i></button>
-							    </div>
-							</form>
+								<?php if ( has_nav_menu( 'main-nav' ) ) { ?>
+									<nav role="navigation">
+										<?php wp_nav_menu(array(
+				    					'container' => false,                           // remove nav container
+				    					'container_class' => 'menu cf',                 // class of container (should you choose to use it)
+				    					'menu' => __( 'The Main Menu', 'bonestheme' ),  // nav name
+				    					'menu_class' => 'nav main-nav cf',               // adding custom nav class
+				    					'theme_location' => 'main-nav',                 // where it's located in the theme
+				    					'before' => '',                                 // before the menu
+					        			'after' => '',                                  // after the menu
+					        			'link_before' => '',                            // before each link
+					        			'link_after' => '',                             // after each link
+					        			'depth' => 0,                                   // limit the depth of the nav
+					    					'fallback_cb' => ''                             // fallback function (if there is one)
+											)); ?>
+									</nav>
+								<?php } ?>
 							
-							<?php if ( has_nav_menu( 'social-nav' ) ) { ?>
-									<?php wp_nav_menu(array(
-			    					'container' => false,                           // remove nav container
-			    					'container_class' => 'menu',                 // class of container (should you choose to use it)
-			    					'menu' => __( 'The Social Menu', 'bonestheme' ),  // nav name
-			    					'menu_class' => 'nav social-nav',               // adding custom nav class
-			    					'theme_location' => 'social-nav',                 // where it's located in the theme
-			    					'before' => '',                                 // before the menu
-				        			'after' => '',                                  // after the menu
-				        			'link_before' => '',                            // before each link
-				        			'link_after' => '',                             // after each link
-				        			'depth' => 0,                                   // limit the depth of the nav
-									)); ?>
-							<?php } ?>
+							<div class="social-search">
+								<form role="search" class="searchform" method="get" id="searchform-head" action="<?php echo home_url( '/' ); ?>">
+								    <div class="head-search">
+								    	<label class="screen-reader-text" for="s">Search this site</label>
+								        <input type="text" value="" placeholder="Search" name="s" id="s" />
+								        <button type="submit" id="searchsubmit-head" value="Search"  /><i class="fa fa-search"></i></button>
+								    </div>
+								</form>
+								
+								<?php if ( has_nav_menu( 'social-nav' ) ) { ?>
+										<?php wp_nav_menu(array(
+				    					'container' => false,                           // remove nav container
+				    					'container_class' => 'menu',                 // class of container (should you choose to use it)
+				    					'menu' => __( 'The Social Menu', 'bonestheme' ),  // nav name
+				    					'menu_class' => 'nav social-nav',               // adding custom nav class
+				    					'theme_location' => 'social-nav',                 // where it's located in the theme
+				    					'before' => '',                                 // before the menu
+					        			'after' => '',                                  // after the menu
+					        			'link_before' => '',                            // before each link
+					        			'link_after' => '',                             // after each link
+					        			'depth' => 0,                                   // limit the depth of the nav
+										)); ?>
+								<?php } ?>
+							</div><!-- .social-search -->
 						</div>
 					</div>
 
@@ -122,14 +141,14 @@
 				<div class="topmenu cf">
 					
 					<div class="wrap">
-					<?php if ( has_nav_menu( 'main-nav' ) ) { ?>
+					<?php if ( has_nav_menu( 'section-nav' ) ) { ?>
 						<nav role="navigation">
 							<?php wp_nav_menu(array(
 	    					'container' => false,                           // remove nav container
 	    					'container_class' => 'menu cf',                 // class of container (should you choose to use it)
-	    					'menu' => __( 'The Main Menu', 'bonestheme' ),  // nav name
-	    					'menu_class' => 'nav top-nav cf',               // adding custom nav class
-	    					'theme_location' => 'main-nav',                 // where it's located in the theme
+	    					'menu' => __( 'The Section Menu', 'bonestheme' ),  // nav name
+	    					'menu_class' => 'nav section-nav cf',               // adding custom nav class
+	    					'theme_location' => 'section-nav',                 // where it's located in the theme
 	    					'before' => '',                                 // before the menu
 		        			'after' => '',                                  // after the menu
 		        			'link_before' => '',                            // before each link
