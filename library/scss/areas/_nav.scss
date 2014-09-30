@@ -18,9 +18,8 @@ NAVIGATION STYLES
 	vertical-align: top;
 	position: relative;
 
-
 	@include breakpoint(laptop) {
-		text-align: right;
+		text-align: left;
 		font-size:.8em;	
 		line-height: 1em;
 	}
@@ -30,6 +29,10 @@ NAVIGATION STYLES
 		height:40px;
 		line-height: 40px;
 		vertical-align: top;
+	}
+	
+	.nav, .main-nav {
+		display: inline-block;
 	}
 
 	.social-nav {
@@ -56,13 +59,17 @@ NAVIGATION STYLES
 	}
 
 	.searchform {
-		width: 30%;
+		width: 50%;
 		position:relative;
 		display: inline-block;
 
+		.search-label {
+			font-family: $title-family;
+			text-transform: uppercase;
+		}
+
 		input, button {
 			margin:0;
-			float:left;
 			height:20px;
 			line-height: 1em;
 		}

@@ -50,6 +50,14 @@
 							    	<h1 class="page-title"><?php post_type_archive_title(); ?></h1>
 							    <?php } ?>
 
+							<?php if (is_category() && category_description()) { ?>
+			                   	<div class="cat-desc"><?php echo category_description(); ?></div>
+			                <?php } ?>
+
+			                <?php if (is_tax() && ($term->description !== '')) { ?>
+			                   	<div class="cat-desc"><?php echo $term->description; ?></div>
+		                    <?php } ?>
+
 							<?php if (have_posts()) :  ?>
 								<div id="masonry-loop">
 

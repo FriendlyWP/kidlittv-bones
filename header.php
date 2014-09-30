@@ -79,7 +79,7 @@
 				</div>
 				<div class="topspacer wrap"></div>
 					<div class="topbar">
-						<div class="wrap">
+						<div class="wrap cf">
 							<a href="#my-menu" class="menu-toggler"><i class="fa fa-bars"></i></a>
 								<?php if ( has_nav_menu( 'main-nav' ) ) { ?>
 									<nav role="navigation">
@@ -102,9 +102,9 @@
 							<div class="social-search">
 								<form role="search" class="searchform" method="get" id="searchform-head" action="<?php echo home_url( '/' ); ?>">
 								    <div class="head-search">
-								    	<label class="screen-reader-text" for="s">Search this site</label>
+								    	<label class="search-label" for="s">Search</label>
 								        <input type="text" value="" placeholder="Search" name="s" id="s" />
-								        <button type="submit" id="searchsubmit-head" value="Search"  /><i class="fa fa-search"></i></button>
+								        <!--<button type="submit" id="searchsubmit-head" value="Search"  /><i class="fa fa-search"></i></button>-->
 								    </div>
 								</form>
 								
