@@ -27,6 +27,19 @@
         <h3><a href="<?php the_permalink(' ') ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h3>
         <div class="masonry-post-excerpt">
             <?php the_excerpt(); ?>
+            <?php //the_tags('<ul class="tags"><li>','</li><li>','</li></ul>'); ?>
+            <?php
+            $posttags = get_the_tags();
+            if ($posttags) {
+                echo '<ul class="tags">';
+              foreach($posttags as $tag) {
+                echo '<li><a class="' . $tag->slug . '" href="' . home_url('/tag/') . $tag->slug . '">';
+                echo $tag->name . '</a></li>'; 
+              }
+              echo '</ul>';
+            }
+            ?>
+            
             <div class="byline"><?php
   comments_popup_link( 'Comment', '1 comment', '% comments', 'comments-link', 'Comments off');
 ?> | <?php printf( get_the_time(get_option('date_format')) . ', ' . get_the_time('g:i a')); ?></div>

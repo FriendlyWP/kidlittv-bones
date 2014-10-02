@@ -176,3 +176,12 @@ function custom_excerpt_length( $length ) {
   return 20;
 }
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+
+
+/*
+ * Enqueue ACF field scripts.
+ */
+function my_acf_admin_enqueue_scripts() {
+ wp_enqueue_script( 'my-acf-script', get_template_directory_uri() . '/library/js/acf.js', 'acf-input', '1.0', true );
+}
+add_action('acf/input/admin_enqueue_scripts', 'my_acf_admin_enqueue_scripts');

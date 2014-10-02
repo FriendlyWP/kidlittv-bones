@@ -221,7 +221,10 @@ h6 {
 }
 
 .page-title, .archive-title, .single-title {
-	font-size:2.5em;
+	font-size:3.5em;
+	color:$purple;
+	line-height:1em;
+	margin-bottom:.25em;
 }
 
 .entry-title {
@@ -230,6 +233,12 @@ h6 {
 	a {
 		border-bottom:none;
 	}
+}
+
+.cat-desc {
+	font-family:$subtitle-family;
+	font-size:1.3em;
+	font-weight:300;
 }
 
 p {
@@ -271,19 +280,39 @@ p {
 /*********************
 POSTS & CONTENT STYLES
 *********************/
-
+.page-header {
+	padding:0 1.5em 0;
+}
 .hentry {
-	
 
 	footer {
-		
-
+	
 		p {
 			margin: 0;
 		}
 	}
 
 } /* end .hentry */
+
+ul.tags {
+	margin:0 0 1em 0;
+	padding:0;
+
+	li {
+		display: inline-block;
+		margin:0 .5em .5em 0;
+	}
+
+	a, a:visited {
+		font-size: .8em;
+		font-weight: 300;
+		text-transform: uppercase;
+		background-color:$orange;
+		color:$white;
+		padding:.2em .5em;
+		font-family: $subtitle-family;
+	}
+}
 .masonry-thumbnail {
 	img {
 		-webkit-box-shadow: 4px 4px 0 0;

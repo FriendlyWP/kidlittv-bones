@@ -121,7 +121,22 @@ function bones_scripts_and_styles() {
 		if ( wp_style_is( 'wp-columna', $list = 'enqueued' )) {
 			wp_dequeue_style('wp-columna');	
 		}
-		
+
+		// INLINE STYLES FOR TAG BACKGROUND COLORS BASED ON ACF
+	 //$css = "ul.tags .app { background-color:#000000; }";
+	 $posttags = get_tags();
+	    if ($posttags) {
+	      
+	      foreach($posttags as $tag) {
+	        $tag_color = get_field('tag_color', 'post_tag_' . $tag->term_id);
+	        $tag_slug = $tag->slug;
+	        if ($tag_color) {
+	        	$css .= 'ul.tags .' . $tag_slug . '  { background-color : ' . $tag_color . "; }\r\n";	
+	        }
+	      }
+	    } 
+
+    wp_add_inline_style( 'bones-stylesheet', $css ); 
 
 		// enqueue styles and scripts
 		wp_enqueue_script( 'bones-modernizr' );
@@ -139,6 +154,27 @@ function bones_scripts_and_styles() {
 		wp_enqueue_script( 'bones-js' );
 
 	}
+}
+
+//add_action(  'wp_enqueue_scripts', 'wpse115373_header_bg' );
+function wpse115373_header_bg() {
+    global $post;
+    // set this to the handle of one of your stylesheets
+    $handle = 'bones-stylesheet';
+    
+    $posttags = get_tags();
+    if ($posttags) {
+      $css = "
+      foreach($posttags as $tag) {
+        $tag_color = get_field('tag_color', $tag->term_id);
+        $tag_slug = $tag->slug;
+        echo '.' . $tag_slug . ': ' $tag_color '\n';
+      }
+      ";
+    } 
+
+    $css = ".app { background-color:#000000; }";
+    wp_add_inline_style( $handle, $css ); 
 }
 
 if ( ! function_exists( 'slug_masonry_init' )) :
