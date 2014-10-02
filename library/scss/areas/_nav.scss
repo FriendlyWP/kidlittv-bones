@@ -7,16 +7,17 @@ NAVIGATION STYLES
 }
 
 #my-content #my-menu {
-  /* display: none; */
+   display: none; 
 }
 
 #my-menu:not( .mm-menu ) {
- /* display: none; */
+   display: none;
 }
 .topbar {
 	text-align: center;
 	vertical-align: top;
 	position: relative;
+	padding:0 .3em;
 
 	@include breakpoint(laptop) {
 		text-align: left;
@@ -31,7 +32,7 @@ NAVIGATION STYLES
 		vertical-align: top;
 	}
 	
-	.nav, .main-nav {
+	nav, .nav, .main-nav {
 		display: inline-block;
 	}
 

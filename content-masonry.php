@@ -12,7 +12,7 @@
     <div class="masonry-thumbnail">
         <a href="<?php the_permalink(' ') ?>" title="<?php the_title(); ?>"><?php the_post_thumbnail('masonry-thumb'); ?></a>
     </div><!--.masonry-thumbnail-->
-<?php } elseif ( function_exists('get_video_thumbnail') && get_video_thumbnail() ) {
+    <?php } elseif ( function_exists('get_video_thumbnail') && get_video_thumbnail() ) {
 		$video_thumbnail = get_video_thumbnail(); 	
 		?>
 		<div class="masonry-thumbnail">
