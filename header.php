@@ -103,7 +103,7 @@
 								<form role="search" class="searchform" method="get" id="searchform-head" action="<?php echo home_url( '/' ); ?>">
 								    <div class="head-search">
 								    	<label class="search-label" for="s">Search</label>
-								        <input type="text" value="" placeholder="Search" name="s" id="s" />
+								        <input type="text" value="" placeholder="" name="s" id="s" />
 								        <!--<button type="submit" id="searchsubmit-head" value="Search"  /><i class="fa fa-search"></i></button>-->
 								    </div>
 								</form>
