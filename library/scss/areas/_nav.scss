@@ -34,18 +34,16 @@ NAVIGATION STYLES
 		display: inline-block;
 	}
 
-	.main-nav {
-		margin-left:1.5em;
-	}
 
 	.social-nav {
 		display: inline-block;
 		vertical-align:middle;
 
-		li a {
+		li a, li a:visited {
 			padding: 0 .75em;
 			vertical-align: middle;
 			font-size:.8em;
+			color:$white;
 
 			i {
 				display: inline-block;
@@ -142,26 +140,53 @@ NAVIGATION STYLES
 		}
 	}
 
-	/* equally spaces out list items in main menu, see http://css-tricks.com/equidistant-objects-with-css/ */
-	/* &.top-nav:after {
-		content:'';
-		width:100%;
+	&.section-nav {
 		display: inline-block;
-		height:0;
-		line-height: 0;
-		font-size:0;
-	} */
+		background-color:$blue;	
+		margin:0 0 0 0;
+		padding:0 0 0 2em;
+
+		box-shadow: 6px 6px 0 lighten($gray, 20%);
+
+		li a {
+			height:50px;
+		}
+	}
 
 	li {
+		display: inline-block;
+		vertical-align: text-bottom;
 
 		a, a:visited {
 			display: block;
-			color: $white;
+			color: $light-blue;
 			border: none;
-			padding: 0.75em;
+			padding: 0.75em .75em;
+			font-size: 1em;
+			text-transform: uppercase;
+
 
 			&:hover, &:focus {
 				color: $white;
+			}
+
+		}
+
+		&.menu-special {
+			box-shadow: 0 6px 0px lighten($gray, 20%);
+			a, a:visited {
+				text-transform: none;
+				font-size: 1.3em;
+				color:$white;
+				display: inline-block;
+				padding:.65em .75em .6em;
+
+			}
+
+			&.m-gribbles {
+				background-color:$orange;
+				border-left:.1em solid $white;
+				margin-left:1.5em;
 			}
 		}
 
@@ -169,12 +194,13 @@ NAVIGATION STYLES
 			> a {
 				font-weight: 700;	
 			}
-			
+
 		}
 
 		@include breakpoint(laptop) {
 			float: left;
 			position: relative;
+
 
 			ul.sub-menu,
 			ul.children {

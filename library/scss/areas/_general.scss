@@ -16,7 +16,6 @@ background: -o-linear-gradient(top,  rgba(58,156,199,0.49) 0%,rgba(165,218,234,0
 background: -ms-linear-gradient(top,  rgba(58,156,199,0.49) 0%,rgba(165,218,234,0.49) 100%); /* IE10+ */
 background: linear-gradient(to bottom,  rgba(58,156,199,0.49) 0%,rgba(165,218,234,0.49) 100%); /* W3C */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7d3a9cc7', endColorstr='#7da5daea',GradientType=0 ); /* IE6-9 */
-
 }
 
 .hide {
@@ -26,6 +25,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7d3a9cc7', e
 .wrap {
 	width: 92%;
 	margin: 0 auto;
+	padding:0 1.5em;
 
 
 	@include breakpoint(tablet) {
@@ -43,12 +43,18 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7d3a9cc7', e
 
 #inner-header {
 	&.wrap {
-		background-color:$yellow;
-		
+		background-color:$yellow;/* Old browsers */
+background: -moz-linear-gradient(-45deg,  #f9efcc 0%, #ffffff 100%);
+background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#f9efcc), color-stop(100%,#ffffff));
+background: -webkit-linear-gradient(-45deg,  #f9efcc 0%,#ffffff 100%);
+background: -o-linear-gradient(-45deg,  #f9efcc 0%,#ffffff 100%);
+background: -ms-linear-gradient(-45deg,  #f9efcc 0%,#ffffff 100%);
+background: linear-gradient(135deg,  #f9efcc 0%,#ffffff 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9efcc', endColorstr='#ffffff',GradientType=1 );
 	}
 }
 #inner-content {
-	padding:1.677em 1em;
+	padding:1.677em 1.5em;
 	background-color:$white;
 }
 
@@ -56,10 +62,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7d3a9cc7', e
 	.wrap {
 		background-color:$purple;
 		position: relative;
-		left:-5px;
+		left:-6px;
 		max-width: 1310px;
 		padding-right:10px;
-		box-shadow: 0 2px 2px lighten($purple, 10%);
+		box-shadow: 0 4px 0 0 lighten($purple, 20%);
 
 		&:before {
 			content: ' ';
@@ -84,15 +90,42 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7d3a9cc7', e
 		    -webkit-transform: rotate(39deg) skew(39deg); 
 		    transform: rotate(39deg) skew(39deg);
 			background-color:darken($purple, 18%);
-			box-shadow: 0 2px 2px lighten($purple, 10%);
+			box-shadow: 0 4px 0 lighten($purple, 20%);
 		}
 	}
 }
 
 .topspacer.wrap, 
 #inner-header.wrap,
-.topbar .wrap {
+.topbar .wrap, 
+.topmenu .wrap,
+#inner-content {
 	border-right: 20px solid $orange;
+	
+}
+
+#inner-footer {
+	background-color:$purple;
+		position: relative;
+		left:-6px;
+		max-width: 1310px;
+		padding-right:10px;
+	padding:1.5em;
+	
+	border-top: 5px solid $light-gray;
+	&:after {
+			content: ' ';
+			position: absolute;
+			height: 33px; 
+		    width: 34px;  
+		    padding: 0px; 
+		    top: 15px; 
+		    right:-28px;
+		    -webkit-transform: rotate(39deg) skew(39deg); 
+		    transform: rotate(39deg) skew(39deg);
+			background-color:darken($purple, 18%);
+			box-shadow: 0 4px 0 lighten($purple, 20%);
+		}
 }
 
 .topspacer.wrap {
@@ -101,7 +134,27 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7d3a9cc7', e
 }
 .topmenu {
 	.wrap {
-		background-color:$blue;	
+		padding:0;
+		background-color:$white;
+		position: relative;
+		left:-10px;
+		max-width: 1320px;
+		line-height:1.5em;
+		height:50px;
+		
+
+		&:before {
+			content: ' ';
+			position: absolute;
+			width: 0;
+			height: 0;
+			left:0px;
+			top: 100%;
+			border-width: 10px 10px;
+			border-style: solid;
+			border-color: $dark-blue $dark-blue transparent transparent;
+
+		}
 	}
 }
 
@@ -122,17 +175,17 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7d3a9cc7', e
 
 
 #logo {
-	margin: 0;
-	padding:1em 1.5em;
+	margin:1em 1.5em 1em 0;
 	color: $white;
 	border: none;
 	line-height:1em;
 	display:inline-block;
-	width:100%;
 	max-width:359px;
+	width:100%;
+	vertical-align:middle;
 
 	@include breakpoint(laptop) {
-		width:50%;
+		width:60%;
 	}
 
 	img {
@@ -147,7 +200,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7d3a9cc7', e
 
 .site-description {
 	display:inline-block;
-	width:25%;
+	width:20%;
+	color: $text-color;
+	font-family:$subtitle-family;
+	font-size:1.2em;
+	font-weight:300;
+	vertical-align:middle;
+	padding-top:3.5em;
 }
 
 /*********************
@@ -687,9 +746,7 @@ FOOTER STYLES
 
 .footer {
 	clear: both;
-	background-color: $black;
-	color: $light-gray;
-	padding:1em 0;
+	color: lighten($purple, 25%);
 	font-size:.9em;
 
 	p {
