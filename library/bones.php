@@ -228,15 +228,15 @@ function bones_theme_support() {
 	// adding post format support
 	add_theme_support( 'post-formats',
 		array(
-			'aside',             // title less blurb
-			'gallery',           // gallery of images
-			'link',              // quick link to other site
-			'image',             // an image
-			'quote',             // a quick quote
-			'status',            // a Facebook like status update
-			'video',             // video
-			'audio',             // audio
-			'chat'               // chat transcript
+			'aside',             // RENAMED TO 'GRIBBLES SCRIBBLES'
+			'video',             // RENAMED TO KLTV EXCLUSIVE
+			//'audio',             // audio
+			//'chat'               // chat transcript
+			//'gallery',           // gallery of images
+			//'link',              // quick link to other site
+			//'image',             // an image
+			//'quote',             // a quick quote
+			//'status',            // a Facebook like status update
 		)
 	); 
 
@@ -306,8 +306,8 @@ function bones_page_navi() {
     'format'       => '',
     'current'      => max( 1, get_query_var('paged') ),
     'total'        => $wp_query->max_num_pages,
-    'prev_text'    => '&larr;',
-    'next_text'    => '&rarr;',
+    'prev_text'    => '<i class="fa fa-angle-left"></i><span>Previous Page</span>',
+    'next_text'    => '<span>Next Page</span><i class="fa fa-angle-right"></i>',
     'type'         => 'list',
     'end_size'     => 3,
     'mid_size'     => 3

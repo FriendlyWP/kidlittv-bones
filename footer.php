@@ -1,5 +1,7 @@
 			<footer class="footer" role="contentinfo">
-
+				
+				<div class="footer-swipe wrap"></div>
+				<div class="footer-top wrap"></div>
 				<div id="inner-footer" class="wrap cf">
 					<?php if ( has_nav_menu( 'footer-nav' ) ) { ?>
 					<nav role="navigation">	

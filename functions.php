@@ -91,6 +91,26 @@ function bones_register_sidebars() {
 		'after_title' => '</h4>',
 	));
 
+  register_sidebar(array(
+    'id' => 'footer1',
+    'name' => __( 'Footer Widgets', 'bonestheme' ),
+    'description' => __( 'The footer widgets.', 'bonestheme' ),
+    'before_widget' => '<div id="%1$s" class="widget %2$s">',
+    'after_widget' => '</div>',
+    'before_title' => '<h4 class="widgettitle">',
+    'after_title' => '</h4>',
+  ));
+
+  register_sidebar(array(
+    'id' => 'header1',
+    'name' => __( 'Header Widget', 'bonestheme' ),
+    'description' => __( 'The header widget.', 'bonestheme' ),
+    'before_widget' => '<div id="%1$s" class="widget %2$s">',
+    'after_widget' => '</div>',
+    'before_title' => '<h4 class="widgettitle">',
+    'after_title' => '</h4>',
+  ));
+
 } // don't remove this bracket!
 
 
@@ -185,3 +205,37 @@ function my_acf_admin_enqueue_scripts() {
  wp_enqueue_script( 'my-acf-script', get_template_directory_uri() . '/library/js/acf.js', 'acf-input', '1.0', true );
 }
 add_action('acf/input/admin_enqueue_scripts', 'my_acf_admin_enqueue_scripts');
+
+// RENAME POST FORMATS
+
+function rename_post_formats( $safe_text ) {
+    if ( $safe_text == 'Aside' ) {
+        return 'Gribble\'s Scribbles';
+    } elseif ( $safe_text == 'Video' ) {
+        return 'KLTV Exclusives';
+    }
+
+    return $safe_text;
+}
+add_filter( 'esc_html', 'rename_post_formats' );
+
+//rename Aside in posts list table
+function live_rename_formats() { 
+    global $current_screen;
+
+    if ( $current_screen->id == 'edit-post' ) { ?>
+        <script type="text/javascript">
+        jQuery('document').ready(function() {
+
+            jQuery("span.post-state-format").each(function() { 
+                if ( jQuery(this).text() == "Aside" )
+                    jQuery(this).text("Gribble\'s Scribbles");             
+                if ( jQuery(this).text() == "Video" )
+                    jQuery(this).text("KLTV Exclusives");
+            });
+
+        });      
+        </script>
+<?php }
+}
+add_action('admin_head', 'live_rename_formats');
