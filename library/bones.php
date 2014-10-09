@@ -125,6 +125,7 @@ function bones_scripts_and_styles() {
 		// INLINE STYLES FOR TAG BACKGROUND COLORS BASED ON ACF
 	 //$css = "ul.tags .app { background-color:#000000; }";
 	 $posttags = get_tags();
+	 $css = '';
 	    if ($posttags) {
 	      
 	      foreach($posttags as $tag) {

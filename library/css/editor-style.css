@@ -283,7 +283,7 @@ dd {
 ol,
 ul {
   padding: 0;
-  list-style-type: none;
+  margin-left: 1em;
 }
 
 /*
@@ -1427,30 +1427,34 @@ h6 {
   font-size: 1.3em;
   font-weight: 300;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003339}}
+.cat-desc p {
+  margin-bottom: 1em;
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003340}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003344}}
 p {
   margin: 0 0 1.677em;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003348}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003352}}
 .searchform input {
   display: inline-block;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003353}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003357}}
 .cat-title {
   font-family: "Rancho", cursive;
   font-size: 2em;
   margin: 0;
   padding: 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003359}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003363}}
 .cat-title a, .cat-title a:visited {
   color: #eb8124;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003364}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003368}}
 .kltv-exclusive {
   margin: 0 0 -.2em 0;
   padding: 0 1em 0 2.5em;
@@ -1458,7 +1462,7 @@ p {
   font-size: 1.5em;
   background: url("../images/bg-kltv-exclusive.png") 0 -0.2em no-repeat;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003371}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003375}}
 .kltv-exclusive a, .kltv-exclusive a:visited {
   color: #fff;
 }
@@ -1466,28 +1470,28 @@ p {
 /*********************
 POSTS & CONTENT STYLES
 *********************/
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003379}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003383}}
 .page-header {
   padding: 0 1.5em 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003386}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003390}}
 .hentry footer p {
   margin: 0;
 }
 
 /* end .hentry */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003393}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003397}}
 ul.tags {
   margin: 0 0 1em 0;
   padding: 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003397}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003401}}
 ul.tags li {
   display: inline-block;
   margin: 0 .5em .5em 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003402}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003406}}
 ul.tags a, ul.tags a:visited {
   font-size: .8em;
   font-weight: 300;
@@ -1498,52 +1502,87 @@ ul.tags a, ul.tags a:visited {
   font-family: "Oswald", sans-serif;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003413}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003416}}
+.masonry-thumbnail {
+  position: relative;
+  z-index: 1;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003419}}
 .masonry-thumbnail img {
   -webkit-box-shadow: 4px 4px 0 0;
   box-shadow: 4px 4px 0 0;
   color: #e6e6e6;
   margin-bottom: 1em;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003420}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003426}}
 .masonry-thumbnail.size-gs {
   width: 45%;
   float: right;
   margin-left: 3%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003426}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003432}}
 .category-kltv-exclusive {
   background-color: #f9efcc;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003429}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003435}}
 .category-kltv-exclusive h3 {
   font-size: 1.8em;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003431}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003437}}
 .category-kltv-exclusive h3 a, .category-kltv-exclusive h3 a:visited {
   color: #eb8124;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003437}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003443}}
 .category-kltv-exclusive .masonry-thumbnail img {
   color: #d3c8b2;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003446}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003452}}
 .format-video {
-  background-color: #fff;
+  background-color: #f9efcc;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003449}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003455}}
+.single .format-video {
+  background-color: #f9efcc;
+  background: -moz-linear-gradient(top, #f9efcc 0%, rgba(252, 248, 233, 0.35) 23%, rgba(255, 255, 255, 0.91) 41%, white 44%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f9efcc), color-stop(23%, rgba(252, 248, 233, 0.35)), color-stop(41%, rgba(255, 255, 255, 0.91)), color-stop(44%, white));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #f9efcc 0%, rgba(252, 248, 233, 0.35) 23%, rgba(255, 255, 255, 0.91) 41%, white 44%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #f9efcc 0%, rgba(252, 248, 233, 0.35) 23%, rgba(255, 255, 255, 0.91) 41%, white 44%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #f9efcc 0%, rgba(252, 248, 233, 0.35) 23%, rgba(255, 255, 255, 0.91) 41%, white 44%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #f9efcc 0%, rgba(252, 248, 233, 0.35) 23%, rgba(255, 255, 255, 0.91) 41%, white 44%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9efcc', endColorstr='#ffffff',GradientType=0 );
+  /* IE6-9 */
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003467}}
+.format-video h3 {
+  font-size: 1.8em;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003469}}
+.format-video h3 a, .format-video h3 a:visited {
+  color: #eb8124;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003474}}
 .format-video .masonry-thumbnail {
   position: relative;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003453}}
-.format-video .masonry-thumbnail a {
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003477}}
+.format-video .masonry-thumbnail img {
+  color: #d3c8b2;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003481}}
+.format-video .masonry-thumbnail > a, .format-video .masonry-thumbnail > a:visited {
   display: block;
   position: relative;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003457}}
-.format-video .masonry-thumbnail a:after {
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003485}}
+.format-video .masonry-thumbnail > a:after {
   content: "";
   position: absolute;
   top: 35%;
@@ -1555,7 +1594,7 @@ ul.tags a, ul.tags a:visited {
   pointer-events: none;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003470}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003499}}
 .masonry-entry {
   width: 100%;
   border: 1px solid #e6e6e6;
@@ -1565,32 +1604,155 @@ ul.tags a, ul.tags a:visited {
   padding: 1.5em;
 }
 @media (min-width: 37.5em) {
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003470}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003499}}
   .masonry-entry {
     width: 50%;
   }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003510}}
+  .single-post .masonry-entry {
+    width: 100%;
+  }
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003517}}
+.format-aside .masonry-thumbnail, .single-format-standard .masonry-thumbnail {
+  width: 45%;
+  margin-left: 2%;
+  float: right;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003525}}
+.archive.term-post-format-aside .cat-title {
+  display: none;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003531}}
+.archive.term-post-format-video .kltv-exclusive {
+  display: none;
 }
 
 /* post meta */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003484}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003537}}
 .byline {
   color: #bebebe;
   font-size: .8em;
   margin: 0;
 }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003545}}
+.subcat-list {
+  list-style: none;
+  margin: 0 0 1em 1.5em;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003549}}
+.single .subcat-list {
+  margin-left: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003553}}
+.subcat-list li {
+  display: inline-block;
+  background-color: #96935b;
+  margin-bottom: 4px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003558}}
+.subcat-list li:nth-of-type(2) {
+  background-color: #eb8124;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003562}}
+.subcat-list li:nth-of-type(3) {
+  background-color: #825b90;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003566}}
+.subcat-list li:nth-of-type(4) {
+  background-color: #ca6812;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003570}}
+.subcat-list li:nth-of-type(5) {
+  background-color: #3a9cc7;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003574}}
+.subcat-list li:nth-of-type(6) {
+  background-color: #a3a067;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003578}}
+.subcat-list li:nth-of-type(7) {
+  background-color: #9b76a8;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003582}}
+.subcat-list li:nth-of-type(8) {
+  background-color: #338db4;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003586}}
+.subcat-list li:nth-of-type(9) {
+  background-color: #96935b;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003589}}
+.subcat-list li:nth-of-type(10) {
+  background-color: #eb8124;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003593}}
+.subcat-list li:nth-of-type(11) {
+  background-color: #825b90;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003597}}
+.subcat-list li:nth-of-type(12) {
+  background-color: #ca6812;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003601}}
+.subcat-list li:nth-of-type(13) {
+  background-color: #3a9cc7;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003605}}
+.subcat-list li:nth-of-type(14) {
+  background-color: #a3a067;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003609}}
+.subcat-list li:nth-of-type(15) {
+  background-color: #9b76a8;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003613}}
+.subcat-list li:nth-of-type(16) {
+  background-color: #338db4;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003617}}
+.single .subcat-list li {
+  margin-right: 4px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003621}}
+.subcat-list a, .subcat-list a:visited {
+  display: inline-block;
+  color: #fff;
+  padding: .2em .5em;
+  font-size: .9em;
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003631}}
+.subcat-list.post-subcats {
+  position: absolute;
+  bottom: 1.5em;
+  z-index: 100;
+  margin: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003636}}
+.subcat-list.post-subcats li {
+  display: block;
+  float: left;
+  clear: left;
+}
+
 /* entry content */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003495}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003647}}
 .entry-content {
   padding: 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003498}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003650}}
 .entry-content table {
   width: 100%;
   border: 1px solid #bebebe;
   margin-bottom: 1.5em;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003503}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003655}}
 .entry-content table caption {
   margin: 0 0 7px;
   font-size: 0.75em;
@@ -1598,41 +1760,41 @@ ul.tags a, ul.tags a:visited {
   text-transform: uppercase;
   letter-spacing: 1px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003512}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003664}}
 .entry-content tr {
   border-bottom: 1px solid #bebebe;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003515}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003667}}
 .entry-content tr:nth-child(even) {
   background-color: #e6e6e6;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003520}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003672}}
 .entry-content td {
   padding: 7px;
   border-right: 1px solid #bebebe;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003524}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003676}}
 .entry-content td:last-child {
   border-right: 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003529}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003681}}
 .entry-content th {
   background-color: #e6e6e6;
   border-bottom: 1px solid #bebebe;
   border-right: 1px solid #bebebe;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003534}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003686}}
 .entry-content th:last-child {
   border-right: 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003539}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003691}}
 .entry-content dd {
   margin-left: 0;
   font-size: 0.9em;
   color: #787878;
   margin-bottom: 1.5em;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003546}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003698}}
 .entry-content .size-auto,
 .entry-content .size-full,
 .entry-content .size-large,
@@ -1641,7 +1803,7 @@ ul.tags a, ul.tags a:visited {
   max-width: 100%;
   height: auto;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003555}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003707}}
 .entry-content pre {
   background: #5c5c5c;
   color: #e6e6e6;
@@ -1652,13 +1814,13 @@ ul.tags a, ul.tags a:visited {
 }
 
 /* end .entry-content */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003566}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003718}}
 #breadcrumbs {
   font-size: .8em;
   margin-bottom: .5em;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003571}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003723}}
 blockquote {
   margin: 0 0 1.5em 0.75em;
   padding: 0 0 0 0.75em;
@@ -1667,7 +1829,7 @@ blockquote {
   color: #bebebe;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003582}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003734}}
 img {
   margin: 0 0 1.5em 0;
   max-width: 100%;
@@ -1677,7 +1839,7 @@ img {
 /*
 Align all images center for smallest screens
 */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003591}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003743}}
 .alignleft, img.alignleft,
 .alignright, img.alignright,
 .aligncenter, img.aligncenter {
@@ -1687,7 +1849,7 @@ Align all images center for smallest screens
   clear: both;
 }
 @media (min-width: 50em) {
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003591}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003743}}
   .alignleft, img.alignleft,
   .alignright, img.alignright,
   .aligncenter, img.aligncenter {
@@ -1696,7 +1858,7 @@ Align all images center for smallest screens
 }
 
 @media (min-width: 50em) {
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003605}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003757}}
   .alignleft, img.alignleft {
     margin-right: 1.5em;
     float: left;
@@ -1705,7 +1867,7 @@ Align all images center for smallest screens
 }
 
 @media (min-width: 50em) {
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003613}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003765}}
   .alignright, img.alignright {
     margin-left: 1.5em;
     float: right;
@@ -1713,7 +1875,7 @@ Align all images center for smallest screens
   }
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003621}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003773}}
 .video-container {
   position: relative;
   padding-bottom: 56.25%;
@@ -1723,7 +1885,7 @@ Align all images center for smallest screens
   overflow: hidden;
   margin-bottom: 1.677em;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003630}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003782}}
 .video-container iframe, .video-container object, .video-container embed {
   position: absolute;
   top: 0;
@@ -1732,14 +1894,14 @@ Align all images center for smallest screens
   height: 100%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003639}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003791}}
 .wp-caption, .html5-captions .wp-caption {
   max-width: 100%;
   background: #e6e6e6;
   padding: .2em;
   /* images inside wp-caption */
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003645}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003797}}
 .wp-caption img, .html5-captions .wp-caption img {
   max-width: 100%;
   margin-bottom: 0;
@@ -1747,7 +1909,7 @@ Align all images center for smallest screens
 }
 
 /* end .wp-caption */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003653}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003805}}
 .wp-caption-text {
   font-size: 0.85em;
   margin: .2em 0 .3em;
@@ -1756,7 +1918,7 @@ Align all images center for smallest screens
 }
 
 /* image gallery styles */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003665}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003817}}
 .gallery-item {
   display: inline-block;
   margin: 0 2% 1em 0;
@@ -1764,23 +1926,23 @@ Align all images center for smallest screens
   vertical-align: top;
   text-align: center;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003672}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003824}}
 .gallery-item img {
   margin-bottom: 0;
 }
 @media (min-width: 50em) {
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003665}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003817}}
   .gallery-item {
     width: 49%;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003678}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003830}}
   .gallery-item:nth-child(2n+2) {
     margin-right: 0;
   }
 }
 
 /* gallery caption styles */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003693}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003845}}
 .tags {
   margin: 0;
 }
@@ -1788,24 +1950,24 @@ Align all images center for smallest screens
 /******************************************************************
 PAGE NAVI STYLES
 ******************************************************************/
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003701}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003853}}
 .pagination,
 .wp-prev-next {
   margin: 1.5em 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003705}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003857}}
 .pagination {
   text-align: center;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003708}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003860}}
 .pagination ul {
   display: inline-block;
   white-space: nowrap;
   padding: 0;
   clear: both;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003715}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003867}}
 .pagination li {
   padding: 0;
   margin: 0;
@@ -1814,7 +1976,7 @@ PAGE NAVI STYLES
   overflow: hidden;
   vertical-align: middle;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003724}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003876}}
 .pagination a, .pagination a:visited, .pagination span {
   margin: 0;
   text-decoration: none;
@@ -1828,36 +1990,36 @@ PAGE NAVI STYLES
   color: #eb8124;
   font-family: "Oswald", sans-serif;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003737}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003889}}
 .pagination a.next, .pagination a.prev, .pagination a:visited.next, .pagination a:visited.prev, .pagination span.next, .pagination span.prev {
   padding: .4em .75em;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003740}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003892}}
 .pagination a.next span, .pagination a.prev span, .pagination a:visited.next span, .pagination a:visited.prev span, .pagination span.next span, .pagination span.prev span {
   font-family: "Rancho", cursive;
   font-size: 1.5em;
   display: inline-block;
   padding: 0 .75em;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003747}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003899}}
 .pagination a.next i, .pagination a.prev i, .pagination a:visited.next i, .pagination a:visited.prev i, .pagination span.next i, .pagination span.prev i {
   display: inline-block;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003754}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003906}}
 .pagination a:hover, .pagination a:focus, .pagination a:visited:hover, .pagination a:visited:focus, .pagination span:hover, .pagination span:focus {
   background-color: #eb8124;
   color: #fff;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003758}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003910}}
 .pagination a:hover span, .pagination a:focus span, .pagination a:visited:hover span, .pagination a:visited:focus span, .pagination span:hover span, .pagination span:focus span {
   color: #fff;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003766}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003918}}
 .pagination .current {
   cursor: default;
   color: #bebebe;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003770}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003922}}
 .pagination .current:hover, .pagination .current:focus {
   color: #3a9cc7;
   background-color: transparent;
@@ -1865,11 +2027,11 @@ PAGE NAVI STYLES
 
 /* end .bones_page_navi */
 /* fallback previous & next links */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003784}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003936}}
 .wp-prev-next .prev-link {
   float: left;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003788}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003940}}
 .wp-prev-next .next-link {
   float: right;
 }
@@ -1878,45 +2040,45 @@ PAGE NAVI STYLES
 /*********************
 FOOTER STYLES
 *********************/
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003799}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003951}}
 .footer {
   clear: both;
   color: #bda5c6;
   font-size: .9em;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003804}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003956}}
 .footer p {
   margin-bottom: .677em;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003808}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003960}}
 .footer a, .footer a:visited {
   color: #bebebe;
   border-color: #bebebe;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003814}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003966}}
 .organization-address, .copyright {
   text-align: center;
   margin: 0 auto .5em;
 }
 @media (min-width: 64em) {
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003814}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003966}}
   .organization-address, .copyright {
     margin: 0 0 .5em;
     text-align: left;
     display: inline-block;
   }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003823}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003975}}
   .organization-address > div, .copyright > div {
     display: inline-block;
   }
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003829}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003981}}
 .contact {
   margin-top: .5em;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003832}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003984}}
 .contact .item {
   display: inline-block;
   margin-right: 1em;
@@ -1924,7 +2086,7 @@ FOOTER STYLES
   border-right: 1px solid #bebebe;
   line-height: 1em;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003839}}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Michelle\/Documents\/Websites\/kidlit\.dev\/wp-content\/themes\/kidlittv-bones\/library\/scss\/areas\/_general\.scss}line{font-family:\00003991}}
 .contact .item:last-of-type {
   border-right: none;
   margin-right: 0;

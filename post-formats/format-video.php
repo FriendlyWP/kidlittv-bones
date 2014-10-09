@@ -1,34 +1,77 @@
 
 
-              <article id="post-<?php the_ID(); ?>" <?php post_class('cf'); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
+              <article id="post-<?php the_ID(); ?>" <?php post_class('masonry-entry cf'); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
 
-                <header class="article-header">
+                <h4 class="kltv-exclusive"><a href="<?php echo get_post_format_link('video'); ?>">KLTV Exclusive</a></h4>
 
-                  <h1 class="entry-title single-title" itemprop="headline"><?php the_title(); ?></h1>
+                <div class="masonry-thumbnail">
+                  <?php if (is_archive() || is_tax() ) { ?>
+                    <?php 
+                    // sub-cat links on top of images
+                      if( (is_category() || is_tax()) && !is_tax( 'post_format', 'post-format-video') ) { 
+                        $current_cat_id = get_query_var('cat');
+                        if (!category_has_parent($current_cat_id)) {
+                          echo '<ul class="subcat-list post-subcats">';
+                        wp_list_categories('orderby=name&title_li=&use_desc_for_title=0&show_option_none=&child_of=' . $current_cat_id );
+                        echo '</ul>';
+                      }
+                    }
+                    ?>
+                      <?php if ( has_post_thumbnail() ) { ?>
+                        <a href="<?php the_permalink(' ') ?>" title="<?php the_title(); ?>"><?php the_post_thumbnail('masonry-thumb'); ?></a>
+                      <?php } elseif ( function_exists('get_video_thumbnail') && get_video_thumbnail() ) {
+                          $video_thumbnail = get_video_thumbnail(); ?>
+                          <a href="<?php the_permalink(' ') ?>" title="<?php the_title(); ?>"><img src="<?php echo $video_thumbnail; ?>" /></a>
+                       <?php } ?>
+                    
+                <?php } elseif (is_single()) { 
 
-                  <p class="byline vcard">
-                    <?php printf( __( 'Posted <time class="updated" datetime="%1$s" pubdate>%2$s</time> by <span class="author">%3$s</span>', 'bonestheme' ), get_the_time('Y-m-j'), get_the_time(get_option('date_format')), get_the_author_link( get_the_author_meta( 'ID' ) )); ?>
-                  </p>
+                         if ( function_exists('get_field') && get_field('add_video_url') ) {
+                              $videourl = get_field('add_video_url');
+                              echo '<figure class="video-container">';
+                                echo  wp_oembed_get($videourl);
+                              echo '</figure>';
+                          } elseif ( function_exists('get_field') && get_field('new_video_url') ) {
+                             $videourl = get_field('new_video_url');
+                             echo '<figure class="video-container">';
+                                echo  $videourl;
+                              echo '</figure>';
+                          } else {
+                           
+                            // do nothing
+                          } 
 
-                </header> <?php // end article header ?>
+
+               } ?>
+              </div><!--.masonry-thumbnail-->
 
                 <section class="entry-content cf" itemprop="articleBody">
-                  <?php
-                    // the content (pretty self explanatory huh)
-                    the_content();
 
-                    /*
-                     * Link Pages is used in case you have posts that are set to break into
-                     * multiple pages. You can remove this if you don't plan on doing that.
-                     *
-                     * Also, breaking content up into multiple pages is a horrible experience,
-                     * so don't do it. While there are SOME edge cases where this is useful, it's
-                     * mostly used for people to get more ad views. It's up to you but if you want
-                     * to do it, you're wrong and I hate you. (Ok, I still love you but just not as much)
-                     *
-                     * http://gizmodo.com/5841121/google-wants-to-help-you-avoid-stupid-annoying-multiple-page-articles
-                     *
-                    */
+                  <?php 
+                  if ( is_single() ) {
+                      // list of cats
+                    echo '<ul class="subcat-list">';
+                    $categories = get_the_category();
+                    $output = '';
+                    if($categories) {
+                      foreach($categories as $category) {
+                        $output .= '<li><a href="'.get_category_link( $category->term_id ).'" title="' . esc_attr( sprintf( __( "View all posts in %s" ), $category->name ) ) . '">'.$category->cat_name.'</a></li>';
+                      }
+                    }
+                    echo $output;
+                    echo '</ul>';
+                  }
+                    ?>
+
+                   <h3><a href="<?php the_permalink(' ') ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h3>
+                  <?php
+                    // if on an archive, taxonomy or post-format archive page, show excerpt, otherwise full content
+                    if( is_archive() || is_tax() ) {
+                      the_excerpt();
+                    } else {
+                      the_content();
+                    }
+
                     wp_link_pages( array(
                       'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'bonestheme' ) . '</span>',
                       'after'       => '</div>',
@@ -38,11 +81,23 @@
                   ?>
                 </section> <?php // end article section ?>
 
-                <footer class="article-footer">
-                  <?php the_tags( '<p class="tags"><span class="tags-title">' . __( 'Tags:', 'bonestheme' ) . '</span> ', ', ', '</p>' ); ?>
+                 <?php if (is_archive() || is_tax() ) { ?>
+                
+                  <div class="byline cf"><?php
+  comments_popup_link( 'Comment', '1 comment', '% comments', 'comments-link', 'Comments off');
+?> | <?php printf( get_the_time(get_option('date_format')) . ', ' . get_the_time('g:i a')); ?></div>
 
-                </footer> <?php // end article footer ?>
+                <?php } else { ?>
 
-                <?php comments_template(); ?>
+                    <footer class="article-footer">
+
+                    <?php printf( __( 'Filed under: %1$s', 'bonestheme' ), get_the_category_list(', ') ); ?>
+
+                    <?php the_tags( '<p class="tags"><span class="tags-title">' . __( 'Tags:', 'bonestheme' ) . '</span> ', ', ', '</p>' ); ?>
+
+                  </footer> <?php // end article footer ?>
+
+                  <?php comments_template(); ?>
+                <?php } ?>
 
               </article> <?php // end article ?>

@@ -40,6 +40,16 @@
 										<h1 class="page-title">
 											<span><?php _e( 'Yearly Archives:', 'bonestheme' ); ?></span> <?php the_time('Y'); ?>
 										</h1>
+								<?php } elseif ( is_tax( 'post_format', 'post-format-aside' ) ) {
+								$term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) );  ?>
+								    		<h1 class="page-title">
+								    	    		Gribble's Scribbles
+								        	</h1>
+								<?php } elseif ( is_tax( 'post_format', 'post-format-video' ) ) { 
+									$term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) ); ?>
+								    		<h1 class="page-title">
+								    	    		KLTV Exclusives
+								        	</h1>
 								<?php } elseif ( is_tax() ) { ?>
 								    	<?php 
 								    	$term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) ); 
@@ -47,6 +57,16 @@
 								    		<h1 class="page-title">
 								    	    		<?php echo $title; ?>
 								        	</h1>
+								        	<?php if ( $term->description !== '' ) { ?>
+							                   	<div class="cat-desc"><?php echo $term->description; ?></div>
+						                    <?php } ?>
+
+						                    <?php 
+						                    $current_cat_id = get_query_var('cat');
+											echo '<ul class="subcat-list">';
+											wp_list_categories('orderby=name&title_li=&use_desc_for_title=0&show_option_none=&child_of=' . $current_cat_id );
+											echo '</ul>';
+											?>
 								    <?php } elseif ( is_post_type_archive() ) { ?>
 								    	<h1 class="page-title"><?php post_type_archive_title(); ?></h1>
 								    <?php } ?>
@@ -55,17 +75,25 @@
 				                   	<div class="cat-desc"><?php echo category_description(); ?></div>
 				                <?php } ?>
 
-				                <?php if (is_tax() && ($term->description !== '')) { ?>
-				                   	<div class="cat-desc"><?php echo $term->description; ?></div>
-			                    <?php } ?>
+				                
 			                </header>
 
 							<?php if (have_posts()) :  ?>
+							
+							<?php 
+
+							if ( !(is_tax( 'post_format', 'post-format-aside' ) || is_tax( 'post_format', 'post-format-video' ) ) ) {
+								//
+							}
+							?>
 								<div id="masonry-loop">
 
 								<?php while (have_posts()) : the_post(); ?>
 
-									<?php get_template_part( 'content', 'masonry'); ?>
+									<?php // get_template_part( 'content', 'masonry'); ?>
+									<?php
+										get_template_part( 'post-formats/format', get_post_format() );
+									?>
 
 								<?php endwhile; ?>
 								</div>

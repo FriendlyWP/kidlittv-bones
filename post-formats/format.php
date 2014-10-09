@@ -1,48 +1,93 @@
-
-              <?php
-                /*
-                 * This is the default post format.
-                 *
-                 * So basically this is a regular post. if you don't want to use post formats,
-                 * you can just copy ths stuff in here and replace the post format thing in
-                 * single.php.
-                 *
-                 * The other formats are SUPER basic so you can style them as you like.
-                 *
-                 * Again, If you want to remove post formats, just delete the post-formats
-                 * folder and replace the function below with the contents of the "format.php" file.
-                */
-              ?>
-
-              <article id="post-<?php the_ID(); ?>" <?php post_class('cf'); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
+              <article id="post-<?php the_ID(); ?>" <?php post_class('masonry-entry cf'); ?>  role="article" itemscope itemtype="http://schema.org/BlogPosting">
 
                 <header class="article-header">
 
-                  <h1 class="entry-title single-title" itemprop="headline"><?php the_title(); ?></h1>
+                  <?php if (is_archive() || is_tax() ) { ?>
+                    <div class="masonry-thumbnail">
 
-                  <p class="byline vcard">
-                    <?php printf( __( 'Posted <time class="updated" datetime="%1$s" pubdate>%2$s</time> by <span class="author">%3$s</span>', 'bonestheme' ), get_the_time('Y-m-j'), get_the_time(get_option('date_format')), get_the_author_link( get_the_author_meta( 'ID' ) )); ?>
-                  </p>
+                  <?php 
+                  // sub-cat links on top of images
+                    if( (is_category() || is_tax()) && !is_tax( 'post_format', 'post-format-video') ) { 
+                      $current_cat_id = get_query_var('cat');
+                      if (!category_has_parent($current_cat_id)) {
+                        echo '<ul class="subcat-list post-subcats">';
+                      wp_list_categories('orderby=name&title_li=&use_desc_for_title=0&show_option_none=&child_of=' . $current_cat_id );
+                      echo '</ul>';
+                    }
+                  }
+                  ?>
 
+                    <?php if( is_archive() || is_tax() ) { ?>
+
+                          <?php if ( has_post_thumbnail() ) { ?>
+                            <a href="<?php the_permalink(' ') ?>" title="<?php the_title(); ?>"><?php the_post_thumbnail('masonry-thumb'); ?></a>
+                          <?php } elseif ( function_exists('get_video_thumbnail') && get_video_thumbnail() ) {
+                              $video_thumbnail = get_video_thumbnail(); ?>
+                              <a href="<?php the_permalink(' ') ?>" title="<?php the_title(); ?>"><img src="<?php echo $video_thumbnail; ?>" /></a>
+                           <?php } ?>
+                        
+                    <?php } ?>
+                  </div>
+                    <h3><a href="<?php the_permalink(' ') ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h3>
+                  <?php } elseif ( is_single() ) { // is single 
+                    // list of cats
+                    echo '<ul class="subcat-list">';
+                    $categories = get_the_category();
+                    //$separator = '</li><li>';
+                    $output = '';
+                    if($categories){
+                      foreach($categories as $category) {
+                        $output .= '<li><a href="'.get_category_link( $category->term_id ).'" title="' . esc_attr( sprintf( __( "View all posts in %s" ), $category->name ) ) . '">'.$category->cat_name.'</a></li>';
+                      }
+                    //echo trim($output, $separator);
+                    echo $output;
+                    echo '</ul>';
+                    } else {
+                      //do nothing
+                    }
+                      //wp_list_categories('orderby=name&title_li=&use_desc_for_title=0&show_option_none=&depth=2&hierarchical=0' );
+                      
+                      ?>
+                    <h1 class="entry-title"><?php the_title(); ?></h1>
+                    <div class="masonry-thumbnail">
+
+                      <?php if( is_archive() || is_tax() ) { ?>
+
+                            <?php if ( has_post_thumbnail() ) { ?>
+                              <a href="<?php the_permalink(' ') ?>" title="<?php the_title(); ?>"><?php the_post_thumbnail('masonry-thumb'); ?></a>
+                            <?php } elseif ( function_exists('get_video_thumbnail') && get_video_thumbnail() ) {
+                                $video_thumbnail = get_video_thumbnail(); ?>
+                                <a href="<?php the_permalink(' ') ?>" title="<?php the_title(); ?>"><img src="<?php echo $video_thumbnail; ?>" /></a>
+                             <?php } ?>
+                          
+                      <?php } ?>
+                    </div>
+                  <?php } ?>
+                  
                 </header> <?php // end article header ?>
 
                 <section class="entry-content cf" itemprop="articleBody">
-                  <?php
-                    // the content (pretty self explanatory huh)
-                    the_content();
 
-                    /*
-                     * Link Pages is used in case you have posts that are set to break into
-                     * multiple pages. You can remove this if you don't plan on doing that.
-                     *
-                     * Also, breaking content up into multiple pages is a horrible experience,
-                     * so don't do it. While there are SOME edge cases where this is useful, it's
-                     * mostly used for people to get more ad views. It's up to you but if you want
-                     * to do it, you're wrong and I hate you. (Ok, I still love you but just not as much)
-                     *
-                     * http://gizmodo.com/5841121/google-wants-to-help-you-avoid-stupid-annoying-multiple-page-articles
-                     *
-                    */
+                  <?php if ( is_single() && has_post_thumbnail() ) { ?>
+                        <div class="masonry-thumbnail">
+                            <a href="<?php the_permalink(' ') ?>" title="<?php the_title(); ?>"><?php the_post_thumbnail('masonry-thumb'); ?></a>
+                        </div><!--.masonry-thumbnail-->
+                        <?php } elseif ( is_single() && function_exists('get_video_thumbnail') && get_video_thumbnail() ) {
+                            $video_thumbnail = get_video_thumbnail();   
+                            ?>
+                            <div class="masonry-thumbnail">
+                            <a href="<?php the_permalink(' ') ?>" title="<?php the_title(); ?>"><img src="<?php echo $video_thumbnail; ?>" /></a>
+                        </div><!--.masonry-thumbnail-->
+                  <?php } ?>
+
+                  <?php
+                   // if on an archive, taxonomy or post-format archive page, show excerpt, otherwise full content
+                    if(is_archive()) {
+                      the_excerpt();
+                    } else {
+                      the_content();
+                    }
+
                     wp_link_pages( array(
                       'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'bonestheme' ) . '</span>',
                       'after'       => '</div>',
@@ -52,14 +97,25 @@
                   ?>
                 </section> <?php // end article section ?>
 
-                <footer class="article-footer">
+                <?php if (is_archive() || is_tax() ) { ?>
 
-                  <?php printf( __( 'Filed under: %1$s', 'bonestheme' ), get_the_category_list(', ') ); ?>
+                  <div class="byline cf"><?php
+  comments_popup_link( 'Comment', '1 comment', '% comments', 'comments-link', 'Comments off');
+?> | <?php printf( get_the_time(get_option('date_format')) . ', ' . get_the_time('g:i a')); ?></div>
 
-                  <?php the_tags( '<p class="tags"><span class="tags-title">' . __( 'Tags:', 'bonestheme' ) . '</span> ', ', ', '</p>' ); ?>
+                <?php } else { ?>
 
-                </footer> <?php // end article footer ?>
+                    <footer class="article-footer">
 
-                <?php comments_template(); ?>
+                    <?php printf( __( 'Filed under: %1$s', 'bonestheme' ), get_the_category_list(', ') ); ?>
+
+                    <?php the_tags( '<p class="tags"><span class="tags-title">' . __( 'Tags:', 'bonestheme' ) . '</span> ', ', ', '</p>' ); ?>
+
+                    <?php printf( get_the_time(get_option('date_format')) . ', ' . get_the_time('g:i a')); ?>
+
+                  </footer> <?php // end article footer ?>
+
+                  <?php comments_template(); ?>
+                <?php } ?>
 
               </article> <?php // end article ?>

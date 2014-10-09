@@ -335,6 +335,10 @@ h6 {
 	font-family:$subtitle-family;
 	font-size:1.3em;
 	font-weight:300;
+
+	p {
+		margin-bottom: 1em;
+	}
 }
 
 p {
@@ -410,6 +414,8 @@ ul.tags {
 	}
 }
 .masonry-thumbnail {
+	position: relative;
+	z-index:1;
 	img {
 		-webkit-box-shadow: 4px 4px 0 0;
 		box-shadow: 4px 4px 0 0;
@@ -444,17 +450,39 @@ ul.tags {
 
 
 .format-video {
-	background-color:$white;
+	background-color:$yellow;
+
+	.single & {
+		background-color:$yellow;
+		background: -moz-linear-gradient(top,  rgba(249,239,204,1) 0%, rgba(252,248,233,0.35) 23%, rgba(255,255,255,0.91) 41%, rgba(255,255,255,1) 44%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(249,239,204,1)), color-stop(23%,rgba(252,248,233,0.35)), color-stop(41%,rgba(255,255,255,0.91)), color-stop(44%,rgba(255,255,255,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(249,239,204,1) 0%,rgba(252,248,233,0.35) 23%,rgba(255,255,255,0.91) 41%,rgba(255,255,255,1) 44%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(249,239,204,1) 0%,rgba(252,248,233,0.35) 23%,rgba(255,255,255,0.91) 41%,rgba(255,255,255,1) 44%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(249,239,204,1) 0%,rgba(252,248,233,0.35) 23%,rgba(255,255,255,0.91) 41%,rgba(255,255,255,1) 44%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(249,239,204,1) 0%,rgba(252,248,233,0.35) 23%,rgba(255,255,255,0.91) 41%,rgba(255,255,255,1) 44%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9efcc', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+	}
+	
+
+	h3 {
+		font-size: 1.8em;
+		a, a:visited {
+			color:$orange;
+		}
+	}
 
 	.masonry-thumbnail {
 		position:relative;
 
+		img {
+			color: $brown;
+		}
 		
-		a {
+		& > a, & > a:visited {
 			display: block;
 			position:relative;
 		}
-		a:after {
+		& > a:after {
 		    content: "";
 		    position: absolute;
 		    top: 35%;
@@ -467,6 +495,7 @@ ul.tags {
 		}
 	}
 }
+
 .masonry-entry {
 	width:100%;
 	border:1px solid $light-gray;
@@ -477,6 +506,30 @@ ul.tags {
 
 	@include breakpoint(phablet) {
 		width:50%;
+
+		.single-post & {
+			width:100%;
+		}
+	}
+}
+
+.format-aside, .single-format-standard {
+	.masonry-thumbnail {
+		width:45%;
+		margin-left:2%;
+		float:right;
+	}
+}
+
+.archive.term-post-format-aside  {
+	.cat-title {
+		display: none;
+	}
+}
+
+.archive.term-post-format-video {
+	.kltv-exclusive {
+		display: none;
 	}
 }
 
@@ -489,7 +542,106 @@ ul.tags {
 	time {}
 }
 
+.subcat-list {
+	list-style: none;
+	margin:0 0 1em 1.5em;
 
+	.single & {
+		margin-left:0;
+	}
+
+	li {
+		display: inline-block;
+		background-color:$green;
+		margin-bottom: 4px;
+
+		&:nth-of-type(2) {
+			background-color:$orange;
+		}
+
+		&:nth-of-type(3) {
+			background-color:$purple;
+		}
+
+		&:nth-of-type(4) {
+			background-color:darken($orange, 10%);
+		}
+
+		&:nth-of-type(5) {
+			background-color:$blue;
+		}
+
+		&:nth-of-type(6) {
+			background-color:lighten($green, 5%);
+		}
+
+		&:nth-of-type(7) {
+			background-color:lighten($purple, 10%);
+		}
+
+		&:nth-of-type(8) {
+			background-color:darken($blue, 5%);
+		}
+
+		&:nth-of-type(9) {
+			background-color:$green;
+		}
+		&:nth-of-type(10) {
+			background-color:$orange;
+		}
+
+		&:nth-of-type(11) {
+			background-color:$purple;
+		}
+
+		&:nth-of-type(12) {
+			background-color:darken($orange, 10%);
+		}
+
+		&:nth-of-type(13) {
+			background-color:$blue;
+		}
+
+		&:nth-of-type(14) {
+			background-color:lighten($green, 5%);
+		}
+
+		&:nth-of-type(15) {
+			background-color:lighten($purple, 10%);
+		}
+
+		&:nth-of-type(16) {
+			background-color:darken($blue, 5%);
+		}
+
+		.single & {
+			margin-right: 4px;
+		}
+	}
+	a, a:visited {
+		display: inline-block;
+		color:$white;
+		padding:.2em .5em;
+		font-size: .9em;
+		font-family:$subtitle-family;
+		text-transform: uppercase;
+
+	}
+	
+	&.post-subcats {
+		position:absolute;
+		bottom: 1.5em;
+		z-index: 100;
+		margin:0;
+		li {
+			display: block;
+			float:left;
+			clear:left;
+		}
+	}
+
+
+}
 
 /* entry content */
 .entry-content {
