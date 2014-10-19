@@ -69,14 +69,6 @@ function bones_custom_image_sizes( $sizes ) {
     ) );
 }
 
-/*
-The function above adds the ability to use the dropdown menu to select
-the new images sizes you have just created from within the media manager
-when you add media to your content blocks. If you add more image sizes,
-duplicate one of the lines in the array and name it according to your
-new image size.
-*/
-
 /************* ACTIVE SIDEBARS ********************/
 
 // Sidebars & Widgetizes Areas
@@ -204,7 +196,7 @@ add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 function my_acf_admin_enqueue_scripts() {
  wp_enqueue_script( 'my-acf-script', get_template_directory_uri() . '/library/js/acf.js', 'acf-input', '1.0', true );
 }
-add_action('acf/input/admin_enqueue_scripts', 'my_acf_admin_enqueue_scripts');
+//add_action('acf/input/admin_enqueue_scripts', 'my_acf_admin_enqueue_scripts');
 
 // RENAME POST FORMATS
 
@@ -241,7 +233,7 @@ function live_rename_formats() {
 add_action('admin_head', 'live_rename_formats');
 
 // REMOVE 'TYPE' FROM POST-FORMAT SLUGS
-add_action( 'init', 'mysite_change_taxonomy_permalinks', 1 );
+//add_action( 'init', 'mysite_change_taxonomy_permalinks', 1 );
 function mysite_change_taxonomy_permalinks() {
   // changing the post_format permastruct
    $taxonomy = 'post_format';
@@ -274,10 +266,10 @@ function my_get_post_format_slugs() {
 }
 
 /* Remove core WordPress filter. */
-remove_filter( 'term_link', '_post_format_link', 10 );
+//remove_filter( 'term_link', '_post_format_link', 10 );
 
 /* Add custom filter. */
-add_filter( 'term_link', 'my_post_format_link', 10, 3 );
+//add_filter( 'term_link', 'my_post_format_link', 10, 3 );
 
 /**
  * Filters post format links to use a custom slug.
@@ -307,10 +299,10 @@ function my_post_format_link( $link, $term, $taxonomy ) {
 }
 
 /* Remove the core WordPress filter. */
-remove_filter( 'request', '_post_format_request' );
+//remove_filter( 'request', '_post_format_request' );
 
 /* Add custom filter. */
-add_filter( 'request', 'my_post_format_request' );
+//add_filter( 'request', 'my_post_format_request' );
 
 /**
  * Changes the queried post format slug to the slug saved in the database.

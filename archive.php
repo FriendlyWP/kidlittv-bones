@@ -7,6 +7,10 @@
 						<div id="main" class="main-content cf" role="main">
 
 							<header class="page-header">
+								<?php if ( function_exists('yoast_breadcrumb') ) {
+								yoast_breadcrumb('<p id="breadcrumbs">','</p>');
+							} ?>
+							
 								<?php if (is_category()) { ?>
 									<h1 class="page-title">
 										<?php single_cat_title(); ?>
@@ -50,7 +54,7 @@
 								    		<h1 class="page-title">
 								    	    		KLTV Exclusives
 								        	</h1>
-								<?php } elseif ( is_tax() ) { ?>
+								<?php } elseif ( is_tax() || is_category() ) { ?>
 								    	<?php 
 								    	$term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) ); 
 								    	$title = $term->name; ?>
@@ -83,7 +87,10 @@
 							<?php 
 
 							if ( !(is_tax( 'post_format', 'post-format-aside' ) || is_tax( 'post_format', 'post-format-video' ) ) ) {
-								//
+								$current_cat_id = get_query_var('cat');
+											echo '<ul class="subcat-list">';
+											wp_list_categories('orderby=name&title_li=&use_desc_for_title=0&show_option_none=&child_of=' . $current_cat_id );
+											echo '</ul>';
 							}
 							?>
 								<div id="masonry-loop">

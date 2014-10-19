@@ -124,20 +124,24 @@ function bones_scripts_and_styles() {
 
 		// INLINE STYLES FOR TAG BACKGROUND COLORS BASED ON ACF
 	 //$css = "ul.tags .app { background-color:#000000; }";
-	 $posttags = get_tags();
-	 $css = '';
-	    if ($posttags) {
-	      
-	      foreach($posttags as $tag) {
-	        $tag_color = get_field('tag_color', 'post_tag_' . $tag->term_id);
-	        $tag_slug = $tag->slug;
-	        if ($tag_color) {
-	        	$css .= 'ul.tags .' . $tag_slug . '  { background-color : ' . $tag_color . "; }\r\n";	
-	        }
-	      }
-	    } 
 
-    wp_add_inline_style( 'bones-stylesheet', $css ); 
+	if (function_exists('get_field')) {
+		$posttags = get_tags();
+		 $css = '';
+		    if ($posttags) {
+		      
+		      foreach($posttags as $tag) {
+		        $tag_color = get_field('tag_color', 'post_tag_' . $tag->term_id);
+		        $tag_slug = $tag->slug;
+		        if ($tag_color) {
+		        	$css .= 'ul.tags .' . $tag_slug . '  { background-color : ' . $tag_color . "; }\r\n";	
+		        }
+		      }
+		    } 
+
+	    wp_add_inline_style( 'bones-stylesheet', $css ); 
+	}
+	 
 
 		// enqueue styles and scripts
 		wp_enqueue_script( 'bones-modernizr' );
@@ -331,7 +335,3 @@ function bones_excerpt_more($more) {
 	// edit here if you like
 	return '...  <a class="excerpt-read-more" href="'. get_permalink($post->ID) . '" title="'. __( 'Read ', 'bonestheme' ) . get_the_title($post->ID).'">'. __( 'Read more &raquo;', 'bonestheme' ) .'</a>';
 }
-
-
-
-?>

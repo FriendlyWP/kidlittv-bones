@@ -23,21 +23,29 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7d3a9cc7', e
 }
 
 .wrap {
-	width: 96%;
+	width: 94%;
 	margin: 0 auto;
 	padding:0 1.5em;
 
 
+	@include breakpoint(phablet) {
+		width: 600px;
+	}
+
 	@include breakpoint(tablet) {
-		max-width: 761px;
+		width: 800px;
 	}
 
 	@include breakpoint(laptop) {
-		max-width: 1030px;
+		width: 1004px;
+	}
+
+	@include breakpoint(desktop) {
+		width: 1100px;
 	}
 
 	@include breakpoint(tv) {
-		max-width: 1300px;
+		width: 1250px;
 	}
 }
 
@@ -63,9 +71,29 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9efcc', end
 		background-color:$purple;
 		position: relative;
 		left:-5px;
-		max-width: 1310px;
 		padding-right:10px;
 		/* box-shadow: 0 4px 0 0 lighten($purple, 20%);*/
+
+		@include breakpoint(phablet) {
+			width: 610px;
+		}
+
+		@include breakpoint(tablet) {
+			width: 810px;
+		}
+
+		@include breakpoint(laptop) {
+			width: 1014px;
+		}
+
+		@include breakpoint(desktop) {
+			width: 1110px;
+		}
+
+		@include breakpoint(tv) {
+			width: 1260px;
+		}
+
 
 		&:before {
 			content: ' ';
@@ -111,32 +139,90 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9efcc', end
 	background-color:$purple;
 	position: relative;
 	left:-1px;
-	max-width: 1320px;
 	padding-right:10px;
 	padding:1.5em;
 	min-height:150px;
 	z-index:2;
 	border-right: 30px solid darken($purple, 18%);
+
+	@include breakpoint(phablet) {
+			width: 620px;
+		}
+
+		@include breakpoint(tablet) {
+			width: 820px;
+		}
+
+		@include breakpoint(laptop) {
+			width: 1024px;
+		}
+
+		@include breakpoint(desktop) {
+			width: 1120px;
+		}
+
+		@include breakpoint(tv) {
+			width: 1270px;
+		}
 }
 .footer-top {
 	height:1.5em;
 	background-color:$purple;
 	position: relative;
 	left:-5px;
-	max-width: 1311px;
+	
 	padding-right:10px;
 	border-right: 21px solid $orange;
 	z-index:1;
+
+	@include breakpoint(phablet) {
+			width: 611px;
+		}
+
+		@include breakpoint(tablet) {
+			width: 811px;
+		}
+
+		@include breakpoint(laptop) {
+			width: 1015px;
+		}
+
+		@include breakpoint(desktop) {
+			width: 1111px;
+		}
+
+		@include breakpoint(tv) {
+			width: 1261px;
+		}
 }
 .footer-swipe {
 	position:relative;
 	height:5px;
 	left:-5px;
 	padding-right:10px;
-	max-width: 1310px;
 	border-right: 22px solid $orange;
 	background-color: $light-gray;
 	z-index:10;
+
+	@include breakpoint(phablet) {
+			width: 610px;
+		}
+
+		@include breakpoint(tablet) {
+			width: 810px;
+		}
+
+		@include breakpoint(laptop) {
+			width: 1014px;
+		}
+
+		@include breakpoint(desktop) {
+			width: 1110px;
+		}
+
+		@include breakpoint(tv) {
+			width: 1260px;
+		}
 
 	&:after {
 			content: ' ';
@@ -163,9 +249,28 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9efcc', end
 		background-color:$white;
 		position: relative;
 		left:-10px;
-		max-width: 1320px;
 		line-height:1.5em;
 		height:50px;
+
+		@include breakpoint(phablet) {
+			width: 620px;
+		}
+
+		@include breakpoint(tablet) {
+			width: 820px;
+		}
+
+		@include breakpoint(laptop) {
+			width: 1024px;
+		}
+
+		@include breakpoint(desktop) {
+			width: 1120px;
+		}
+
+		@include breakpoint(tv) {
+			width: 1270px;
+		}
 		
 
 		&:before {
@@ -499,10 +604,12 @@ ul.tags {
 .masonry-entry {
 	width:100%;
 	border:1px solid $light-gray;
-	margin-left:-1px;
+	margin-right:-1px;
 	margin-bottom:-1px;
-	margin-top:-1px;
+	
 	padding:1.5em;
+
+
 
 	@include breakpoint(phablet) {
 		width:50%;

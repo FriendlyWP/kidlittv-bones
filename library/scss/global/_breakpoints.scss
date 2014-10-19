@@ -3,8 +3,8 @@ Breakpoints
 *********************/
 /* usage: @include breakpoint(tablet) { // your styles here } */
  @mixin breakpoint($point) {
-  @if $point == tv { // 1300px
-     @media (min-width: 81.25em) { @content ; }
+  @if $point == tv { // 1280px
+     @media (min-width: 80em) { @content ; }
   }
    @else if $point == desktop { // 1120px
      @media (min-width: 70em) { @content ; }
