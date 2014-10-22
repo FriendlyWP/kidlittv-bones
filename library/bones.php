@@ -233,7 +233,7 @@ function bones_theme_support() {
 	// adding post format support
 	add_theme_support( 'post-formats',
 		array(
-			'aside',             // RENAMED TO 'GRIBBLES SCRIBBLES'
+			//'aside',             // RENAMED TO 'GRIBBLES SCRIBBLES'
 			'video',             // RENAMED TO KLTV EXCLUSIVE
 			//'audio',             // audio
 			//'chat'               // chat transcript

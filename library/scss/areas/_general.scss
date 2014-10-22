@@ -94,7 +94,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9efcc', end
 			width: 1260px;
 		}
 
-
 		&:before {
 			content: ' ';
 			position: absolute;
@@ -440,9 +439,10 @@ h6 {
 	font-family:$subtitle-family;
 	font-size:1.3em;
 	font-weight:300;
+	margin-bottom:1em;
 
 	p {
-		margin-bottom: 1em;
+		margin-bottom: 0;
 	}
 }
 
@@ -554,7 +554,7 @@ ul.tags {
 
 
 
-.format-video {
+.posttype-kltv-exclusives {
 	background-color:$yellow;
 
 	.single & {
@@ -576,6 +576,10 @@ ul.tags {
 		}
 	}
 
+	
+}
+
+.posttype-kltv-exclusives, .format-video {
 	.masonry-thumbnail {
 		position:relative;
 
@@ -590,8 +594,8 @@ ul.tags {
 		& > a:after {
 		    content: "";
 		    position: absolute;
-		    top: 35%;
-		    left:42%;
+		    top: 33%;
+		    left:41%;
 		    width: 65px;
 		    height: 65px;
 		    z-index: 100;
@@ -620,7 +624,7 @@ ul.tags {
 	}
 }
 
-.format-aside, .single-format-standard {
+.format-aside, .single-format-standard, .posttype-gribbles-scribbles {
 	.masonry-thumbnail {
 		width:45%;
 		margin-left:2%;
@@ -628,13 +632,13 @@ ul.tags {
 	}
 }
 
-.archive.term-post-format-aside  {
+.archive.term-post-format-aside,.archive.term-gribbles-scribbles  {
 	.cat-title {
 		display: none;
 	}
 }
 
-.archive.term-post-format-video {
+.archive.term-post-format-video, .archive.term-kltv-exclusives {
 	.kltv-exclusive {
 		display: none;
 	}

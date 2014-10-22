@@ -2,32 +2,33 @@
 
                 <header class="article-header">
 
-                  <?php if (is_archive() || is_tax() ) { ?>
-                    <div class="masonry-thumbnail">
+                  <?php if ( !is_single() ) {
 
-                  <?php 
-                  // sub-cat links on top of images
-                    if( (is_category() || is_tax()) && !is_tax( 'post_format', 'post-format-video') ) { 
-                      $current_cat_id = get_query_var('cat');
-                      if (!category_has_parent($current_cat_id)) {
+                    if (has_post_thumbnail() ) { ?>
+                      <div class="masonry-thumbnail">
+
+                      <?php 
+                       $category = get_the_category(); 
+                      if($category[0]) {
                         echo '<ul class="subcat-list post-subcats">';
-                      wp_list_categories('orderby=name&title_li=&use_desc_for_title=0&show_option_none=&child_of=' . $current_cat_id );
-                      echo '</ul>';
-                    }
-                  }
-                  ?>
+                        foreach((get_the_category()) as $category) { 
+                          if ( $category->parent !== 0 ) {
+                          echo '<li><a href="' . get_category_link($category->term_id ) . '">' . $category->cat_name . '</a></li>';   
+                           }
+                        } 
+                        echo '</ul>';
+                      }
+                      ?>
 
-                    <?php if( is_archive() || is_tax() ) { ?>
-
-                          <?php if ( has_post_thumbnail() ) { ?>
-                            <a href="<?php the_permalink(' ') ?>" title="<?php the_title(); ?>"><?php the_post_thumbnail('masonry-thumb'); ?></a>
-                          <?php } elseif ( function_exists('get_video_thumbnail') && get_video_thumbnail() ) {
-                              $video_thumbnail = get_video_thumbnail(); ?>
-                              <a href="<?php the_permalink(' ') ?>" title="<?php the_title(); ?>"><img src="<?php echo $video_thumbnail; ?>" /></a>
-                           <?php } ?>
+                            <?php if ( has_post_thumbnail() ) { ?>
+                              <a href="<?php the_permalink(' ') ?>" title="<?php the_title(); ?>"><?php the_post_thumbnail('masonry-thumb'); ?></a>
+                            <?php } elseif ( function_exists('get_video_thumbnail') && get_video_thumbnail() ) {
+                                $video_thumbnail = get_video_thumbnail(); ?>
+                                <a href="<?php the_permalink(' ') ?>" title="<?php the_title(); ?>"><img src="<?php echo $video_thumbnail; ?>" /></a>
+                             <?php } ?>
                         
-                    <?php } ?>
                   </div>
+                  <?php } ?>
                     <h3><a href="<?php the_permalink(' ') ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h3>
                   <?php } elseif ( is_single() ) { // is single 
                     // list of cats

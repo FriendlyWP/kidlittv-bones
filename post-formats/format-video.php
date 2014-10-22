@@ -1,21 +1,25 @@
 
-
               <article id="post-<?php the_ID(); ?>" <?php post_class('masonry-entry cf'); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
-
-                <h4 class="kltv-exclusive"><a href="<?php echo get_post_format_link('video'); ?>">KLTV Exclusive</a></h4>
+                <?php if( has_term( 'kltv-exclusives', 'posttype' ) ) { ?>
+                  <h4 class="kltv-exclusive"><a href="<?php echo get_term_link( 'kltv-exclusives', 'posttype' ); ?>">KLTV Exclusive</a></h4>
+                <?php } ?>
 
                 <div class="masonry-thumbnail">
-                  <?php if (is_archive() || is_tax() ) { ?>
+                  <?php if ( is_archive() || is_tax() ) { ?>
                     <?php 
-                    // sub-cat links on top of images
-                      if( (is_category() || is_tax()) && !is_tax( 'post_format', 'post-format-video') ) { 
-                        $current_cat_id = get_query_var('cat');
-                        if (!category_has_parent($current_cat_id)) {
-                          echo '<ul class="subcat-list post-subcats">';
-                        wp_list_categories('orderby=name&title_li=&use_desc_for_title=0&show_option_none=&child_of=' . $current_cat_id );
+                   
+                      $category = get_the_category(); 
+                      if($category[0]) {
+                        echo '<ul class="subcat-list post-subcats">';
+                        foreach((get_the_category()) as $category) { 
+                          if ( $category->parent !== 0 ) {
+                          echo '<li><a href="' . get_category_link($category->term_id ) . '">' . $category->cat_name . '</a></li>';   
+                           }
+        
+                        } 
                         echo '</ul>';
                       }
-                    }
+                    
                     ?>
                       <?php if ( has_post_thumbnail() ) { ?>
                         <a href="<?php the_permalink(' ') ?>" title="<?php the_title(); ?>"><?php the_post_thumbnail('masonry-thumb'); ?></a>

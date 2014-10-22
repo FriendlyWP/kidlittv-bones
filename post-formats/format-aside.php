@@ -4,7 +4,7 @@
 
                 <header class="article-header">
 
-                      <h4 class="cat-title"><a href="<?php echo get_post_format_link('aside'); ?>">Gribble's Scribbles</a></h4>
+                      <h4 class="cat-title"><a href="<?php echo get_term_link( 'gribbles-scribbles', 'posttype' ); ?>">Gribble's Scribbles</a></h4>
                   
 
                    <?php if (is_archive() || is_tax() ) { ?>
@@ -12,17 +12,17 @@
                   <?php } else { ?>
                     <?php 
                       // list of cats
-                      echo '<ul class="subcat-list">';
-                      $categories = get_the_category();
-                      //$separator = '</li><li>';
-                      $output = '';
-                      if($categories) {
-                        foreach($categories as $category) {
-                          $output .= '<li><a href="'.get_category_link( $category->term_id ).'" title="' . esc_attr( sprintf( __( "View all posts in %s" ), $category->name ) ) . '">'.$category->cat_name.'</a></li>';
-                        }
+                       $category = get_the_category(); 
+                      if($category[0]) {
+                        echo '<ul class="subcat-list post-subcats">';
+                        foreach((get_the_category()) as $category) { 
+                          if ( $category->parent !== 0 ) {
+                          echo '<li><a href="' . get_category_link($category->term_id ) . '">' . $category->cat_name . '</a></li>';   
+                           }
+        
+                        } 
+                        echo '</ul>';
                       }
-                      echo $output;
-                      echo '</ul>';
                     ?>
                     <h1 class="entry-title"><?php the_title(); ?></h1>
                   <?php } ?>
