@@ -9,13 +9,14 @@ body {
 	line-height: 1.5;
 	color: $text-color;
   	-webkit-font-smoothing: antialiased;
-  	background: -moz-linear-gradient(top,  rgba(58,156,199,0.49) 0%, rgba(165,218,234,0.49) 100%); /* FF3.6+ */
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(58,156,199,0.49)), color-stop(100%,rgba(165,218,234,0.49))); /* Chrome,Safari4+ */
-background: -webkit-linear-gradient(top,  rgba(58,156,199,0.49) 0%,rgba(165,218,234,0.49) 100%); /* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(top,  rgba(58,156,199,0.49) 0%,rgba(165,218,234,0.49) 100%); /* Opera 11.10+ */
-background: -ms-linear-gradient(top,  rgba(58,156,199,0.49) 0%,rgba(165,218,234,0.49) 100%); /* IE10+ */
-background: linear-gradient(to bottom,  rgba(58,156,199,0.49) 0%,rgba(165,218,234,0.49) 100%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7d3a9cc7', endColorstr='#7da5daea',GradientType=0 ); /* IE6-9 */
+  	background: -moz-linear-gradient(top,  rgba(71,161,199,0.79) 0%, rgba(174,229,246,0.78) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(71,161,199,0.79)), color-stop(100%,rgba(174,229,246,0.78))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  rgba(71,161,199,0.79) 0%,rgba(174,229,246,0.78) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  rgba(71,161,199,0.79) 0%,rgba(174,229,246,0.78) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  rgba(71,161,199,0.79) 0%,rgba(174,229,246,0.78) 100%); /* IE10+ */
+background: linear-gradient(to bottom,  rgba(71,161,199,0.79) 0%,rgba(174,229,246,0.78) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c947a1c7', endColorstr='#c7aee5f6',GradientType=0 ); /* IE6-9 */
+
 }
 
 .hide {
@@ -944,13 +945,6 @@ Align all images center for smallest screens
 	}
 }
 
-/* gallery caption styles */
-.gallery-caption {}
-
-.size-full {}
-.size-large {}
-.size-medium {}
-.size-thumbnail {}
 
 // the tag output
 .tags {

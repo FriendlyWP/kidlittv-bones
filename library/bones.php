@@ -109,10 +109,17 @@ function bones_scripts_and_styles() {
 		wp_enqueue_script('masonry');
     	wp_enqueue_style('masonry', get_stylesheet_directory_uri() .'/library/css/');
 
-    // comment reply script for threaded comments
-    if ( is_singular() AND comments_open() AND (get_option('thread_comments') == 1)) {
-		  wp_enqueue_script( 'comment-reply' );
-    }
+	    // comment reply script for threaded comments
+	    if ( is_singular() AND comments_open() AND (get_option('thread_comments') == 1)) {
+			  wp_enqueue_script( 'comment-reply' );
+	    }
+
+	    if ( is_page_template('tmpl-home.php') ) {
+				// Flexslider
+				wp_register_script( 'flexslider', get_stylesheet_directory_uri() . '/library/js/libs/FlexSlider/jquery.flexslider-min.js', array( 'jquery' ), '', false );
+				wp_enqueue_script('flexslider');
+				wp_enqueue_style( 'flexslider-css', get_stylesheet_directory_uri() . '/library/css/flexslider.css');
+		}
 
 		//adding scripts file in the footer
 		wp_register_script( 'bones-js', get_stylesheet_directory_uri() . '/library/js/scripts.js', array( 'jquery' ), '', true );
@@ -120,6 +127,11 @@ function bones_scripts_and_styles() {
 		// Dequeue WP-Columna stylesheet if that plugin is active and trying to enqueue the styles
 		if ( wp_style_is( 'wp-columna', $list = 'enqueued' )) {
 			wp_dequeue_style('wp-columna');	
+		}
+
+		// IF FONTAWESOME ISN'T ALREADY ENQUEUED, ENQUEUE IT
+		if ( !wp_style_is( 'fontawesome', $list = 'enqueued' )) {
+			wp_enqueue_style( 'fontawesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css');
 		}
 
 		// INLINE STYLES FOR TAG BACKGROUND COLORS BASED ON ACF
