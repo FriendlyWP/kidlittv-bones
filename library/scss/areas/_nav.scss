@@ -118,6 +118,11 @@ NAVIGATION STYLES
 	}
 }
 
+.nav-desc {
+	margin-bottom:1em;
+	display:inline-block;
+}
+
 
 .nav {
 	border-bottom: 0;
@@ -198,13 +203,13 @@ NAVIGATION STYLES
 			position: relative;
 
 			.sub-menu-content {
+				display: none;
 				border-top: .5em solid lighten($link-color, 15%);
 				border-bottom: .2em solid $link-color;
 				box-shadow: 0 .5em $light-gray;
-				background-color: lighten($link-color, 25%);
-				display: none;
-				padding:1em;
-				color:$white;
+				background-color: $pale-blue;
+				padding:1em 1.677em;
+				color:$blue;
 				position: absolute;
 				z-index: 8999;
 				text-align:left;
@@ -219,24 +224,32 @@ NAVIGATION STYLES
 				margin:0;
 				width:auto;
 				border-top: 0;
-				
 				text-align:left;
-				-webkit-column-count: 2;  -webkit-column-gap: 15px; /* Chrome, Safari 3 */
-			     -moz-column-count: 2;     -moz-column-gap: 15px; /* Firefox 3.5+ */
-			          column-count: 2;          column-gap: 15px; /* Opera 11+ */
+				-webkit-columns: 2;
+				-webkit-columns: 2;
+				-moz-columns: 2;
+				columns: 2;
+				-webkit-column-gap: 1em;
+				-moz-column-gap:1em;
+				column-gap: 1em;
 
 				li {
 					float:none;
 
-					a {
-						
+					a, a:visited {
+						color: $dark-blue;
+						font-weight:700;
 						border-right: 0;
 						display: block;
-						width: 180px;
+						width: auto;
 						text-transform: none;
+						padding:.2em .677em 0 0;
+						height: auto;
 
 						&:hover,
-						&:focus {}
+						&:focus { 
+							color: $bright-blue;
+						}
 
 						&:link {}
 					}
@@ -277,7 +290,7 @@ NAVIGATION STYLES
 			&:hover > .sub-menu-content {
 				display: block;
 				visibility: visible;
-				top:98%;
+				top:100%;
 				left:0;
 				@include transition(all .5s ease);
 			}

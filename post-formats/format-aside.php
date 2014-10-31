@@ -8,7 +8,7 @@
                       <h4 class="cat-title"><a href="<?php echo get_term_link( 'gribbles-scribbles', 'posttype' ); ?>">Gribble's Scribbles</a></h4>
                   
 
-                   <?php if (is_archive() || is_tax() ) { ?>
+                   <?php if (is_archive() || is_tax() || is_category() ) { ?>
                     <h3><a href="<?php the_permalink(' ') ?>"><?php the_title(); ?></a></h3>
                   <?php } else { ?>
                     <?php 
@@ -34,13 +34,13 @@
                         <div class="masonry-thumbnail">
                             <a href="<?php the_permalink(' ') ?>"><?php the_post_thumbnail('masonry-thumb', array( 'alt' =>  $alttext )); ?></a>
                         </div><!--.masonry-thumbnail-->
-                        <?php } elseif ( function_exists('get_video_thumbnail') && get_video_thumbnail() ) {
+                        <?php } /* elseif ( function_exists('get_video_thumbnail') && get_video_thumbnail() ) {
                             $video_thumbnail = get_video_thumbnail();   
                             ?>
                             <div class="masonry-thumbnail">
                             <a href="<?php the_permalink(' ') ?>"><img src="<?php echo $video_thumbnail; ?>" alt="<?php echo $alttext; ?>" /></a>
                         </div><!--.masonry-thumbnail-->
-                  <?php } ?>
+                  <?php } */  ?>
                   <?php
                     // if on an archive, taxonomy or post-format archive page, show excerpt, otherwise full content
                     if(is_archive()) {

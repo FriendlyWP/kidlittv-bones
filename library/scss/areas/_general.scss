@@ -39,7 +39,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c947a1c7', e
 
 	@include breakpoint(laptop) {
 		width: 1004px;
-	}
+	}	
 
 	@include breakpoint(desktop) {
 		width: 1100px;
@@ -1266,6 +1266,7 @@ FOOTER STYLES
 .smallplay {
 	position:relative;
 	display:inline-block;
+	display:block;
 
 	img {
 		line-height: 0;

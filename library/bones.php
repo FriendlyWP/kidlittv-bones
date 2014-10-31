@@ -106,8 +106,11 @@ function bones_scripts_and_styles() {
 		// ie-only style sheet
 		wp_register_style( 'bones-ie-only', get_stylesheet_directory_uri() . '/library/css/ie.css', array(), '' );
 
-		wp_enqueue_script('masonry');
-    	wp_enqueue_style('masonry', get_stylesheet_directory_uri() .'/library/css/');
+		if ( is_archive() || is_category() || is_tax() ) {
+			wp_enqueue_script('masonry');
+    		wp_enqueue_style('masonry', get_stylesheet_directory_uri() .'/library/css/');	
+		}
+		
 
 	    // comment reply script for threaded comments
 	    if ( is_singular() AND comments_open() AND (get_option('thread_comments') == 1)) {
@@ -194,24 +197,31 @@ function wpse115373_header_bg() {
     wp_add_inline_style( $handle, $css ); 
 }
 
-if ( ! function_exists( 'slug_masonry_init' )) :
-function slug_masonry_init() { ?>
-<script>
-    //set the container that Masonry will be inside of in a var
-    var container = document.querySelector('#masonry-loop');
-    //create empty var msnry
-    var msnry;
-    // initialize Masonry after all images have loaded
-    imagesLoaded( container, function() {
-        msnry = new Masonry( container, {
-            itemSelector: '.masonry-entry',
-        });
-    });
-</script>
-<?php }
 //add to wp_footer
 add_action( 'wp_footer', 'slug_masonry_init', 99 );
-endif; // ! slug_masonry_init exists
+if ( !function_exists( 'slug_masonry_init' ) ) {
+	function slug_masonry_init() { 
+		if ( is_archive() || is_category() || is_tax() ) {
+		?>
+	<script>
+	    //set the container that Masonry will be inside of in a var
+	    var container = document.querySelector('#masonry-loop');
+	    //create empty var msnry
+	    var msnry;
+	    // initialize Masonry after all images have loaded
+	    imagesLoaded( container, function() {
+	        msnry = new Masonry( container, {
+	            itemSelector: '.masonry-entry',
+	        });
+	    });
+	</script>
+	<?php }
+	 }
+	
+} // ! slug_masonry_init exists
+
+
+	
 
 /*********************
 THEME SUPPORT

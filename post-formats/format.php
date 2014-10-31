@@ -23,10 +23,10 @@
 
                             <?php if ( has_post_thumbnail() ) { ?>
                               <a href="<?php the_permalink(' ') ?>"><?php the_post_thumbnail('masonry-thumb', array( 'alt' =>  $alttext )); ?></a>
-                            <?php } elseif ( function_exists('get_video_thumbnail') && get_video_thumbnail() ) {
+                            <?php } /*elseif ( function_exists('get_video_thumbnail') && get_video_thumbnail() ) {
                                 $video_thumbnail = get_video_thumbnail(); ?>
                                 <a href="<?php the_permalink(' ') ?>"><img alt="<?php echo $alttext; ?>" src="<?php echo $video_thumbnail; ?>" /></a>
-                             <?php } ?>
+                             <?php } */ ?>
                         
                   </div>
                   <?php } ?>

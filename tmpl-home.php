@@ -33,11 +33,11 @@ get_header();
 		         					$exclusives_query->the_post(); 
 		         					echo '<li>';
 		         					if ( has_post_thumbnail() ) { 
-						                echo '<a class="smallplay" href="' . get_permalink('') . '">' .  get_the_post_thumbnail($exclusives_query->post->ID, 'masonry-thumb', array( 'alt' =>  $alttext )) . '</a>';
-						            } elseif ( function_exists('get_video_thumbnail') && get_video_thumbnail() ) {
+						                echo '<a class="smallplay" href="' . get_permalink('') . '">' .  get_the_post_thumbnail($exclusives_query->post->ID, 'tiny-thumb', array( 'alt' =>  $alttext )) . '</a>';
+						            } /*elseif ( function_exists('get_video_thumbnail') && get_video_thumbnail() ) {
 						                $video_thumbnail = get_video_thumbnail($exclusives_query->post->ID);   
 						                echo '<a class="smallplay" href="' . get_permalink('') . '"><img src="'. $video_thumbnail . '" alt="' . $alttext . '" /></a>';
-						            }
+						            } */
 						            echo '<h4><a href="'. get_permalink() . '">' . get_the_title() . '</a></h4>';
 		         					echo '</li>';
 		         				}
@@ -78,11 +78,11 @@ get_header();
 										setup_postdata($post);
 
 										if ( has_post_thumbnail() ) { 
-							                echo '<a class="smallplay" href="' . get_permalink('') . '">' .  get_the_post_thumbnail($post->ID, 'masonry-thumb', array( 'alt' =>  $alttext )) . '</a>';
-							            } elseif ( function_exists('get_video_thumbnail') && get_video_thumbnail() ) {
+							                echo '<a class="smallplay" href="' . get_permalink('') . '">' .  get_the_post_thumbnail($post->ID, 'tiny-thumb', array( 'alt' =>  $alttext )) . '</a>';
+							            } /*elseif ( function_exists('get_video_thumbnail') && get_video_thumbnail() ) {
 							                $video_thumbnail = get_video_thumbnail($post->ID);   
 							                echo '<a class="smallplay" href="' . get_permalink('') . '"><img src="'. $video_thumbnail . '" alt="' . $alttext . '" /></a>';
-							            }
+							            } */
 							            echo '<h4><a href="'. get_permalink() . '">' . get_the_title() . '</a></h4>';
 									}
 									echo '</li>';
@@ -127,11 +127,11 @@ get_header();
 										setup_postdata($post);
 
 										if ( has_post_thumbnail() ) { 
-							                echo '<a class="smallplay" href="' . get_permalink('') . '">' .  get_the_post_thumbnail($post->ID, 'masonry-thumb', array( 'alt' =>  $alttext )) . '</a>';
-							            } elseif ( function_exists('get_video_thumbnail') && get_video_thumbnail() ) {
+							                echo '<a class="smallplay" href="' . get_permalink('') . '">' .  get_the_post_thumbnail($post->ID, 'tiny-thumb', array( 'alt' =>  $alttext )) . '</a>';
+							            } /* elseif ( function_exists('get_video_thumbnail') && get_video_thumbnail() ) {
 							                $video_thumbnail = get_video_thumbnail($post->ID);   
 							                echo '<a class="smallplay" href="' . get_permalink('') . '"><img src="'. $video_thumbnail . '" alt="' . $alttext . '" /></a>';
-							            }
+							            } */
 							            echo '<h3 class="cattitle"><a href="' . get_category_link( $category->term_id ) . '">' . $category->name . '</a></h3>';
 							            echo '<h4><a href="'. get_permalink() . '">' . get_the_title() . '</a></h4>';
 									}
