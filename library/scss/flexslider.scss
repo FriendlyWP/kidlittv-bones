@@ -54,6 +54,9 @@ $disabled-color:    $light-gray;
 $text-color:        $black;
 $meta-color:        $gray;
 
+$title-family:    "Rancho", cursive;
+$subtitle-family: "Oswald", sans-serif;
+
 /* Browser Resets */
 .flex-container a:active, .flexslider a:active, .flex-container a:focus, .flexslider a:focus {
   outline: none;
@@ -69,17 +72,22 @@ $meta-color:        $gray;
 *********************************/
 
 .flexslider {
-  margin: 0;
+  margin: 0 auto 1.677em;
   padding: 0;
+  width:90%;
  
   .slides {
     > li {
       display: none;
       -webkit-backface-visibility: hidden;
+      margin-right: 2px;
     }
     img {
-      width: 100%;
-      display: block;
+      width: 55%;
+      display: inline-block;
+      float:left;
+      margin-bottom: 5px;
+      box-shadow:4px 4px rgba(58, 156, 199, 0.5);
     }
   }
 
@@ -88,6 +96,32 @@ $meta-color:        $gray;
       color:$white;
     }
   }
+}
+
+.slidetext {
+  width: 40%;
+  margin-right:2%;
+  display: inline-block;
+  float:right;
+  text-shadow: 1px 1px 3px $dark-blue;
+
+  a, a:visited {
+    color:$yellow;
+
+    &:hover {
+      color:$orange;
+    }
+  }
+
+}
+
+.slidecat {
+  font-family:$title-family; 
+  font-size:2em;
+}
+
+.slidemore {
+  font-weight: 400;
 }
 
 /* Hide the slides before the JS is loaded. Avoids image jumping */
@@ -127,9 +161,10 @@ html[xmlns] .slides {
 *********************************/
 
 .flexslider {
-  margin: 0 0 1.677em;
+ 
   padding:1em;
   position: relative;
+  box-shadow:5px 5px $light-gray;
   zoom: 1;
   background: -moz-linear-gradient(top,  rgba(92,171,204,0.79) 0%, rgba(182,229,242,0.78) 100%); /* FF3.6+ */
 background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(92,171,204,0.79)), color-stop(100%,rgba(182,229,242,0.78))); /* Chrome,Safari4+ */
@@ -138,8 +173,6 @@ background: -o-linear-gradient(top,  rgba(92,171,204,0.79) 0%,rgba(182,229,242,0
 background: -ms-linear-gradient(top,  rgba(92,171,204,0.79) 0%,rgba(182,229,242,0.78) 100%); /* IE10+ */
 background: linear-gradient(to bottom,  rgba(92,171,204,0.79) 0%,rgba(182,229,242,0.78) 100%); /* W3C */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c95cabcc', endColorstr='#c7b6e5f2',GradientType=0 ); /* IE6-9 */
-
-
 }
 
 .flex-viewport {
@@ -164,44 +197,32 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c95cabcc', e
 .flex-direction-nav {
   *height: 0;
   a {
-    width: 30px;
-    height: 30px;
-    margin: -20px 0 0;
+    width:25px;
+    height:78px;
     display: block;
-    background: url("/wp-content/themes/bones/library/js/libs/flexslider/images/bg_direction_nav.png") no-repeat 0 0;
+    margin:-25px 0 0;
     position: absolute;
     top: 50%;
     z-index: 10;
     cursor: pointer;
     text-indent: -9999px;
-    opacity: 0;
+    opacity: 1;
     transition: all .3s ease;
     
     &.flex-next {
-	    background-position: 100% 0;
-	    right: -36px;
+      background: url("../images/arrow-right.png") no-repeat 0 0;
+      right:-25px;
   	}
   	
   	&.flex-prev {
-    	left: -36px;
+    	background: url("../images/arrow-left.png") no-repeat 0 0;
+      left:-25px;
   	}
   	
   }
 }
 
-.flexslider:hover {
-  .flex-next {
-    opacity: 0.8;
-    right: 5px;
-  }
-  .flex-prev {
-    opacity: 0.8;
-    left: 5px;
-  }
-  .flex-next:hover, .flex-prev:hover {
-    opacity: 1;
-  }
-}
+
 
 .flex-direction-nav .flex-disabled {
   opacity: .3!important;

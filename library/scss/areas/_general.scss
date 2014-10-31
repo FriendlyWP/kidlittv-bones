@@ -1101,3 +1101,303 @@ FOOTER STYLES
 	}
 }
 
+
+.kltv-featurebox {
+	position: relative;
+	padding:3em 1.677em 1.677em;
+	margin-top:50px;
+	background: $yellow url('../images/bg-colored-line.jpg') top repeat-x;
+	border:1px solid $light-gray;
+	
+
+	.kltvtitle {
+		position:absolute;
+		top: -28px;
+		left:20px;
+		width:272px;
+		height:60px;
+		font-size: 1.8rem;
+		font-family: $title-family;
+		background: transparent url('../images/bg-kltv-featurebox-h2.png') no-repeat;
+		
+		a, a:visited {
+			color:$white;
+			display: inline-block;
+			padding:15px 0 0 85px;
+		}
+	}
+
+	ul {
+		list-style: none;
+		margin:0;
+	}
+
+	li {
+		display: inline-block;
+		width:22.7%;
+		margin-right:3%;
+		vertical-align: top;
+
+		&:nth-of-type(4n) {
+			margin-right:0;
+		}
+	}
+
+	a, a:visited {
+		color:$orange;
+		line-height: 1.1em;
+		position: relative;
+	}
+
+	
+	img {
+		box-shadow: 3px 3px $brown;
+	}
+}
+
+.latestfromeach {
+
+	img {
+		box-shadow: 3px 3px $light-gray;
+	}
+	ul {
+		list-style: none;
+		margin:0;
+	}
+
+	li {
+		display: inline-block;
+		width:50%;
+		padding:1em 1.677em;
+		border:1px solid $light-gray;
+		border-top: none;
+		vertical-align: top;
+		min-height: 200px;
+
+
+		&:nth-of-type(2n) {
+			border-left:none;
+
+			.cattitle {
+				a, a:visited {
+					color:$orange;
+				}
+			}
+		}
+
+		&:nth-of-type(3) {
+
+			.cattitle {
+				a, a:visited {
+					color:$green;
+				}
+			}
+		}
+
+		&:nth-of-type(4) {
+
+			.cattitle {
+				a, a:visited {
+					color:$teal;
+				}
+			}
+		}
+
+		&:nth-of-type(6) {
+
+			.cattitle {
+				a, a:visited {
+					color:$green;
+				}
+			}
+		}
+
+	}
+
+	a, a:visited {
+		color:$purple;
+		font-size:.9em;
+	}
+
+	.imglink {
+
+		width:45%;
+		float:left;
+		margin-right: 5%;
+		line-height: 0;
+		
+	}
+
+	
+}
+
+.cattitle {
+	margin-bottom:0;
+
+	&.all {
+		margin-top:2em;
+	}
+
+	a, a:visited {
+		font-family: $title-family;
+		font-size: 1.5em;
+		position:relative;
+		color:$blue;
+		font-weight: 400;
+
+		&:after {
+		    position: absolute;
+		    bottom: 5px;
+		    right:-20px;
+		    overflow: visible;
+		    font-size: .5em;
+		   /* width: 18px;
+		    height: 18px;
+		    background: transparent url('../images/play-purple.png') no-repeat center; */
+		    content: "\f144";
+		    font-family: 'FontAwesome';
+		    color:lighten($purple,20%);
+
+		}
+
+	}
+}
+
+.smallplay {
+	position:relative;
+	display:inline-block;
+
+	img {
+		line-height: 0;
+		margin:0;
+	}
+
+	&:after {
+	   content: "\f144";
+	    font-family: 'FontAwesome';
+	    color:$white;
+	    opacity: .8;
+	    font-size: 2.5em;
+	    position: absolute;
+	    bottom: .5em;
+	    right:.25em;
+	    z-index: 100;
+	    pointer-events: none;
+	    transition: all 1s;
+	}
+
+	&:hover {
+		&:after {
+			opacity:1;
+		}
+	}
+}
+
+.latestcommunity {
+	border:1px solid $light-gray;
+	border-top:none;
+	padding:1.677em 1.677em;
+
+	ul {
+		list-style: none;
+		margin:0;
+	}
+
+	a, a:visited {
+		color:$white;
+	}
+
+	.commtitle  {
+		p {
+			color:$gray;
+			font-size: .9em;	
+		}
+		
+
+		h3.cattitle {
+			a, a:visited {
+				color:$orange;
+				font-size: 1.5em;
+				text-shadow: none;
+
+				&:after {
+					content:'';
+				}
+			}		
+		}		
+	}
+
+	.cattitle {
+		line-height: 1em;
+		margin-bottom: .5em;
+
+		a, a:visited {
+			color:$yellow;
+			font-size: .9em;
+			text-shadow: 2px 2px 3px darken($blue,10%);	
+
+			&:after {
+				color:lighten($blue,30%);
+				font-size:.8em;
+				bottom:0;
+				opacity:1;
+			}
+		}
+		
+	}
+
+	li {
+		display: inline-block;
+		width:22.7%;
+		margin-right:3%;
+		vertical-align: top;
+		padding:1em;
+		background-color:$blue;
+		color:$white;
+		border-bottom:2px solid darken($blue,10%);
+
+
+		&:first-of-type {
+			background-color: transparent;
+			padding:0;
+			border:none;
+		}
+
+		&:nth-of-type(2n) {
+			
+		}
+
+		&:nth-of-type(3n) {
+			background-color: $orange;
+			border-bottom:2px solid darken($orange,10%);
+
+			.cattitle {
+				a, a:visited {
+					text-shadow: 2px 2px 3px darken($orange,10%);
+
+					&:after {
+						color:lighten($orange,30%);
+					}
+				}
+			}
+		}
+
+		&:nth-of-type(4n) {
+			margin-right:0;
+			background-color:$teal;
+			border-bottom:2px solid darken($teal,10%);
+
+			.cattitle {
+				a, a:visited {
+					text-shadow: 2px 2px 3px darken($teal,10%);
+
+					&:after {
+						color:lighten($teal,30%);
+						
+					}
+				}
+			}
+		}
+	}
+
+}

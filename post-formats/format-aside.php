@@ -1,4 +1,5 @@
-
+              
+              <?php $alttext = the_title_attribute('echo=0'); ?>
 
               <article id="post-<?php the_ID(); ?>" <?php post_class('masonry-entry cf'); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
 
@@ -8,7 +9,7 @@
                   
 
                    <?php if (is_archive() || is_tax() ) { ?>
-                    <h3><a href="<?php the_permalink(' ') ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h3>
+                    <h3><a href="<?php the_permalink(' ') ?>"><?php the_title(); ?></a></h3>
                   <?php } else { ?>
                     <?php 
                       // list of cats
@@ -19,7 +20,6 @@
                           if ( $category->parent !== 0 ) {
                           echo '<li><a href="' . get_category_link($category->term_id ) . '">' . $category->cat_name . '</a></li>';   
                            }
-        
                         } 
                         echo '</ul>';
                       }
@@ -32,13 +32,13 @@
                 <section class="entry-content cf" itemprop="articleBody">
                   <?php if ( has_post_thumbnail() ) { ?>
                         <div class="masonry-thumbnail">
-                            <a href="<?php the_permalink(' ') ?>" title="<?php the_title(); ?>"><?php the_post_thumbnail('masonry-thumb'); ?></a>
+                            <a href="<?php the_permalink(' ') ?>"><?php the_post_thumbnail('masonry-thumb', array( 'alt' =>  $alttext )); ?></a>
                         </div><!--.masonry-thumbnail-->
                         <?php } elseif ( function_exists('get_video_thumbnail') && get_video_thumbnail() ) {
                             $video_thumbnail = get_video_thumbnail();   
                             ?>
                             <div class="masonry-thumbnail">
-                            <a href="<?php the_permalink(' ') ?>" title="<?php the_title(); ?>"><img src="<?php echo $video_thumbnail; ?>" /></a>
+                            <a href="<?php the_permalink(' ') ?>"><img src="<?php echo $video_thumbnail; ?>" alt="<?php echo $alttext; ?>" /></a>
                         </div><!--.masonry-thumbnail-->
                   <?php } ?>
                   <?php

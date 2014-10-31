@@ -1,9 +1,85 @@
+.sidebar {
+	font-size:.9em;
+}
 .widget {
 	margin-bottom:1.5em;
+	padding:1.677em;
+	border:1px solid $light-gray;
+
+	&.kltv-related {
+		border:none;
+	}
+
+	h3 {
+		font-family: $title-family;
+		font-size: 2.5em;
+		margin-bottom: .25em;
+	}
+
+	h5 {
+		a, a:visited {
+			color:$purple;
+		}
+	}
+
+	img {
+		box-shadow: 3px 3px $light-gray;
+	}
 }
 
 .widgettitle {
 	font-family: $title-family;
 	font-size: 2.1em;
 	color: $orange;
+}
+
+.gribbles-widget {
+	margin:0;
+	padding:0;
+	list-style: none;
+
+	h5 {
+
+	}
+	img {
+		width:45%;
+		float:right;
+		margin: 0 0 .8em 1em;
+	}
+}
+
+.welcome-widget {
+	background: $teal url('../images/bg-colored-line.jpg') top repeat-x;
+	color:$white;
+	border-bottom:5px solid darken($teal,10%);
+}
+
+.kltv-relatedposts {
+	margin:0;
+	padding:0;
+	list-style:none;
+
+	li {
+		margin-bottom: 1em;
+
+		&:last-of-type {
+			margin-bottom:0;
+		}
+	}
+
+	.related-title {
+		width: 60%;
+		float:left;
+		margin:0 0 0 4.5%;
+		display: inline-block;
+		vertical-align: top;
+
+	}
+
+	.kltv-related-img {
+		float:left;
+		width: 35%;
+		display: inline-block;
+		vertical-align: top;
+	}
 }

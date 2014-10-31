@@ -1,3 +1,4 @@
+              <?php $alttext = the_title_attribute('echo=0'); ?>
               <article id="post-<?php the_ID(); ?>" <?php post_class('masonry-entry cf'); ?>  role="article" itemscope itemtype="http://schema.org/BlogPosting">
 
                 <header class="article-header">
@@ -21,15 +22,15 @@
                       ?>
 
                             <?php if ( has_post_thumbnail() ) { ?>
-                              <a href="<?php the_permalink(' ') ?>" title="<?php the_title(); ?>"><?php the_post_thumbnail('masonry-thumb'); ?></a>
+                              <a href="<?php the_permalink(' ') ?>"><?php the_post_thumbnail('masonry-thumb', array( 'alt' =>  $alttext )); ?></a>
                             <?php } elseif ( function_exists('get_video_thumbnail') && get_video_thumbnail() ) {
                                 $video_thumbnail = get_video_thumbnail(); ?>
-                                <a href="<?php the_permalink(' ') ?>" title="<?php the_title(); ?>"><img src="<?php echo $video_thumbnail; ?>" /></a>
+                                <a href="<?php the_permalink(' ') ?>"><img alt="<?php echo $alttext; ?>" src="<?php echo $video_thumbnail; ?>" /></a>
                              <?php } ?>
                         
                   </div>
                   <?php } ?>
-                    <h3><a href="<?php the_permalink(' ') ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h3>
+                    <h3><a href="<?php the_permalink(' ') ?>"><?php the_title(); ?></a></h3>
                   <?php } elseif ( is_single() ) { // is single 
                     // list of cats
                     echo '<ul class="subcat-list">';

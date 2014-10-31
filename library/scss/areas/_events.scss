@@ -2,12 +2,10 @@
 
 .ui-widget-header.ui-widget-header {
 	background-image: none;
-	background-color:$meta-color;
+	background-color:$teal;
+	color:$white;
 }
 
-.ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight {
-	background-color:darken($meta-color, 5%) !important;
-}
 
 #main .fc-header td {
 	display:block;
@@ -111,3 +109,19 @@
 	}
 }
 
+#main {
+	.ui-widget {
+		font-family: $sans-serif;
+	}
+	.ui-widget-header {
+		border-color:$white;
+	}
+
+	.ui-widget-content {
+		border-color:$light-gray;
+	}
+
+	.ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight {
+		background-color: $yellow;
+	}
+}

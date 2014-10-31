@@ -59,6 +59,7 @@ add_action( 'after_setup_theme', 'bones_ahoy' );
 
 // Thumbnail sizes
 add_image_size('masonry-thumb', 412, 0 );
+add_image_size('tiny-thumb', 170, 0 );
 
 add_filter( 'image_size_names_choose', 'bones_custom_image_sizes' );
 
@@ -196,10 +197,12 @@ if( function_exists('acf_add_options_sub_page') )
 /**** MENU SOCIAL ICONS ****/
 add_filter( 'storm_social_icons_use_latest', '__return_true' );
 
+
+/**** CUSTOM EXCERPT LENGTH ****/
+add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 function custom_excerpt_length( $length ) {
   return 20;
 }
-add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
 
 /*
@@ -239,3 +242,4 @@ function theme_t_wp_taxonomy_post_class( $classes, $class, $ID ) {
     }
     return $classes;
 } 
+
