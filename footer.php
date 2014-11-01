@@ -3,22 +3,48 @@
 				<div class="footer-swipe wrap"></div>
 				<div class="footer-top wrap"></div>
 				<div id="inner-footer" class="wrap cf">
-					<?php if ( has_nav_menu( 'footer-nav' ) ) { ?>
-					<nav role="navigation">	
-						<?php wp_nav_menu(array(
-    					'container' => '',                              // remove nav container
-    					'container_class' => 'footer-nav cf',         // class of container (should you choose to use it)
-    					'menu' => __( 'Footer Links', 'bonestheme' ),   // nav name
-    					'menu_class' => 'nav footer-nav cf',            // adding custom nav class
-    					'theme_location' => 'footer-nav',             // where it's located in the theme
-    					'before' => '',                                 // before the menu
-	        			'after' => '',                                  // after the menu
-	        			'link_before' => '',                            // before each link
-	        			'link_after' => '',                             // after each link
-	        			'depth' => 1,                                   // limit the depth of the nav
-						)); ?>
-					</nav>
+					<div class="footer-menus cf">
+						<?php if ( has_nav_menu( 'footer-nav' ) ) { ?>
+							<nav role="navigation" class="kltv-footnav">	
+								<?php wp_nav_menu(array(
+		    					'container' => '',                              // remove nav container
+		    					'container_class' => 'footer-nav cf',         // class of container (should you choose to use it)
+		    					'menu' => __( 'Footer Links', 'bonestheme' ),   // nav name
+		    					'menu_class' => 'nav footer-nav cf',            // adding custom nav class
+		    					'theme_location' => 'footer-nav',             // where it's located in the theme
+		    					'before' => '',                                 // before the menu
+			        			'after' => '',                                  // after the menu
+			        			'link_before' => '',                            // before each link
+			        			'link_after' => '',                             // after each link
+			        			'depth' => 1,                                   // limit the depth of the nav
+								)); ?>
+							</nav>
+						<?php } ?>
+
+						<?php if ( has_nav_menu( 'social-nav' ) ) { ?>
+							<nav role="navigation" class="kltv-social">	
+								<?php wp_nav_menu(array(
+		    					'container' => '',                              // remove nav container
+		    					'container_class' => 'social-nav cf',         // class of container (should you choose to use it)
+		    					'menu' => __( 'Social Links', 'bonestheme' ),   // nav name
+		    					'menu_class' => 'nav social-nav cf',            // adding custom nav class
+		    					'theme_location' => 'social-nav',             // where it's located in the theme
+		    					'before' => '',                                 // before the menu
+			        			'after' => '',                                  // after the menu
+			        			'link_before' => '',                            // before each link
+			        			'link_after' => '',                             // after each link
+			        			'depth' => 1,                                   // limit the depth of the nav
+								)); ?>
+							</nav>
+						<?php } ?>
+					</div>
+
+					<?php if ( is_active_sidebar( 'footer1' ) ) { ?>
+					<div class="footer-widgets cf">
+						<?php dynamic_sidebar( 'footer1' ); ?>
+					</div>
 					<?php } ?>
+
 					<?php if (function_exists('get_field') && get_field('copyrighted', 'option')) {
 						?>
 						<p class="source-org copyright">&copy; <?php echo date('Y'); ?> <span><?php the_field('copyrighted', 'option' ); ?></span></p>
@@ -55,6 +81,8 @@
 					} else { ?> 
 
 					<?php } ?>
+
+					<a href="#top" class="backtotop"><i class="fa fa-chevron-up"></i> Back to top</a>
 
 				</div>
 

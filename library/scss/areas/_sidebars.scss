@@ -83,3 +83,57 @@
 		vertical-align: top;
 	}
 }
+
+.header-widgets {
+	display: none;
+
+	@include breakpoint(tablet) {
+		width: 100%;
+		float:none;
+	}
+
+	@include breakpoint(laptop) {
+		width:30%;
+		float:right;
+		display:inline-block;
+		
+		margin-top:2em;
+	}
+
+	.widget {
+		background:transparent url('../images/bg-promo-header.png') no-repeat;
+		background-size:100% 100%;
+		border: none;
+		padding:1em 1.677em .677em 0;
+		font-size:.8em;
+		color:$yellow;
+		text-align: left;
+		
+
+		h3 {
+			color:$white;
+		}
+
+		p {
+			padding-right:1em;
+		}
+
+		a, a:visited {
+			color:$white;
+			text-transform: uppercase;
+			font-weight: 700;
+		}
+
+		img {
+			box-shadow: none;
+			margin-right:.2em;
+		}
+	}
+}
+
+.footer-widgets {
+	.widget {
+		border: none;
+		padding:0;
+	}
+}

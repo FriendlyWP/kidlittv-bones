@@ -59,72 +59,94 @@
 			<header class="header" role="banner">
 
 				<div class="toggle-content clearfix">
-					<?php if ( has_nav_menu( 'main-nav' ) ) { ?>
+					<?php if ( has_nav_menu( 'section-nav' ) ) { ?>
 						<nav role="navigation" id="my-menu">
-							<?php wp_nav_menu(array(
-	    					'container' => false,                           // remove nav container
-	    					'container_class' => '',                 // class of container (should you choose to use it)
-	    					'menu' => __( 'The Main Menu', 'bonestheme' ),  // nav name
-	    					'menu_class' => '',               // adding custom nav class
-	    					'theme_location' => 'main-nav',                 // where it's located in the theme
-	    					'before' => '',                                 // before the menu
-		        			'after' => '',                                  // after the menu
-		        			'link_before' => '',                            // before each link
-		        			'link_after' => '',                             // after each link
-		        			'depth' => 0,                                   // limit the depth of the nav
-		    					'fallback_cb' => ''                             // fallback function (if there is one)
+							<ul>
+								<li class="mm-label">KLTV Categories</li>
+								<?php 
+								// SECTION MENU
+								wp_nav_menu(array(
+		    					'container' => false,                           // remove nav container
+		    					'container_class' => '',                 // class of container (should you choose to use it)
+		    					'menu' => __( 'The Section Menu', 'bonestheme' ),  // nav name
+		    					'menu_class' => '',               // adding custom nav class
+		    					'theme_location' => 'section-nav',                 // where it's located in the theme
+		    					'before' => '',                                 // before the menu
+			        			'after' => '',                                  // after the menu
+			        			'link_before' => '',                            // before each link
+			        			'link_after' => '',                             // after each link
+			        			'depth' => 0,                                   // limit the depth of the nav
+			    				'items_wrap' => '%3$s',						// don't wrap in UL
 								)); ?>
+									<li class="mm-label">KLTV Pages</li>
+								<?php 
+								// MAIN MENU
+								wp_nav_menu(array(
+		    					'container' => false,                           // remove nav container
+		    					'container_class' => 'menu cf',                 // class of container (should you choose to use it)
+		    					'menu' => __( 'The Main Menu', 'bonestheme' ),  // nav name
+		    					'menu_class' => 'nav main-nav cf',               // adding custom nav class
+		    					'theme_location' => 'main-nav',                 // where it's located in the theme
+		    					'before' => '',                                 // before the menu
+			        			'after' => '',                                  // after the menu
+			        			'link_before' => '',                            // before each link
+			        			'link_after' => '',                             // after each link
+			        			'depth' => 0,                                   // limit the depth of the nav
+			    				'items_wrap' => '%3$s',						// don't wrap in UL
+									)); ?>
+							</ul>
 						</nav>
 					<?php } ?>   
 				</div>
+
 				<div class="topspacer wrap"></div>
-					<div class="topbar">
-						<div class="wrap cf">
-							<a href="#my-menu" class="menu-toggler"><i class="fa fa-bars"></i></a>
-								<?php if ( has_nav_menu( 'main-nav' ) ) { ?>
-									<nav role="navigation">
-										<?php wp_nav_menu(array(
-				    					'container' => false,                           // remove nav container
-				    					'container_class' => 'menu cf',                 // class of container (should you choose to use it)
-				    					'menu' => __( 'The Main Menu', 'bonestheme' ),  // nav name
-				    					'menu_class' => 'nav main-nav cf',               // adding custom nav class
-				    					'theme_location' => 'main-nav',                 // where it's located in the theme
-				    					'before' => '',                                 // before the menu
-					        			'after' => '',                                  // after the menu
-					        			'link_before' => '',                            // before each link
-					        			'link_after' => '',                             // after each link
-					        			'depth' => 0,                                   // limit the depth of the nav
-					    					'fallback_cb' => ''                             // fallback function (if there is one)
-											)); ?>
-									</nav>
-								<?php } ?>
-							
-							<div class="social-search">
-								<form role="search" class="searchform" method="get" id="searchform-head" action="<?php echo home_url( '/' ); ?>">
-								    <div class="head-search">
-								    	<label class="search-label" for="s">Search</label>
-								        <input type="text" value="" placeholder="" name="s" id="s" />
-								        <!--<button type="submit" id="searchsubmit-head" value="Search"  /><i class="fa fa-search"></i></button>-->
-								    </div>
-								</form>
-								
-								<?php if ( has_nav_menu( 'social-nav' ) ) { ?>
-										<?php wp_nav_menu(array(
-				    					'container' => false,                           // remove nav container
-				    					'container_class' => 'menu',                 // class of container (should you choose to use it)
-				    					'menu' => __( 'The Social Menu', 'bonestheme' ),  // nav name
-				    					'menu_class' => 'nav social-nav',               // adding custom nav class
-				    					'theme_location' => 'social-nav',                 // where it's located in the theme
-				    					'before' => '',                                 // before the menu
-					        			'after' => '',                                  // after the menu
-					        			'link_before' => '',                            // before each link
-					        			'link_after' => '',                             // after each link
-					        			'depth' => 0,                                   // limit the depth of the nav
+				<div class="topbar">
+					<div class="wrap cf">
+						<div class="mobilemenu allmenu"><a href="#my-menu" class="menu-toggler"><i class="fa fa-bars"></i><span class="mobilemessage">Navigate the site</span></a></div>
+							<?php if ( has_nav_menu( 'main-nav' ) ) { ?>
+								<nav role="navigation" class="mainnav">
+									<?php wp_nav_menu(array(
+			    					'container' => false,                           // remove nav container
+			    					'container_class' => 'menu cf',                 // class of container (should you choose to use it)
+			    					'menu' => __( 'The Main Menu', 'bonestheme' ),  // nav name
+			    					'menu_class' => 'nav main-nav cf',               // adding custom nav class
+			    					'theme_location' => 'main-nav',                 // where it's located in the theme
+			    					'before' => '',                                 // before the menu
+				        			'after' => '',                                  // after the menu
+				        			'link_before' => '',                            // before each link
+				        			'link_after' => '',                             // after each link
+				        			'depth' => 0,                                   // limit the depth of the nav
+				    					'fallback_cb' => ''                             // fallback function (if there is one)
 										)); ?>
-								<?php } ?>
-							</div><!-- .social-search -->
-						</div>
+								</nav>
+							<?php } ?>
+						
+						<div class="social-search">
+							<form role="search" class="searchform" method="get" id="searchform-head" action="<?php echo home_url( '/' ); ?>">
+							    <div class="head-search">
+							    	<label class="search-label" for="s">Search</label>
+							        <input type="text" value="" placeholder="" name="s" id="s" />
+							        <!--<button type="submit" id="searchsubmit-head" value="Search"  /><i class="fa fa-search"></i></button>-->
+							    </div>
+							</form>
+							
+							<?php if ( !wp_is_mobile() && has_nav_menu( 'social-nav' ) ) { ?>
+									<?php wp_nav_menu(array(
+			    					'container' => false,                           // remove nav container
+			    					'container_class' => 'menu',                 // class of container (should you choose to use it)
+			    					'menu' => __( 'The Social Menu', 'bonestheme' ),  // nav name
+			    					'menu_class' => 'nav social-nav',               // adding custom nav class
+			    					'theme_location' => 'social-nav',                 // where it's located in the theme
+			    					'before' => '',                                 // before the menu
+				        			'after' => '',                                  // after the menu
+				        			'link_before' => '',                            // before each link
+				        			'link_after' => '',                             // after each link
+				        			'depth' => 0,                                   // limit the depth of the nav
+									)); ?>
+							<?php } ?>
+						</div><!-- .social-search -->
 					</div>
+				</div>
 
 				<div id="inner-header" class="wrap cf">
 					
@@ -134,13 +156,20 @@
 					<?php $desc = get_bloginfo('description'); 
 					if ($desc) { ?>
 						<span class="site-description"><?php echo $desc; ?></span>
-					<?php } ?>					
+					<?php } ?>
+
+					<?php if ( is_active_sidebar( 'header1' ) ) { ?>
+						<div class="header-widgets">
+							<?php dynamic_sidebar( 'header1' ); ?>
+						</div>
+					<?php } ?>			
 
 				</div>
 
 				<div class="topmenu cf">
 					
 					<div class="wrap">
+						<div class="mobilemenu catmenu"><a href="#my-menu" class="menu-toggler"><i class="fa fa-bars"></i><span class="mobilemessage">Navigate by category</span></a></div>
 					<?php 
 					$walker = new Menu_With_Description;
 					if ( has_nav_menu( 'section-nav' ) ) { ?>
@@ -161,7 +190,7 @@
 					jQuery(document).ready(function($) {
 					      
 				      jQuery("#my-menu").mmenu({
-			             classes: "mm-zoom-page mm-zoom-menu mm-zoom-panels"
+			             classes: "mm-zoom-page mm-zoom-menu mm-zoom-panels",
 			         });
 
 				      jQuery("#my-button").click(function() {

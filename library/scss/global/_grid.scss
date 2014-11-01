@@ -19,7 +19,11 @@ GRID
 
 .sidebar {
   @include grid-col;
-  width: 31%;
+  width:100%;
+
+  @include breakpoint(tablet) {
+      width: 31%;
+  }
 }
 
 // the last column

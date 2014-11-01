@@ -6,14 +6,14 @@ Breakpoints
   @if $point == tv { // 1280px
      @media (min-width: 80em) { @content ; }
   }
-   @else if $point == desktop { // 1120px
-     @media (min-width: 70em) { @content ; }
+   @else if $point == desktop { // 1136px
+     @media (min-width: 71em) { @content ; }
   }
-   @else if $point == laptop { // 1024px
-     @media (min-width: 64em) { @content ; }
+   @else if $point == laptop { // 1040px
+     @media (min-width: 65em) { @content ; }
   }
-    @else if $point == tablet { // 800px
-     @media (min-width: 50em) { @content ; }
+    @else if $point == tablet { // 832px
+     @media (min-width: 52em) { @content ; }
   }
    @else if $point == phablet { // 600px
      @media (min-width: 37.5em)  { @content ; }

@@ -10,6 +10,33 @@
  *
  * CSS rewritten into SCSS: Tyce Clee (@iamtyce) 6/11/12
  */
+/*********************
+Breakpoints
+*********************/
+/* usage: @include breakpoint(tablet) { // your styles here } */
+ @mixin breakpoint($point) {
+  @if $point == tv { // 1280px
+     @media (min-width: 80em) { @content ; }
+  }
+   @else if $point == desktop { // 1136px
+     @media (min-width: 71em) { @content ; }
+  }
+   @else if $point == laptop { // 1040px
+     @media (min-width: 65em) { @content ; }
+  }
+    @else if $point == tablet { // 832px
+     @media (min-width: 52em) { @content ; }
+  }
+   @else if $point == phablet { // 600px
+     @media (min-width: 37.5em)  { @content ; }
+  }
+  @else if $point == mobileonly { // 400px
+     @media (max-width: 25em)  { @content ; }
+  }
+  @else if $point == print {
+     @media (print)  { @content ; }
+  }
+}
 
  /******************************************************************
 Colors
@@ -83,11 +110,15 @@ $subtitle-family: "Oswald", sans-serif;
       margin-right: 2px;
     }
     img {
-      width: 55%;
-      display: inline-block;
-      float:left;
-      margin-bottom: 5px;
-      box-shadow:4px 4px rgba(58, 156, 199, 0.5);
+      display: none;
+
+      @include breakpoint(tablet) {
+        width: 55%;
+        display: inline-block;
+        float:left;
+        margin-bottom: 5px;
+        box-shadow:4px 4px rgba(58, 156, 199, 0.5);
+      }
     }
   }
 
@@ -99,11 +130,15 @@ $subtitle-family: "Oswald", sans-serif;
 }
 
 .slidetext {
-  width: 40%;
-  margin-right:2%;
-  display: inline-block;
-  float:right;
+  
   text-shadow: 1px 1px 3px $dark-blue;
+
+  @include breakpoint(tablet) {
+    width: 40%;
+    margin-right:2%;
+    display: inline-block;
+    float:right;
+  }
 
   a, a:visited {
     color:$yellow;

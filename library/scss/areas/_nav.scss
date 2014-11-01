@@ -6,23 +6,68 @@ NAVIGATION STYLES
 	margin-top:0em;
 }
 
-#my-content #my-menu {
-   display: none; 
+.mobilemenu {
+	display:block;
+	background-color:$purple;	
+	margin:0 0 0 0;
+	text-align: left;
+	padding-left:1em;
+
+	&.catmenu {
+		display: none;
+
+		@include breakpoint(tablet) {
+			display: block;
+			background-color:$blue;	
+			box-shadow: 6px 6px 0 lighten($gray, 20%);
+		}
+
+		@include breakpoint(laptop) {
+			display: none;
+		}
+		
+	}
+
+	.mobilemessage {
+		font-size: .8em;
+		display: inline-block;
+		margin-left: 1em;
+		font-family: $subtitle-family;
+	}
+
+	&.allmenu {
+		.mobilemessage {
+			font-size: .6em;
+		}
+	}
+
+	@include breakpoint(tablet) {
+		padding:.5em 0 .5em 2em;
+
+		&.allmenu {
+			display: none;
+		}
+	}
+
+	@include breakpoint(laptop) {
+		display:none;
+	}
 }
 
-#my-menu:not( .mm-menu ) {
-   display: none;
+.mainnav {
+	display: none;
 }
 .topbar {
 	text-align: center;
 	vertical-align: top;
 	position: relative;
-	padding:0 .3em;
+	
 	vertical-align:middle;
 	line-height:1em;
 
-	@include breakpoint(laptop) {
+	@include breakpoint(tablet) {
 		text-align: left;
+		padding:0 .3em;
 	}
 
 	.login, input, .social-nav > li > a {
@@ -31,13 +76,19 @@ NAVIGATION STYLES
 	}
 	
 	nav, .nav, .main-nav {
-		display: inline-block;
+		@include breakpoint(tablet) {
+			display: inline-block;	
+		}
+		
 	}
 
-
 	.social-nav {
-		display: inline-block;
-		vertical-align:middle;
+		display: none;
+
+		@include breakpoint(laptop) {
+			display: inline-block;
+			vertical-align:middle;
+		}
 
 		li a, li a:visited {
 			padding: 0 .75em;
@@ -90,6 +141,7 @@ NAVIGATION STYLES
 			    background-color: lighten($purple, 45%);
 			    border-color:$purple;
 			  } // end hover or focus
+
 		}
 
 		button {
@@ -142,16 +194,24 @@ NAVIGATION STYLES
 	}
 
 	&.section-nav {
-		display: inline-block;
-		background-color:$blue;	
-		margin:0 0 0 0;
-		padding:0 0 0 2em;
+		display: none;
 
-		box-shadow: 6px 6px 0 lighten($gray, 20%);
 
-		li a {
-			height:50px;
+		@include breakpoint(laptop) {
+			display: inline-block;	
+			background-color:$blue;	
+			margin:0 0 0 0;
+			padding:0 0 0 2em;
+			box-shadow: 6px 6px 0 lighten($gray, 20%);
+			
+			li {
+				display:inline-block;
+				a {
+					height:50px;
+				}
+			}
 		}
+		
 	}
 
 	li {
@@ -169,6 +229,13 @@ NAVIGATION STYLES
 
 			&:hover, &:focus {
 				color: $white;
+			}
+
+		}
+
+		&.current-menu-ancestor, &.current-menu-item {
+			> a {
+				color:$white;
 			}
 
 		}
@@ -191,14 +258,9 @@ NAVIGATION STYLES
 			}
 		}
 
-		&.current-menu-ancestor, &.current-menu-item {
-			> a {
-				font-weight: 700;	
-			}
+		
 
-		}
-
-		@include breakpoint(laptop) {
+		@include breakpoint(tablet) {
 			float: left;
 			position: relative;
 
@@ -312,7 +374,14 @@ NAVIGATION STYLES
 		a, a:visited {
 			text-transform: uppercase;
 			color:lighten($purple, 25%);
-			font-size: 1.2em;
+			font-size: 1.1em;
+		}
+
+		&.current-menu-ancestor, &.current-menu-item {
+			> a {
+				color:$white;
+			}
+
 		}
 	}
 	.menu-item-has-children {
@@ -328,6 +397,58 @@ NAVIGATION STYLES
 			> a:after {
 				content:"\f103";
 			}
+		}
+	}
+
+
+}
+
+.footer-menus {
+	margin-bottom:1em;
+
+	nav {
+		width: 48%;
+		float:left;
+
+		li {
+			vertical-align: middle;
+		}
+	}
+
+	nav.kltv-social {
+		float:right;
+		font-size: .8em;
+		text-align:right;
+
+		a, a:visited {
+			color:$white;
+		}
+
+		li {
+			float:none;
+		}
+	}
+
+	.footer-nav {
+		a, a:visited {
+			color: $white;
+			padding:0 1em 0 0;
+			
+			line-height: 1em;
+
+			@include breakpoint(tablet) {
+				margin-right:1em;
+				border-right:1px solid $p-purple;
+			}
+		}
+
+
+		li {
+			padding:1em 0;
+		}
+
+		li:last-of-type > a {
+			border-right: none;
 		}
 	}
 }

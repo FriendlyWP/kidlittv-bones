@@ -1,7 +1,33 @@
 #my-menu {
-	background-color:$gray;
+	background-color:$purple;
 
-	a {
+	a, a:visited {
 		border: none;
+		color:$white;
 	}
+}
+
+#my-content #my-menu {
+   display: none; 
+}
+
+#my-menu:not( .mm-menu ) {
+   display: none;
+}
+
+.mm-menu {
+	.mm-list > li.mm-label {
+		font-size:1.2em;
+		font-family:$subtitle-family;
+		margin:.677em 0;
+		padding:.3em 0;
+	}
+
+	input {
+		margin-left:1.677em;
+	}
+}
+
+.allmenu {
+
 }
