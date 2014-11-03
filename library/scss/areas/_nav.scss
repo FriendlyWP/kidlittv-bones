@@ -426,8 +426,14 @@ NAVIGATION STYLES
 	margin-bottom:1em;
 
 	nav {
-		width: 48%;
-		float:left;
+		text-align:center;
+
+		@include breakpoint(tablet) {
+			width: 48%;
+			float:left;
+			text-align: left;
+		}
+
 
 		li {
 			vertical-align: middle;
@@ -435,9 +441,14 @@ NAVIGATION STYLES
 	}
 
 	nav.kltv-social {
-		float:right;
+		text-align: center;
 		font-size: .8em;
-		text-align:right;
+
+		@include breakpoint(tablet) {
+			float:right;
+			text-align:right;
+		}
+		
 
 		a, a:visited {
 			color:$white;
