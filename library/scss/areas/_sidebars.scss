@@ -5,6 +5,7 @@
 	margin-bottom:1.5em;
 	padding:1.677em;
 	border:1px solid $light-gray;
+	color:$darkest-gray;
 
 	&.kltv-related {
 		border:none;
@@ -29,8 +30,9 @@
 
 .widgettitle {
 	font-family: $title-family;
-	font-size: 2.1em;
+	font-size: 2.5em;
 	color: $orange;
+	margin-bottom:.2em;
 }
 
 .gribbles-widget {
@@ -51,7 +53,7 @@
 .welcome-widget {
 	background: $teal url('../images/bg-colored-line.jpg') top repeat-x;
 	color:$white;
-	border-bottom:5px solid darken($teal,10%);
+	border-bottom:2px solid darken($teal,10%);
 }
 
 .kltv-relatedposts {
@@ -96,7 +98,6 @@
 		width:30%;
 		float:right;
 		display:inline-block;
-		
 		margin-top:2em;
 	}
 
@@ -108,14 +109,17 @@
 		font-size:.8em;
 		color:$yellow;
 		text-align: left;
+		margin-bottom:0;
 		
 
 		h3 {
 			color:$white;
+			margin-bottom: 0
 		}
 
 		p {
 			padding-right:1em;
+			line-height:1.3em;
 		}
 
 		a, a:visited {

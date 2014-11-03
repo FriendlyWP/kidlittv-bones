@@ -216,15 +216,18 @@ NAVIGATION STYLES
 
 	li {
 		display: inline-block;
-		vertical-align: text-bottom;
+		vertical-align: bottom;
+		line-height: 1em;
 
 		a, a:visited {
-			display: block;
+			display: table-cell;
 			color: $light-blue;
 			border: none;
-			padding: 0.75em .75em;
+			padding: 0.75em .75em 1.1em;
 			font-size: 1em;
 			text-transform: uppercase;
+			vertical-align: bottom;
+			line-height: 1em;
 
 
 			&:hover, &:focus {
@@ -268,7 +271,7 @@ NAVIGATION STYLES
 				display: none;
 				border-top: .5em solid lighten($link-color, 15%);
 				border-bottom: .2em solid $link-color;
-				box-shadow: 0 .5em $light-gray;
+				box-shadow: 0 .2em rgba(230, 230, 230, 0.56);
 				background-color: $pale-blue;
 				padding:1em 1.677em;
 				color:$blue;
@@ -294,19 +297,23 @@ NAVIGATION STYLES
 				-webkit-column-gap: 1em;
 				-moz-column-gap:1em;
 				column-gap: 1em;
+				vertical-align: text-bottom;
 
 				li {
 					float:none;
+					vertical-align: text-bottom;
 
 					a, a:visited {
 						color: $dark-blue;
 						font-weight:700;
 						border-right: 0;
-						display: block;
+						display: inline-block;
 						width: auto;
 						text-transform: none;
 						padding:.2em .677em 0 0;
 						height: auto;
+						white-space: nowrap;
+						vertical-align: text-bottom;
 
 						&:hover,
 						&:focus { 
@@ -371,10 +378,15 @@ NAVIGATION STYLES
 
 .main-nav {
 	li {
+		padding:.75em 0;
+
 		a, a:visited {
 			text-transform: uppercase;
 			color:lighten($purple, 25%);
-			font-size: 1.1em;
+			font-size: 1em;
+			line-height: 1em;
+			padding:0 .75em;
+			border-right:1px solid $white;
 		}
 
 		&.current-menu-ancestor, &.current-menu-item {
@@ -382,6 +394,12 @@ NAVIGATION STYLES
 				color:$white;
 			}
 
+		}
+
+		&:last-of-type {
+			a {
+				border-right: none;
+			}
 		}
 	}
 	.menu-item-has-children {
@@ -445,10 +463,12 @@ NAVIGATION STYLES
 
 		li {
 			padding:1em 0;
+			margin-right:1em;
 		}
 
 		li:last-of-type > a {
 			border-right: none;
+
 		}
 	}
 }

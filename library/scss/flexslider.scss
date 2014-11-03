@@ -123,6 +123,8 @@ $subtitle-family: "Oswald", sans-serif;
   }
 
   h2 {
+    font-size: 1.8em;
+
     a, a:visited {
       color:$white;
     }
@@ -130,8 +132,8 @@ $subtitle-family: "Oswald", sans-serif;
 }
 
 .slidetext {
-  
-  text-shadow: 1px 1px 3px $dark-blue;
+  font-size:.9em;
+  text-shadow: 2px 2px $dark-blue;
 
   @include breakpoint(tablet) {
     width: 40%;
@@ -144,7 +146,7 @@ $subtitle-family: "Oswald", sans-serif;
     color:$yellow;
 
     &:hover {
-      color:$orange;
+      color:$light-yellow;
     }
   }
 
@@ -201,13 +203,15 @@ html[xmlns] .slides {
   position: relative;
   box-shadow:5px 5px $light-gray;
   zoom: 1;
-  background: -moz-linear-gradient(top,  rgba(92,171,204,0.79) 0%, rgba(182,229,242,0.78) 100%); /* FF3.6+ */
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(92,171,204,0.79)), color-stop(100%,rgba(182,229,242,0.78))); /* Chrome,Safari4+ */
-background: -webkit-linear-gradient(top,  rgba(92,171,204,0.79) 0%,rgba(182,229,242,0.78) 100%); /* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(top,  rgba(92,171,204,0.79) 0%,rgba(182,229,242,0.78) 100%); /* Opera 11.10+ */
-background: -ms-linear-gradient(top,  rgba(92,171,204,0.79) 0%,rgba(182,229,242,0.78) 100%); /* IE10+ */
-background: linear-gradient(to bottom,  rgba(92,171,204,0.79) 0%,rgba(182,229,242,0.78) 100%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c95cabcc', endColorstr='#c7b6e5f2',GradientType=0 ); /* IE6-9 */
+ background: #5dabcc; /* Old browsers */
+background: -moz-linear-gradient(top,  #5dabcc 75%, #b6e5f2 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(75%,#5dabcc), color-stop(100%,#b6e5f2)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #5dabcc 75%,#b6e5f2 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #5dabcc 75%,#b6e5f2 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #5dabcc 75%,#b6e5f2 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #5dabcc 75%,#b6e5f2 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5dabcc', endColorstr='#b6e5f2',GradientType=0 ); /* IE6-9 */
+
 }
 
 .flex-viewport {

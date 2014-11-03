@@ -29,5 +29,10 @@
 }
 
 .allmenu {
-
+	.mm-list > li.mm-label {
+		font-size:1.2em;
+		font-family:$subtitle-family;
+		margin:.677em 0;
+		padding:.3em 0;
+	}
 }

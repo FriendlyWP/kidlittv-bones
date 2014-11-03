@@ -9,13 +9,14 @@ body {
 	line-height: 1.5;
 	color: $text-color;
   	-webkit-font-smoothing: antialiased;
-  	background: -moz-linear-gradient(top,  rgba(71,161,199,0.79) 0%, rgba(174,229,246,0.78) 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(71,161,199,0.79)), color-stop(100%,rgba(174,229,246,0.78))); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(top,  rgba(71,161,199,0.79) 0%,rgba(174,229,246,0.78) 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(top,  rgba(71,161,199,0.79) 0%,rgba(174,229,246,0.78) 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(top,  rgba(71,161,199,0.79) 0%,rgba(174,229,246,0.78) 100%); /* IE10+ */
-	background: linear-gradient(to bottom,  rgba(71,161,199,0.79) 0%,rgba(174,229,246,0.78) 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c947a1c7', endColorstr='#c7aee5f6',GradientType=0 ); /* IE6-9 */
+  	background: -moz-linear-gradient(top,  rgba(58,156,199,0.66) 0%, rgba(178,235,252,0.66) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(58,156,199,0.66)), color-stop(100%,rgba(178,235,252,0.66))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(58,156,199,0.66) 0%,rgba(178,235,252,0.66) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(58,156,199,0.66) 0%,rgba(178,235,252,0.66) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(58,156,199,0.66) 0%,rgba(178,235,252,0.66) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(58,156,199,0.66) 0%,rgba(178,235,252,0.66) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a83a9cc7', endColorstr='#a8b2ebfc',GradientType=0 ); /* IE6-9 */
+
 
 	@include breakpoint(laptop) {
 		font-size:90%;
@@ -337,7 +338,7 @@ body {
 
 
 #logo {
-	margin:1em 1.5em 1em 0;
+	margin:.5em 1.5em .5em 0;
 	color: $white;
 	border: none;
 	line-height:1em;
@@ -367,23 +368,23 @@ body {
 .site-description {
 	display:inline-block;
 	width:98%;
-	color: $text-color;
+	color: $dark-gray;
 	font-family:$subtitle-family;
 	font-size:1.2em;
 	font-weight:300;
 	vertical-align:middle;
 	text-align:center;
-	padding:0 0 1em;
+	padding:0 0 .75em;
 
 	@include breakpoint(tablet) {
 		width:38%;
 		text-align:left;
-		padding-top:3.5em;
+		padding-top:4.9em;
 		float:left;
 	}
 
 	@include breakpoint(laptop) {
-		width:18%;
+		width:23%;
 		float:none;
 	}
 }
@@ -427,7 +428,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
   font-weight: 400;
   margin:0 0 .675em 0;
   font-family: $subtitle-family;
-  line-height: 1.333em;
+  line-height: 1.4em;
   
   a, a:visited {
     text-decoration: none;
@@ -1206,12 +1207,78 @@ FOOTER STYLES
 	}
 }
 
+.postnav {
+	width:100%;
+	font-family:$subtitle-family;
+	border: 1px solid $light-gray;
+
+	a, a:visited {
+		color:$purple;
+	}
+
+	& > div {
+		float:left;
+		width: 50%;
+		border-right:1px solid $light-gray;
+		padding:1em;
+		display: inline-block;
+		vertical-align: top;
+		min-height:150px;
+
+		&:nth-of-type(2) {
+			border-right:0;
+		}
+	}
+
+	.imglink {
+		display: inline-block;
+		line-height: 0;
+		width: 35%;
+		box-shadow:3px 3px $light-gray;
+	}
+
+	span {
+		width:60%;
+		float:left;
+	}
+
+	h6 {
+		font-family: $title-family;
+		margin:0 0 .25em 0;
+		color:$orange;
+		font-size: 1.5em;
+		font-weight:400;
+	}
+}
+
+.prevpost {
+	.imglink {
+		float:left;
+		margin-right:5%;
+	}
+}
+
+.nextpost {
+	text-align:right;
+
+	.imglink {
+		float:right;
+		margin-left:5%;
+	}
+}
+
+.kltv-featurebox, .latestfromeach, .latestcommunity {
+	h4 {
+		font-size:1.1em;
+		
+	}
+}
 
 .kltv-featurebox {
 	position: relative;
 	padding:3em 1.677em 1.677em;
 	margin-top:50px;
-	background: $yellow url('../images/bg-colored-line.jpg') top repeat-x;
+	background: $medium-yellow url('../images/bg-colored-line.jpg') top repeat-x;
 	border:1px solid $light-gray;
 	
 
@@ -1255,9 +1322,9 @@ FOOTER STYLES
 	}
 
 	a, a:visited {
-		color:$orange;
-		line-height: 1.1em;
+		color:$red;
 		position: relative;
+		
 	}
 
 	
@@ -1334,14 +1401,13 @@ FOOTER STYLES
 
 	a, a:visited {
 		color:$purple;
-		font-size:.9em;
 	}
 
 	.imglink {
 
-		width:45%;
+		width:44%;
 		float:left;
-		margin-right: 5%;
+		margin-right: 6%;
 		line-height: 0;
 		
 	}
@@ -1373,7 +1439,7 @@ FOOTER STYLES
 		    background: transparent url('../images/play-purple.png') no-repeat center; */
 		    content: "\f144";
 		    font-family: 'FontAwesome';
-		    color:lighten($purple,20%);
+		    color:$lighter-blue;
 
 		}
 
@@ -1384,6 +1450,7 @@ FOOTER STYLES
 	position:relative;
 	display:inline-block;
 	display:block;
+	margin-bottom:.5em;
 
 	img {
 		line-height: 0;
@@ -1403,6 +1470,10 @@ FOOTER STYLES
 	    z-index: 100;
 	    pointer-events: none;
 	    transition: all 1s;
+	    text-shadow: -1px -1px 0 $black, 
+	    			1px -1px 0 $black,
+	    			-1px 1px 0 $black,
+	    			1px 1px 0 $black;  
 	}
 
 	&:hover {
@@ -1453,7 +1524,7 @@ FOOTER STYLES
 
 	.commtitle  {
 		p {
-			color:$gray;
+			color:$darkest-gray;
 			font-size: .9em;
 			margin-bottom: .677em;
 		}
@@ -1475,10 +1546,11 @@ FOOTER STYLES
 	.cattitle {
 		line-height: 1em;
 		margin-bottom: .5em;
+		font-size: .9em;
+		line-height: 1.4em;
 
 		a, a:visited {
 			color:$yellow;
-			font-size: .9em;
 			text-shadow: 2px 2px 3px darken($blue,10%);	
 
 			&:after {
