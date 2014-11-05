@@ -58,27 +58,29 @@ body {
 		background-color:$purple;
 		position: relative;
 		padding:.677em 0;
+		border-bottom: 2px solid rgba(90, 49, 105, 0.6);
+		box-shadow:0 6px 4px -4px #cfc8b8;
 
 		@include breakpoint(phablet) {
 			width: 610px;
 		}
 
 		@include breakpoint(tablet) {
-			width: 810px;
+			width: 812px;
 			padding:0 10px 0 1em;
-			left:-5px;
-			border-bottom: 3px solid lighten($purple, 30%);
+			left:-6px;
+			
 
 			&:before {
 				content: ' ';
 				position: absolute;
 				width: 0;
 				height: 0;
-				left:-3px;
+				left:-1px;
 				top: 100%;
 				border-width: 6px 6px;
 				border-style: solid;
-				border-color: $purple $purple transparent transparent;
+				border-color: #5a3169 #5a3169 transparent transparent;
 
 			}
 
@@ -86,23 +88,23 @@ body {
 				content: ' ';
 				position: absolute;
 				height: 32px; 
-			    width: 34px;  
+			    width: 33px;  
 			    padding: 0px; 
 			    top: 16px; 
 			    right:-29px;
 			    -webkit-transform: rotate(39deg) skew(39deg); 
 			    transform: rotate(39deg) skew(39deg);
 				background-color:darken($purple, 18%);
-				box-shadow: 0 3px 0 lighten($purple, 30%);
+				box-shadow: 0 6px 4px -4px #bc3a00;
 			}
 		}
 
 		@include breakpoint(laptop) {
-			width: 1014px;
+			width: 1016px;
 		}
 
 		@include breakpoint(desktop) {
-			width: 1110px;
+			width: 1112px;
 		}
 
 		@include breakpoint(tv) {
@@ -159,7 +161,7 @@ body {
 
 		@include breakpoint(tablet) {
 			width: 820px;
-			left:-1px;
+			left:-2px;
 			padding:0 1.5em 1.5em;
 			min-height:150px;
 			z-index:2;
@@ -184,22 +186,22 @@ body {
 
 		@include breakpoint(tablet) {
 			display: block;
-			width: 811px;
+			width: 812px;
 			height:1.5em;
 			background-color:$purple;
 			position: relative;
 			left:-6px;
 			padding-right:10px;
-			border-right: 21px solid $orange;
+			border-right: 20px solid $orange;
 			z-index:1;
 		}
 
 		@include breakpoint(laptop) {
-			width: 1015px;
+			width: 1016px;
 		}
 
 		@include breakpoint(desktop) {
-			width: 1111px;
+			width: 1112px;
 		}
 
 		@include breakpoint(tv) {
@@ -207,8 +209,6 @@ body {
 		}
 }
 .footer-swipe {
-	
-
 
 		@include breakpoint(tablet) {
 			width: 810px;
@@ -227,7 +227,7 @@ body {
 			    width: 38px;  
 			    padding: 0px; 
 			    top: 15px; 
-			    right:-35px;
+			    right:-34px;
 			    -webkit-transform: rotate(39deg) skew(39deg); 
 			    transform: rotate(39deg) skew(39deg);
 				background-color:darken($purple, 18%);
@@ -307,7 +307,7 @@ body {
 }
 
 #inner-content {
-	padding:1.677em 1.5em;
+	padding:2.6em 1.5em 1.677em;
 	background-color:$white;
 }
 
@@ -431,7 +431,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
   a, a:visited {
     text-decoration: none;
     border: none;
-    color:$black;
+    color:$purple;
   }
 
 }
@@ -472,7 +472,7 @@ h6 {
 	font-size:3.5em;
 	color:$purple;
 	line-height:1em;
-	margin-bottom:.25em;
+	margin-bottom:.1em;
 	font-family:$title-family;
 }
 
@@ -484,7 +484,9 @@ h6 {
 	}
 
 	.single & {
-		padding-bottom:1.25em;
+
+		color:$orange;
+		/* padding-bottom:1.25em;*/
 	}
 }
 
@@ -616,8 +618,7 @@ ul.tags {
 	position: relative;
 	z-index:1;
 	img {
-		-webkit-box-shadow: 4px 4px 0 0;
-		box-shadow: 4px 4px 0 0;
+		box-shadow:2px 3px #e6e6e6;
 		color:$light-gray;
 		margin-bottom: 1em;
 	}
@@ -740,7 +741,7 @@ ul.tags {
 
 /* post meta */
 .byline {
-	color: $meta-color;
+	color: #939393;
 	font-size:.8em;
 	margin: 0;
 
@@ -751,7 +752,9 @@ ul.tags {
 	list-style: none;
 	margin:0 0 1em 1.5em;
 
-	
+	.single & {
+		margin-top:.5em;
+	}
 
 	li {
 		display: inline-block;
@@ -825,7 +828,7 @@ ul.tags {
 		display: inline-block;
 		color:$white;
 		padding:.2em .5em;
-		font-size: .9em;
+		font-size: .8em;
 		font-family:$subtitle-family;
 		text-transform: uppercase;
 
@@ -856,6 +859,7 @@ ul.tags {
 /* entry content */
 .entry-content {
 	padding: 0;
+	font-size:95%;
 
 	table {
 		width: 100%;
@@ -987,7 +991,8 @@ Align all images center for smallest screens
 	height: 0;
 	width:100%;
 	overflow: hidden;
-	margin-bottom:1em;
+	margin-bottom:1.677em;
+	z-index:1;
 
 	iframe, object, embed {
 		position: absolute;
@@ -995,6 +1000,7 @@ Align all images center for smallest screens
 		left: 0;
 		width: 100%;
 		height: 100%;
+		z-index:1;
 	}
 }
 
@@ -1161,8 +1167,8 @@ FOOTER STYLES
 	}
 
 	a, a:visited {
-		color:$gray;
-		border-color: $gray;
+		color: $white;
+		border-color: lighten($purple, 25%);
 	}
 }
 
@@ -1170,7 +1176,8 @@ FOOTER STYLES
 	font-size:1.2em;
 	display:block;
 	text-align:center;
-	font-weight:700;
+	font-weight:400;
+	font-family:$subtitle-family;
 }
 
 .organization-address, .copyright {
@@ -1243,7 +1250,7 @@ FOOTER STYLES
 
 	h6 {
 		font-family: $title-family;
-		margin:0 0 .25em 0;
+		margin:0;
 		color:$orange;
 		font-size: 1.5em;
 		font-weight:400;
@@ -1280,7 +1287,6 @@ FOOTER STYLES
 	margin-top:50px;
 	background: $medium-yellow url('../images/bg-colored-line.jpg') top repeat-x;
 	border:1px solid $light-gray;
-	
 
 	.kltvtitle {
 		position:absolute;
@@ -1289,6 +1295,7 @@ FOOTER STYLES
 		width:272px;
 		height:60px;
 		font-size: 1.8rem;
+		line-height: 1em;
 		font-family: $title-family;
 		background: transparent url('../images/bg-kltv-featurebox-h2.png') no-repeat;
 		
@@ -1334,6 +1341,7 @@ FOOTER STYLES
 }
 
 .latestfromeach {
+
 	h4 {
 		width:50%;
 		float:left;
@@ -1356,7 +1364,7 @@ FOOTER STYLES
 		
 
 		@include breakpoint(tablet) {
-			min-height: 225px;
+			min-height: 240px;
 			width:50%;
 			&:nth-of-type(2n) {
 				border-left:none;
@@ -1433,7 +1441,7 @@ FOOTER STYLES
 
 		&:after {
 		    position: absolute;
-		    bottom: 5px;
+		    bottom: 2px;
 		    right:-20px;
 		    overflow: visible;
 		    font-size: .5em;
@@ -1462,28 +1470,35 @@ FOOTER STYLES
 	}
 
 	&:after {
-	   content: "\f144";
+	   /* content: "\f144";
 	    font-family: 'FontAwesome';
 	    color:$white;
 	    opacity: .8;
 	    font-size: 2.5em;
 	    position: absolute;
-	    bottom: .5em;
-	    right:.25em;
-	    z-index: 100;
-	    pointer-events: none;
-	    transition: all 1s;
+transition: all 1s;
 	    text-shadow: -1px -1px 0 $black, 
 	    			1px -1px 0 $black,
 	    			-1px 1px 0 $black,
 	    			1px 1px 0 $black;  
+	    */
+	   content: "";
+	    position: absolute;
+	    bottom: 8px;
+	    right:8px;
+	    width: 32px;
+	    height: 32px;
+	    z-index: 100;
+	    background: transparent url('../images/bg-play-small.png') no-repeat center;
+	    pointer-events: none;
+	    
 	}
 
-	&:hover {
+	/* &:hover {
 		&:after {
 			opacity:1;
 		}
-	}
+	} */
 }
 
 .latestcommunity {
@@ -1540,7 +1555,7 @@ FOOTER STYLES
 			&:after {
 				color:lighten($blue,30%);
 				font-size:.8em;
-				bottom:0;
+				bottom:3px;
 				opacity:1;
 			}
 		}

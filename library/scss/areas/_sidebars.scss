@@ -3,7 +3,7 @@
 }
 .widget {
 	margin-bottom:1.5em;
-	padding:1.3em 1.677em 1.677em;
+	padding:1.677em 1.677em 1.677em;
 	border:1px solid $light-gray;
 	color:$darkest-gray;
 
@@ -25,7 +25,7 @@
 	}
 
 	img {
-		box-shadow: 3px 3px $light-gray;
+		box-shadow: 2px 3px #e6e6e6;
 	}
 }
 
@@ -57,9 +57,17 @@
 	color:$dark-white;
 	border-bottom:2px solid darken($teal,10%);
 
+	figure {
+		margin-bottom: 5px;
+	}
+
 	h3 {
 		color:$white;
 		text-shadow: 2px 2px #2f938d;
+	}
+
+	:last-child {
+		margin-bottom: 0;
 	}
 }
 
@@ -143,8 +151,11 @@
 }
 
 .footer-widgets {
+	color: lighten($purple, 25%);
+
 	.widget {
 		border: none;
 		padding:0;
+		color: lighten($purple, 25%);
 	}
 }

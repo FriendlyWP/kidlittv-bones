@@ -173,6 +173,7 @@ NAVIGATION STYLES
 .nav-desc {
 	margin-bottom:1em;
 	display:inline-block;
+	line-height:1.4em;
 }
 
 
@@ -201,13 +202,29 @@ NAVIGATION STYLES
 			display: inline-block;	
 			background-color:$blue;	
 			margin:0 0 0 0;
-			padding:0 0 0 2em;
-			box-shadow: 6px 6px 0 lighten($gray, 20%);
+			padding:0;
+			box-shadow: 4px 4px 0 #dfdfdf;
 			
-			li {
+			
+			& > li {
 				display:inline-block;
+
 				a {
 					height:50px;
+					border-bottom:2px solid rgba(2, 126, 163, 0.5);
+				}
+
+				&:first-child {
+					a {
+						padding-left:2.1em;
+					}
+				}
+
+				&:nth-last-child(2) {
+					a {
+						padding-right:2.25em;	
+					}
+					
 				}
 			}
 		}
@@ -222,9 +239,8 @@ NAVIGATION STYLES
 		a, a:visited {
 			display: table-cell;
 			color: $light-blue;
-			border: none;
 			padding: 0.75em .75em 1.1em;
-			font-size: 1em;
+			font-size: .95em;
 			text-transform: uppercase;
 			vertical-align: bottom;
 			line-height: 1em;
@@ -244,7 +260,7 @@ NAVIGATION STYLES
 		}
 
 		&.menu-special {
-			box-shadow: 0 6px 0px lighten($gray, 20%);
+			/* box-shadow: 0 6px 0px lighten($gray, 20%); */
 			a, a:visited {
 				text-transform: none;
 				font-size: 1.3em;
@@ -257,7 +273,11 @@ NAVIGATION STYLES
 			&.m-gribbles {
 				background-color:$orange;
 				border-left:.1em solid $white;
-				margin-left:1.5em;
+
+				a {
+					border-bottom: 2px solid rgba(227, 92, 52, 0.56);	
+				}
+				
 			}
 		}
 
@@ -269,9 +289,9 @@ NAVIGATION STYLES
 
 			.sub-menu-content {
 				display: none;
-				border-top: .5em solid lighten($link-color, 15%);
-				border-bottom: .2em solid $link-color;
-				box-shadow: 0 .2em rgba(230, 230, 230, 0.56);
+				border-top: 4px solid lighten($link-color, 15%);
+				border-bottom: 1px solid $link-color;
+				box-shadow: 0 2px rgba(230, 230, 230, 0.56);
 				background-color: $pale-blue;
 				padding:1em 1.677em;
 				color:$blue;
@@ -310,6 +330,7 @@ NAVIGATION STYLES
 						border-right: 0;
 						display: inline-block;
 						width: auto;
+						border:none;
 						text-transform: none;
 						padding:.2em .677em 0 0;
 						height: auto;
@@ -384,10 +405,10 @@ NAVIGATION STYLES
 		a, a:visited {
 			text-transform: uppercase;
 			color:lighten($purple, 25%);
-			font-size: 1em;
+			font-size: .95em;
 			line-height: 1em;
 			padding:0 .75em;
-			border-right:1px solid $white;
+			border-right:1px solid #8d609f;
 		}
 
 		&.current-menu-ancestor, &.current-menu-item {

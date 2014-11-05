@@ -64,10 +64,14 @@
                     }
                     echo $output;
                     echo '</ul>';
-                  }
+                    ?>
+                    <h3 class="entry-title"><?php the_title(); ?></h3>
+                  <?php } else { ?>
+                    <h3 class="entry-title"><a href="<?php the_permalink(' ') ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h3>
+                    <?php }
                     ?>
 
-                   <h3><a href="<?php the_permalink(' ') ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h3>
+                   
                   <?php
                     // if on an archive, taxonomy or post-format archive page, show excerpt, otherwise full content
                     if( is_archive() || is_tax() ) {

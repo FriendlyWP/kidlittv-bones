@@ -160,6 +160,19 @@ function custom_mime_types( $post_mime_types ) {
 }
 
 /************ RESPONSIVE VIDEO ******************/
+
+// STOP VIDEOS FROM TAKING TOP PRIORITY AND OVERRIDING MENU HOVER
+add_filter( 'embed_oembed_html', 'add_video_wmode_transparent', 10, 3);
+function add_video_wmode_transparent($html, $url, $attr) {
+  if ( strpos( $html, "<embed src=" ) !== false )
+     { return str_replace('</param><embed', '</param><param name="wmode" value="opaque"></param><embed wmode="opaque" ', $html); }
+  elseif ( strpos ( $html, 'feature=oembed' ) !== false )
+     { return str_replace( 'feature=oembed', 'feature=oembed&wmode=opaque', $html ); }
+  else
+     { return $html; }
+}
+
+
 // remove dimensions from oEmbed videos
 add_filter( 'embed_oembed_html', 'tdd_oembed_filter', 10, 4 ) ; 
 function tdd_oembed_filter($html, $url, $attr, $post_ID) {
@@ -178,6 +191,8 @@ add_filter('wpseo_metabox_prio' , 'my_wpseo_metabox_prio' );
 function my_wpseo_metabox_prio() {
   return 'low' ;                                
 }
+
+//add_filter( 'black_studio_tinymce_hide_empty', '__return_true' );
 
 /**************** SHORTCODES ***************/
 
@@ -249,3 +264,5 @@ function remove_thumbnail_dimensions( $html ) {
     $html = preg_replace( '/(width|height)=\"\d*\"\s/', "", $html );
     return $html;
 }
+
+

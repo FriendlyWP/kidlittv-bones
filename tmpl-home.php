@@ -112,7 +112,9 @@ get_header();
 
 							foreach($categories as $category) {
 								$post_args=array(
-									'showposts' => 1, // you can fetch number of articles from each category
+									'numberposts' => 1, // you can fetch number of articles from each category
+									'posts_per_page' => 1,
+									'post_status' => 'publish',
 									'category__in' => array($category->term_id),
 								);
 
