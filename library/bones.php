@@ -201,20 +201,20 @@ function wpse115373_header_bg() {
 add_action( 'wp_footer', 'slug_masonry_init', 99 );
 if ( !function_exists( 'slug_masonry_init' ) ) {
 	function slug_masonry_init() { 
-		if ( is_archive() || is_category() || is_tax() ) {
+		if ( !is_post_type_archive('event') && (is_archive() || is_category() || is_tax())) {
 		?>
-	<script>
-	    //set the container that Masonry will be inside of in a var
-	    var container = document.querySelector('#masonry-loop');
-	    //create empty var msnry
-	    var msnry;
-	    // initialize Masonry after all images have loaded
-	    imagesLoaded( container, function() {
-	        msnry = new Masonry( container, {
-	            itemSelector: '.masonry-entry',
-	        });
-	    });
-	</script>
+		<script>
+		    //set the container that Masonry will be inside of in a var
+		    var container = document.querySelector('#masonry-loop');
+		    //create empty var msnry
+		    var msnry;
+		    // initialize Masonry after all images have loaded
+		    imagesLoaded( container, function() {
+		        msnry = new Masonry( container, {
+		            itemSelector: '.masonry-entry',
+		        });
+		    });
+		</script>
 	<?php }
 	 }
 	
