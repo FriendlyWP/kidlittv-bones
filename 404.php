@@ -10,13 +10,13 @@
 
 							<header class="article-header">
 
-								<h1><?php _e( 'Epic 404 - Article Not Found', 'bonestheme' ); ?></h1>
+									<h1 class="page-title" itemprop="headline"><?php _e( 'Oh No!', 'bonestheme' ); ?></h1>
 
 							</header>
 
 							<section class="entry-content">
 
-								<p><?php _e( 'The article you were looking for was not found, but maybe try looking again!', 'bonestheme' ); ?></p>
+								<p><?php _e( 'The content you were looking for was not found. Maybe try looking again:', 'bonestheme' ); ?></p>
 
 							</section>
 
@@ -24,17 +24,18 @@
 
 									<p><?php get_search_form(); ?></p>
 
+									<h1>Site Map</h1>
+
+									<?php get_template_part('content','sitemap'); ?>
+
 							</section>
 
-							<footer class="article-footer">
-
-									<p><?php _e( 'This is the 404.php template.', 'bonestheme' ); ?></p>
-
-							</footer>
-
+							
 						</article>
 
 					</div>
+
+						<?php get_sidebar(); ?>
 
 				</div>
 

@@ -1,7 +1,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class('masonry-entry'); ?> >
     <?php foreach((get_the_category()) as $category) {
-            // IF GRIBBLES SCRIBBLES
-            if ($category->slug == 'gribbles-scribbles') { ?>
+            // IF KIDLIT KIBBLES
+            if ($category->slug == 'kidlit-kibbles') { ?>
                    <h4 class="cat-title"><?php echo '<a href="' . get_category_link( $category->term_id ) . '" title="' . sprintf( __( "View all %s" ), $category->name ) . '" ' . '>' . $category->name.'</a> '; ?></h4>
             <?php 
             // ELSE IF KLTV EXCLUSIVE
@@ -40,7 +40,7 @@
         <h3><a href="<?php the_permalink(' ') ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h3>
         <div class="masonry-post-excerpt">
             
-            <?php if ($category->slug == 'gribbles-scribbles') { ?>
+            <?php if ($category->slug == 'kidlit-kibbles') { ?>
                 <?php if ( has_post_thumbnail() ) { ?>
                     <div class="masonry-thumbnail size-gs">
                         <a href="<?php the_permalink(' ') ?>" title="<?php the_title(); ?>"><?php the_post_thumbnail('masonry-thumb'); ?></a>

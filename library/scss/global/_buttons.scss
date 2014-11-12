@@ -8,7 +8,7 @@ http://galp.in/blog/2011/08/02/the-ui-guide-part-1-buttons/
 %btn {
   display: inline-block;
   position: relative;
-  font-family: $sans-serif;
+  font-family: $subtitle-family;
   text-decoration: none;
   color: $white;
   font-size: 0.9em;
@@ -53,3 +53,20 @@ and it will create a button dependant on those variables.
   } // end active
 
 } // end blue button
+
+input[type="submit"] {
+  @extend %btn;
+  background-color: $red;
+  font-size: 1em;
+  height:40px;
+  margin-bottom: .9em;
+
+   &:hover,
+  &:focus {
+    background-color: darken($red, 4%);
+  } // end hover
+
+  &:active {
+    background-color: darken($red, 6%);
+  } // end active
+}

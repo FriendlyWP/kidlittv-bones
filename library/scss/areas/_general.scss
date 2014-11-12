@@ -162,7 +162,7 @@ body {
 		@include breakpoint(tablet) {
 			width: 820px;
 			left:-2px;
-			padding:0 1.5em 1.5em;
+			padding:1.5em 1.5em 1.5em;
 			min-height:150px;
 			z-index:2;
 			border-right: 30px solid darken($purple, 18%);
@@ -185,7 +185,7 @@ body {
 	display:none;
 
 		@include breakpoint(tablet) {
-			display: block;
+			display: none;
 			width: 812px;
 			height:1.5em;
 			background-color:$purple;
@@ -209,6 +209,8 @@ body {
 		}
 }
 .footer-swipe {
+
+	display:none;
 
 		@include breakpoint(tablet) {
 			width: 810px;
@@ -432,6 +434,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
     text-decoration: none;
     border: none;
     color:$purple;
+
   }
 
 }
@@ -516,9 +519,10 @@ p {
 
 .cat-title {
   	font-family: $title-family;
-  	font-size:2em;
+  	font-size:1.4em;
   	margin:0;
   	padding:0;
+  	text-align:right;
 
   	a, a:visited {
   		color:$orange;
@@ -535,6 +539,14 @@ p {
 	a, a:visited {
 		color:$white;
 	}
+}
+
+ .tax-posttype.term-kidlit-kibbles  {
+ 	.article-header {
+ 		a, a:visited {
+ 			color:$red;
+ 		}
+ 	}
 }
 
 /*********************
@@ -689,8 +701,8 @@ ul.tags {
 		& > a:after {
 		    content: "";
 		    position: absolute;
-		    top: 33%;
-		    left:41%;
+		    bottom: 2em;
+		    right:1em;
 		    width: 65px;
 		    height: 65px;
 		    z-index: 100;
@@ -719,7 +731,7 @@ ul.tags {
 	}
 }
 
-.format-aside, .single-format-standard, .posttype-gribbles-scribbles {
+.format-aside, .single-format-standard, .posttype-kidlit-kibbles {
 	.masonry-thumbnail {
 		width:45%;
 		margin-left:2%;
@@ -727,7 +739,7 @@ ul.tags {
 	}
 }
 
-.archive.term-post-format-aside,.archive.term-gribbles-scribbles  {
+.archive.term-post-format-aside,.archive.term-kidlit-kibbles  {
 	.cat-title {
 		display: none;
 	}
@@ -927,6 +939,10 @@ ul.tags {
 		border-radius: 3px;
 	}
 
+	.learnmore-link {
+		display: none;
+	}
+
 } /* end .entry-content */
 
 #breadcrumbs {
@@ -939,7 +955,8 @@ blockquote {
 	padding: 0 0 0 0.75em;
 	border-left: 3px solid $blue;
 	font-style: italic;
-	color: $meta-color;
+	color: $dark-blue;
+	font-size:1.1em;
 
 	&:before {}
 

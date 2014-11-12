@@ -78,7 +78,7 @@ function bones_register_sidebars() {
 		'id' => 'sidebar1',
 		'name' => __( 'Sidebar 1', 'bonestheme' ),
 		'description' => __( 'The first (primary) sidebar.', 'bonestheme' ),
-		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'before_widget' => '<div id="%1$s" class="widget cf %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<h4 class="widgettitle">',
 		'after_title' => '</h4>',
@@ -88,7 +88,7 @@ function bones_register_sidebars() {
     'id' => 'footer1',
     'name' => __( 'Footer Widgets', 'bonestheme' ),
     'description' => __( 'The footer widgets.', 'bonestheme' ),
-    'before_widget' => '<div id="%1$s" class="widget %2$s">',
+    'before_widget' => '<div id="%1$s" class="widget cf %2$s">',
     'after_widget' => '</div>',
     'before_title' => '<h4 class="widgettitle">',
     'after_title' => '</h4>',
@@ -98,7 +98,7 @@ function bones_register_sidebars() {
     'id' => 'header1',
     'name' => __( 'Header Widget', 'bonestheme' ),
     'description' => __( 'The header widget.', 'bonestheme' ),
-    'before_widget' => '<div id="%1$s" class="widget %2$s">',
+    'before_widget' => '<div id="%1$s" class="widget cf %2$s">',
     'after_widget' => '</div>',
     'before_title' => '<h4 class="widgettitle">',
     'after_title' => '</h4>',
@@ -173,7 +173,7 @@ function add_video_wmode_transparent($html, $url, $attr) {
 }
 
 
-// remove dimensions from oEmbed videos
+// remove dimensions from oEmbed videos & wrap in 
 add_filter( 'embed_oembed_html', 'tdd_oembed_filter', 10, 4 ) ; 
 function tdd_oembed_filter($html, $url, $attr, $post_ID) {
     $return = '<figure class="video-container">'.$html.'</figure>';

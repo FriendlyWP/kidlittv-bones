@@ -27,7 +27,7 @@ get_header();
 					    if ( $exclusives_query->have_posts() ) { 
 					    	$alttext = the_title_attribute('echo=0');
 					    	echo '<div class="kltv-featurebox">';
-					    	echo '<h3 class="kltvtitle"><a href="' . '">KLTV Exclusives</a></h3>';
+					    	echo '<h3 class="kltvtitle"><a href="' . get_term_link( 'kltv-exclusives', 'posttype' ) . '">KLTV Exclusives</a></h3>';
 					    	echo '<ul>';
 						    	while ( $exclusives_query->have_posts() ) { 
 		         					$exclusives_query->the_post(); 
@@ -51,8 +51,9 @@ get_header();
   						$id = $idObj->term_id;
   						$exclude = $id . ',1'; // exclude community and uncategorized categories
 						$selected_categories = array(
-						 'cat_name' => 'book-craft,interviews,technology,trailers,business-marketing',
+						 //'cat_name' => 'book-craft,interviews,technology,trailers,business-marketing',
 						 'exclude' => $exclude,
+						 'order_by' => 'menu_order',
 						 'order' => 'ASC',
 						 'parent' => '0'
 						 );
@@ -90,7 +91,7 @@ get_header();
 								}
 								
 							}
-							echo '<li class="blocks"><h3 class="cattitle all"><a href="' . get_home_url( '/kltv-exclusives' ) . '">All Videos</a></h3></li>';
+							//echo '<li class="blocks"><h3 class="cattitle all"><a href="' . get_home_url( '/kltv-exclusives' ) . '">All Videos</a></h3></li>';
 							echo '</ul></div>';
 						}
 						?>
@@ -101,6 +102,7 @@ get_header();
   						$description = $idObj->description;
 						$selected_categories = array(
 						 'order' => 'ASC',
+						 'order_by' => 'menu_order',
 						 'parent' => $id,
 						 );
 						$categories=get_categories($selected_categories);

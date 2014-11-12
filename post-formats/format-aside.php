@@ -5,10 +5,10 @@
 
                 <header class="article-header">
 
-                      <h4 class="cat-title"><a href="<?php echo get_term_link( 'gribbles-scribbles', 'posttype' ); ?>">Gribble's Scribbles</a></h4>
+                      <h4 class="cat-title"><a href="<?php echo get_term_link( 'kidlit-kibbles', 'posttype' ); ?>">KiLit Kibbles</a></h4>
                   
 
-                   <?php if (is_archive() || is_tax() || is_category() ) { ?>
+                   <?php if (is_archive() || is_tax() || is_category() || is_search() ) { ?>
                     <h3><a href="<?php the_permalink(' ') ?>"><?php the_title(); ?></a></h3>
                   <?php } else { ?>
                     <?php 
@@ -43,7 +43,7 @@
                   <?php } */  ?>
                   <?php
                     // if on an archive, taxonomy or post-format archive page, show excerpt, otherwise full content
-                    if(is_archive()) {
+                    if(is_archive() || is_search()) {
                       the_excerpt();
                     } else {
                       the_content();
@@ -58,7 +58,7 @@
                   ?>
                 </section> <?php // end article section ?>
 
-                 <?php if (is_archive() || is_tax() ) { ?>
+                 <?php if (is_archive() || is_tax() || is_search() ) { ?>
                 
                   <div class="byline cf"><?php
   comments_popup_link( 'Comment', '1 comment', '% comments', 'comments-link', 'Comments off');

@@ -1,6 +1,6 @@
 <?php
 /**
- * Flexible Posts Widget: Gribble's Scribbles widget template
+ * Flexible Posts Widget: KiLit Kibbles widget template
  * 
  * @since 3.4.0
  *

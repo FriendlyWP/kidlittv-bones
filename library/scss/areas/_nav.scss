@@ -239,12 +239,11 @@ NAVIGATION STYLES
 		a, a:visited {
 			display: table-cell;
 			color: $light-blue;
-			padding: 0.75em .75em 1.1em;
+			padding: 0.75em .75em .95em;
 			font-size: .95em;
 			text-transform: uppercase;
 			vertical-align: bottom;
 			line-height: 1em;
-
 
 			&:hover, &:focus {
 				color: $white;
@@ -266,7 +265,8 @@ NAVIGATION STYLES
 				font-size: 1.3em;
 				color:$white;
 				display: inline-block;
-				padding:.65em .75em .6em;
+				line-height: 1.075em;
+				padding:.65em .75em .7em;
 
 			}
 
@@ -299,6 +299,7 @@ NAVIGATION STYLES
 				z-index: 8999;
 				text-align:left;
 				width:auto;
+				min-width: 300px;
 				font-size:.9em;
 				font-family: $sans-serif;
 			}

@@ -56,7 +56,7 @@
 						                    <?php } ?>
 
 						                    <?php 
-						                    if ( !( is_tax('posttype','gribbles-scribbles') || is_tax('posttype','kltv-exclusives') ) ) {
+						                    if ( !( is_tax('posttype','kidlit-kibbles') || is_tax('posttype','kltv-exclusives') ) ) {
 							                    $current_cat_id = get_query_var('cat');
 												echo '<ul class="subcat-list">';
 												wp_list_categories('orderby=name&title_li=&use_desc_for_title=0&show_option_none=&child_of=' . $current_cat_id );
@@ -77,9 +77,9 @@
 							<?php if (have_posts()) :  ?>
 							
 							<?php 
-							// IF THIS ISN'T THE ARCHIVE FOR GRIBBLES SCRIBBLES OR KLTV EXCLUSIVES, SHOW CATS
-							if ( !( is_tax('posttype','gribbles-scribbles') || is_tax('posttype','kltv-exclusives') ) ) {
-								// IS IN EITHER GRIBBLES SCRIBBLES OR KLTV EXCLUSIVE
+							// IF THIS ISN'T THE ARCHIVE FOR KIDLIT KIBBLES OR KLTV EXCLUSIVES, SHOW CATS
+							if ( !( is_tax('posttype','kidlit-kibbles') || is_tax('posttype','kltv-exclusives') ) ) {
+								// IS IN EITHER KIDLIT KIBBLES OR KLTV EXCLUSIVE
 								$current_cat_id = get_query_var('cat');
 								echo '<ul class="subcat-list">';
 								wp_list_categories('orderby=name&title_li=&use_desc_for_title=0&show_option_none=&child_of=' . $current_cat_id );
@@ -92,7 +92,7 @@
 
 									<?php // get_template_part( 'content', 'masonry'); ?>
 									<?php
-									if ( has_term( 'gribbles-scribbles','posttype' ) ) {
+									if ( has_term( 'kidlit-kibbles','posttype' ) ) {
 										get_template_part( 'post-formats/format', 'aside' );
 									} elseif ( has_term('kltv-exclusives' , 'posttype' ) ) {
 										get_template_part( 'post-formats/format', 'video' );

@@ -47,7 +47,7 @@
 								<?php } elseif ( is_tax( 'post_format', 'post-format-aside' ) ) {
 								$term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) );  ?>
 								    		<h1 class="page-title">
-								    	    		Gribble's Scribbles
+								    	    		KiLit Kibbles
 								        	</h1>
 								<?php } elseif ( is_tax( 'post_format', 'post-format-video' ) ) { 
 									$term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) ); ?>

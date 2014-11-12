@@ -106,7 +106,7 @@ function bones_scripts_and_styles() {
 		// ie-only style sheet
 		wp_register_style( 'bones-ie-only', get_stylesheet_directory_uri() . '/library/css/ie.css', array(), '' );
 
-		if ( is_archive() || is_category() || is_tax() ) {
+		if ( is_archive() || is_category() || is_tax() || is_search() ) {
 			wp_enqueue_script('masonry');
     		wp_enqueue_style('masonry', get_stylesheet_directory_uri() .'/library/css/');	
 		}
@@ -201,7 +201,7 @@ function wpse115373_header_bg() {
 add_action( 'wp_footer', 'slug_masonry_init', 99 );
 if ( !function_exists( 'slug_masonry_init' ) ) {
 	function slug_masonry_init() { 
-		if ( !is_post_type_archive('event') && (is_archive() || is_category() || is_tax())) {
+		if ( !is_post_type_archive('event') && (is_archive() || is_category() || is_tax() || is_search())) {
 		?>
 		<script>
 		    //set the container that Masonry will be inside of in a var
@@ -255,7 +255,7 @@ function bones_theme_support() {
 	// adding post format support
 	add_theme_support( 'post-formats',
 		array(
-			//'aside',             // RENAMED TO 'GRIBBLES SCRIBBLES'
+			//'aside',             // RENAMED TO 'KIDLIT KIBBLES'
 			'video',             // RENAMED TO KLTV EXCLUSIVE
 			//'audio',             // audio
 			//'chat'               // chat transcript

@@ -53,7 +53,7 @@
                     <h1 class="entry-title"><?php the_title(); ?></h1>
                     <div class="masonry-thumbnail">
 
-                      <?php if( is_archive() || is_tax() ) { ?>
+                      <?php if( is_archive() || is_tax() || is_search() ) { ?>
 
                             <?php if ( has_post_thumbnail() ) { ?>
                               <a href="<?php the_permalink(' ') ?>" title="<?php the_title(); ?>"><?php the_post_thumbnail('masonry-thumb'); ?></a>
@@ -84,7 +84,7 @@
 
                   <?php
                    // if on an archive, taxonomy or post-format archive page, show excerpt, otherwise full content
-                    if(is_archive()) {
+                    if(is_archive() || is_search()) {
                       the_excerpt();
                     } else {
                       the_content();
@@ -99,7 +99,7 @@
                   ?>
                 </section> <?php // end article section ?>
 
-                <?php if (is_archive() || is_tax() ) { ?>
+                <?php if (is_archive() || is_tax() || is_search() ) { ?>
 
                   <div class="byline cf"><?php
   comments_popup_link( 'Comment', '1 comment', '% comments', 'comments-link', 'Comments off');

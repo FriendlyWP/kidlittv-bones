@@ -5,7 +5,7 @@
                 <?php } ?>
 
                 <div class="masonry-thumbnail">
-                  <?php if ( is_archive() || is_tax() ) { ?>
+                  <?php if ( is_archive() || is_tax() || is_search()) { ?>
                     <?php 
                    
                       $category = get_the_category(); 
@@ -74,7 +74,7 @@
                    
                   <?php
                     // if on an archive, taxonomy or post-format archive page, show excerpt, otherwise full content
-                    if( is_archive() || is_tax() ) {
+                    if( is_archive() || is_tax() || is_search() ) {
                       the_excerpt();
                     } else {
                       the_content();
@@ -89,7 +89,7 @@
                   ?>
                 </section> <?php // end article section ?>
 
-                 <?php if (is_archive() || is_tax() ) { ?>
+                 <?php if (is_archive() || is_tax() || is_search() ) { ?>
                 
                   <div class="byline cf"><?php
   comments_popup_link( 'Comment', '1 comment', '% comments', 'comments-link', 'Comments off');

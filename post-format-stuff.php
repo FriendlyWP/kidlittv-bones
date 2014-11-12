@@ -51,7 +51,7 @@ function mysite_change_taxonomy_permalinks() {
 function my_get_post_format_slugs() {
 
   $slugs = array(
-    'aside'   => 'gribbles-scribbles',
+    'aside'   => 'kidlit-kibbles',
     'audio'   => 'audio',
     'chat'    => 'chats',
     'gallery' => 'galleries',
