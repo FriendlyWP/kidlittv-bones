@@ -30,7 +30,13 @@
                 </header> <?php // end article header ?>
 
                 <section class="entry-content cf" itemprop="articleBody">
-                  <?php if ( has_post_thumbnail() ) { ?>
+                  <?php if ( is_single() && has_post_thumbnail() ) { 
+                    $large_image_url = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'large' );
+                      ?>
+                        <div class="masonry-thumbnail">
+                            <a rel="lightbox" href="<?php echo $large_image_url[0]; ?>"><?php the_post_thumbnail('masonry-thumb'); ?></a>
+                        </div><!--.masonry-thumbnail-->
+                        <?php } elseif ( has_post_thumbnail() ) { ?>
                         <div class="masonry-thumbnail">
                             <a href="<?php the_permalink(' ') ?>"><?php the_post_thumbnail('masonry-thumb', array( 'alt' =>  $alttext )); ?></a>
                         </div><!--.masonry-thumbnail-->

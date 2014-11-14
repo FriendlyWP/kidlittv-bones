@@ -70,17 +70,19 @@
 
                 <section class="entry-content cf" itemprop="articleBody">
 
-                  <?php if ( is_single() && has_post_thumbnail() ) { ?>
+                  <?php if ( is_single() && has_post_thumbnail() ) { 
+                    $large_image_url = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'large' );
+                      ?>
                         <div class="masonry-thumbnail">
-                            <a href="<?php the_permalink(' ') ?>" title="<?php the_title(); ?>"><?php the_post_thumbnail('masonry-thumb'); ?></a>
+                            <a rel="lightbox" href="<?php echo $large_image_url[0]; ?>"><?php the_post_thumbnail('masonry-thumb'); ?></a>
                         </div><!--.masonry-thumbnail-->
-                        <?php } elseif ( is_single() && function_exists('get_video_thumbnail') && get_video_thumbnail() ) {
+                        <?php } /* elseif ( is_single() && function_exists('get_video_thumbnail') && get_video_thumbnail() ) {
                             $video_thumbnail = get_video_thumbnail();   
                             ?>
                             <div class="masonry-thumbnail">
                             <a href="<?php the_permalink(' ') ?>" title="<?php the_title(); ?>"><img src="<?php echo $video_thumbnail; ?>" /></a>
                         </div><!--.masonry-thumbnail-->
-                  <?php } ?>
+                  <?php } */ ?>
 
                   <?php
                    // if on an archive, taxonomy or post-format archive page, show excerpt, otherwise full content

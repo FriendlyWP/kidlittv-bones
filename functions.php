@@ -104,6 +104,16 @@ function bones_register_sidebars() {
     'after_title' => '</h4>',
   ));
 
+  register_sidebar(array(
+    'id' => 'mobile-home',
+    'name' => __( 'Home Page Mobile Widgets', 'bonestheme' ),
+    'description' => __( 'These widgets appear above the slider on mobile only.', 'bonestheme' ),
+    'before_widget' => '<div id="%1$s" class="widget cf %2$s">',
+    'after_widget' => '</div>',
+    'before_title' => '<h4 class="widgettitle">',
+    'after_title' => '</h4>',
+  ));
+
 } // don't remove this bracket!
 
 

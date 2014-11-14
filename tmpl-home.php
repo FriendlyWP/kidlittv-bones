@@ -10,6 +10,11 @@ get_header();
 				<div id="inner-content" class="wrap cf">
 
 						<div id="main" class="main-content cf" role="main">
+							<?php if ( wp_is_mobile() && is_active_sidebar( 'mobile-home' ) ) { ?>
+
+								<?php dynamic_sidebar( 'mobile-home' ); ?>
+
+							<?php } ?>
 
 						<?php get_template_part('content', 'flexslider'); ?>
 
