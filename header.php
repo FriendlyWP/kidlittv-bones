@@ -103,6 +103,7 @@
 				<div class="topspacer wrap"></div>
 				<div class="topbar">
 					<div class="wrap cf">
+						<div class="holder">
 						<div class="mobilemenu allmenu"><a href="#my-menu" class="menu-toggler"><i class="fa fa-bars"></i><span class="mobilemessage">Navigate the site</span></a></div>
 							<?php if ( has_nav_menu( 'main-nav' ) ) { ?>
 								<nav role="navigation" class="mainnav">
@@ -146,6 +147,7 @@
 									)); ?>
 							<?php } ?>
 						</div><!-- .social-search -->
+					</div><!-- .cf -->
 					</div>
 				</div>
 
