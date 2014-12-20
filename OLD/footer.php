@@ -93,10 +93,6 @@
 
 		<?php if ( function_exists('get_field') && get_field('footer_scripts') ) {
 			the_field('footer_scripts');
-		} elseif ( is_single() && has_term('kltv-exclusives','posttype')) {
-			?>
-			<script data-leadbox="147ee8b73f72a2:13e318d2cb46dc" data-url="https://my.leadpages.net/leadbox/147ee8b73f72a2%3A13e318d2cb46dc/5689413791121408/" data-config="%7B%22type%22%3A%22time%22%2C%22settings%22%3A%7B%22seconds%22%3A0%2C%22days%22%3A0%2C%22views%22%3A0%7D%7D" type="text/javascript" src="//my.leadpages.net/leadbox-819.js"></script>
-			<?php 
 		} ?>
 		<?php wp_footer(); ?>
 

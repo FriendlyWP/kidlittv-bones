@@ -27,7 +27,6 @@
 
 .flexslider {
   margin: 0 auto 1.677em;
-  padding: 0;
   width:90%;
   border-bottom:1px solid #a4d9e9;
   min-height: 220px;
@@ -36,7 +35,7 @@
     > li {
       display: none;
       -webkit-backface-visibility: hidden;
-      margin-right: 2px;
+      
     }
     img {
       display: none;
@@ -63,6 +62,7 @@
 .slidetext {
   font-size:.9em;
   text-shadow: 2px 2px #0297c4;
+  word-wrap: break-word;
 
   @include breakpoint(tablet) {
     width: 40%;
@@ -128,7 +128,7 @@ html[xmlns] .slides {
 
 .flexslider {
  
-  padding:1em;
+  padding:1.1em;
   position: relative;
   box-shadow:5px 5px $light-gray;
   zoom: 1;

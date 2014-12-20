@@ -62,6 +62,7 @@ get_header();
 						 'order' => 'ASC',
 						 'parent' => '0'
 						 );
+
 						$categories=get_categories($selected_categories);
 						if ($categories) {
 							echo '<div class="latestfromeach">';
@@ -71,6 +72,14 @@ get_header();
 								$post_args=array(
 									'showposts' => 1, // you can fetch number of articles from each category
 									'category__in' => array($category->term_id),
+									'tax_query' => array(
+										array(
+											'taxonomy' => 'posttype',
+											'field'    => 'slug',
+											'terms'    => array( 'kidlit-kibbles', 'kltv-exclusives'),
+											'operator' => 'NOT IN',
+										),
+									),
 								);
 
 								$posts=get_posts($post_args);
@@ -82,9 +91,15 @@ get_header();
 								
 									foreach($posts as $post) {
 										setup_postdata($post);
+										$format = get_post_format( $post->ID );
+										if ("video" === $format) {
+											$class = 'smallplay';
+										} else {
+											$class = '';
+										}
 
 										if ( has_post_thumbnail() ) { 
-							                echo '<a class="smallplay" href="' . get_permalink('') . '">' .  get_the_post_thumbnail($post->ID, 'tiny-thumb', array( 'alt' =>  $alttext )) . '</a>';
+							                echo '<a class="' . $class  . '" href="' . get_permalink('') . '">' .  get_the_post_thumbnail($post->ID, 'tiny-thumb', array( 'alt' =>  $alttext )) . '</a>';
 							            } /*elseif ( function_exists('get_video_thumbnail') && get_video_thumbnail() ) {
 							                $video_thumbnail = get_video_thumbnail($post->ID);   
 							                echo '<a class="smallplay" href="' . get_permalink('') . '"><img src="'. $video_thumbnail . '" alt="' . $alttext . '" /></a>';
@@ -123,6 +138,14 @@ get_header();
 									'posts_per_page' => 1,
 									'post_status' => 'publish',
 									'category__in' => array($category->term_id),
+									'tax_query' => array(
+										array(
+											'taxonomy' => 'posttype',
+											'field'    => 'slug',
+											'terms'    => array( 'kidlit-kibbles', 'kltv-exclusives'),
+											'operator' => 'NOT IN',
+										),
+									),
 								);
 
 								$posts=get_posts($post_args);
@@ -134,9 +157,15 @@ get_header();
 								
 									foreach($posts as $post) {
 										setup_postdata($post);
+										$format = get_post_format( $post->ID );
+										if ("video" === $format) {
+											$class = 'smallplay';
+										} else {
+											$class = '';
+										}
 
 										if ( has_post_thumbnail() ) { 
-							                echo '<a class="smallplay" href="' . get_permalink('') . '">' .  get_the_post_thumbnail($post->ID, 'tiny-thumb', array( 'alt' =>  $alttext )) . '</a>';
+							                echo '<a class="' . $class . '" href="' . get_permalink('') . '">' .  get_the_post_thumbnail($post->ID, 'tiny-thumb', array( 'alt' =>  $alttext )) . '</a>';
 							            } /* elseif ( function_exists('get_video_thumbnail') && get_video_thumbnail() ) {
 							                $video_thumbnail = get_video_thumbnail($post->ID);   
 							                echo '<a class="smallplay" href="' . get_permalink('') . '"><img src="'. $video_thumbnail . '" alt="' . $alttext . '" /></a>';
