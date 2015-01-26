@@ -61,7 +61,7 @@ NAVIGATION STYLES
 	text-align: center;
 	vertical-align: top;
 	position: relative;
-	
+	z-index:1;
 	vertical-align:middle;
 	line-height:1em;
 
@@ -81,6 +81,11 @@ NAVIGATION STYLES
 		}
 	}
 
+	nav {
+		/* width:60%; */
+		text-align: right;
+	}
+
 
 	.social-nav {
 		display: none;
@@ -94,7 +99,7 @@ NAVIGATION STYLES
 		li a, li a:visited {
 			padding: 0 .75em;
 			vertical-align: middle;
-			font-size:.8em;
+			font-size:.6em;
 			color:$white;
 
 			i {
@@ -113,9 +118,10 @@ NAVIGATION STYLES
 	}
 
 	.searchform {
-		width: 50%;
+		
 		position:relative;
 		display: inline-block;
+		margin-right: .75em;
 
 		.search-label {
 			font-family: $subtitle-family;
@@ -126,23 +132,44 @@ NAVIGATION STYLES
 
 		input, button {
 			margin:0;
-			height:1.5em;
+			height:1.7em;
 			line-height: 1em;
 		}
 
 		input {
-			width: 52%;
+			width: 100%;
 			margin:0 3% 0 2%;
-			background-color:lighten($purple, 15%);
+			background-color:#a386b2;
 			border-color:lighten($purple, 15%);
+			color: #dccae6;
+			font-size:.8em;
+			padding:.4em 2em .2em .2em;
 
 			// a focused input (or hovered on)
 			  &:focus,
 			  &:active {
-			    background-color: lighten($purple, 45%);
+			    background-color: #a386b2;
 			    border-color:$purple;
+			    color: #dccae6;
+
 			  } // end hover or focus
 
+		}
+
+		::-webkit-input-placeholder {
+		   color: #dccae6;
+		}
+
+		:-moz-placeholder { /* Firefox 18- */
+		   color: #dccae6;  
+		}
+
+		::-moz-placeholder {  /* Firefox 19+ */
+		   color: #dccae6;  
+		}
+
+		:-ms-input-placeholder {  
+		   color: #dccae6;  
 		}
 
 		button {
@@ -150,6 +177,15 @@ NAVIGATION STYLES
 			background-color:transparent;
 			border: none;
 			font-size: 26px;
+		}
+
+		.search-icon {
+			display: block;
+			position:absolute;
+			right:-.1em;
+			top:-.15em;
+			font-size: 16px;
+			color:#c5b3ce;
 		}
 	}
 
@@ -411,12 +447,12 @@ NAVIGATION STYLES
 
 .main-nav {
 	li {
-		padding:.75em 0;
+		padding:.9em 0 .5em;
 
 		a, a:visited {
 			text-transform: uppercase;
 			color:lighten($purple, 25%);
-			font-size: .95em;
+			font-size: .9em;
 			line-height: 1em;
 			padding:0 .75em;
 			border-right:1px solid #8d609f;
@@ -429,11 +465,11 @@ NAVIGATION STYLES
 
 		}
 
-		&:last-of-type {
+		/* &:last-of-type {
 			a {
 				border-right: none;
 			}
-		}
+		} */
 	}
 	.menu-item-has-children {
 		& > a:after {

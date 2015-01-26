@@ -213,7 +213,7 @@ add_filter('widget_text', 'do_shortcode');
 if( function_exists('acf_add_options_sub_page') )
 {
     acf_add_options_sub_page(array(
-        'title' => 'Copyright & Address',
+        'title' => 'Site Footer',
         'parent' => 'options-general.php',
         'capability' => 'manage_options'
     ));
@@ -275,4 +275,13 @@ function remove_thumbnail_dimensions( $html ) {
     return $html;
 }
 
-
+// FUNCTION TO CHECK IF A VISITOR HAS BEEN HERE BEFORE (AND SEEN LEADPAGES - used in footer.php)
+add_action("init", "checkAccessed");
+function checkAccessed(){
+        if ( !isset($_COOKIE['accessed']) ) { 
+            setcookie('accessed', 'yes', time() + 3600*24*30); 
+            define("ACCESSED", false);
+        }else{
+            define("ACCESSED", true);
+        }
+}

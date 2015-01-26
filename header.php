@@ -126,9 +126,9 @@
 						<div class="social-search">
 							<form role="search" class="searchform" method="get" id="searchform-head" action="<?php echo home_url( '/' ); ?>">
 							    <div class="head-search">
-							    	<label class="search-label" for="s">Search</label>
-							        <input type="text" value="" placeholder="" name="s" id="s" />
-							        <!--<button type="submit" id="searchsubmit-head" value="Search"  /><i class="fa fa-search"></i></button>-->
+							    	<label class="search-label screen-reader-text" for="s">Search</label>
+							        <input type="text" value="" placeholder="Search" name="s" id="s" />
+							        <button type="submit" class="search-icon" id="searchsubmit-head" value="Search"  /><i class="fa fa-search"></i></button>
 							    </div>
 							</form>
 							
@@ -154,7 +154,7 @@
 				<div id="inner-header" class="wrap cf">
 					
 
-					<a href="<?php echo home_url(); ?>" id="logo" rel="nofollow" title="<?php bloginfo('name'); ?>"><img itemprop="logo" src="<?php echo get_template_directory_uri(); ?>/library/images/logo-kidlittv.png" alt="<?php bloginfo('name'); ?>" /></a>
+					<a href="<?php echo home_url(); ?>" id="logo" rel="nofollow" title="<?php bloginfo('name'); ?>"><img itemprop="logo" src="<?php echo get_template_directory_uri(); ?>/library/images/kidlit-sitelogo-small.png" alt="<?php bloginfo('name'); ?>" /></a>
 
 					<?php $desc = get_bloginfo('description'); 
 					if ($desc) { ?>

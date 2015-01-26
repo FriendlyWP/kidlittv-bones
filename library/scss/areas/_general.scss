@@ -119,6 +119,7 @@ body {
 
 
 #inner-header {
+	position:relative;
 
 	&.wrap {
 		position:relative;
@@ -132,6 +133,16 @@ body {
 		background: -ms-linear-gradient(-45deg,  #f9efcc 0%,#ffffff 100%);
 		background: linear-gradient(135deg,  #f9efcc 0%,#ffffff 100%);
 		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9efcc', endColorstr='#ffffff',GradientType=1 );
+
+		background: #f9efcc; /* Old browsers */
+background: -moz-linear-gradient(top,  #f9efcc 0%, #fffaea 94%, #ffffff 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f9efcc), color-stop(94%,#fffaea), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #f9efcc 0%,#fffaea 94%,#ffffff 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #f9efcc 0%,#fffaea 94%,#ffffff 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #f9efcc 0%,#fffaea 94%,#ffffff 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #f9efcc 0%,#fffaea 94%,#ffffff 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9efcc', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+
 
 		@include breakpoint(tablet) {
 			border:none;
@@ -319,25 +330,30 @@ body {
 
 .holder {
 	position: relative;
+	text-align: right;
 }
 
 .social-search {
 	display: none;
 
 	@include breakpoint(tablet) {
-		width:40%;
+		
 		display:inline-block;
-		/*float:right; */
+		/*
+		width:40%;
+		float:right; 
 		position:absolute;
 		right:0;
 		top:0;
-		text-align:right;
 		vertical-align:middle;
+		*/
+		text-align:right;
+		vertical-align:top;
 		padding:.5em 0;
 	}
 
 	@include breakpoint(laptop) {
-		width: 60%;
+		/* width: 40%; */
 	}
 }
 
@@ -349,18 +365,21 @@ body {
 
 
 #logo {
-	margin:.5em 1.5em .5em 0;
+	margin:.5em 1.5em 0 0;
 	color: $white;
 	border: none;
 	line-height:1em;
 	display:inline-block;
-	max-width:359px;
+	max-width:399px;
 	width:100%;
 	vertical-align:middle;
+	z-index:100;
+	position:relative;
 
 	@include breakpoint(tablet) {
-		width:48%;
+		width:54%;
 		float:left;
+		margin:-2em 1.5em .25em 0;
 	}
 
 	@include breakpoint(laptop) {
@@ -390,7 +409,7 @@ body {
 	@include breakpoint(tablet) {
 		width:38%;
 		text-align:left;
-		padding-top:4.9em;
+		padding-top:3.5em;
 		float:left;
 	}
 
@@ -525,7 +544,10 @@ p {
 	}
 	input {
 		display: inline-block;
+
 	}
+
+	
 }
 
 .cat-title {
@@ -697,7 +719,7 @@ ul.tags {
 	
 }
 
-.posttype-kltv-exclusives, .format-video {
+.format-video {
 	.masonry-thumbnail {
 		position:relative;
 

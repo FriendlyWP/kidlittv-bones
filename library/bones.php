@@ -110,12 +110,6 @@ function bones_scripts_and_styles() {
 			wp_enqueue_script('masonry');
     		wp_enqueue_style('masonry', get_stylesheet_directory_uri() .'/library/css/');	
 		}
-		
-
-	    // comment reply script for threaded comments
-	    if ( is_singular() AND comments_open() AND (get_option('thread_comments') == 1)) {
-			  wp_enqueue_script( 'comment-reply' );
-	    }
 
 	    if ( is_page_template('tmpl-home.php') ) {
 				// Flexslider
@@ -126,6 +120,11 @@ function bones_scripts_and_styles() {
 
 		//adding scripts file in the footer
 		wp_register_script( 'bones-js', get_stylesheet_directory_uri() . '/library/js/scripts.js', array( 'jquery' ), '', true );
+
+		// retina.js
+		// **** this script now added in scripts.js ****
+		//wp_register_script( 'retina', get_stylesheet_directory_uri() . '/library/js/libs/retina-1.3.0/retina.min.js', '', '', true );
+		//wp_enqueue_script('retina');
 
 		// Dequeue WP-Columna stylesheet if that plugin is active and trying to enqueue the styles
 		if ( wp_style_is( 'wp-columna', $list = 'enqueued' )) {
