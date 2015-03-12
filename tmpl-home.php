@@ -23,7 +23,7 @@ get_header();
 					    $kltv_options = array(
 					        'post_type' => 'post',
 					        'order' => 'menu_order',
-					        'posts_per_page' => 8,
+					        'posts_per_page' => 6,
 					        'posttype' => 'kltv-exclusives'
 					    );
 					    
@@ -38,7 +38,7 @@ get_header();
 		         					$exclusives_query->the_post(); 
 		         					echo '<li>';
 		         					if ( has_post_thumbnail() ) { 
-						                echo '<a class="smallplay" href="' . get_permalink('') . '">' .  get_the_post_thumbnail($exclusives_query->post->ID, 'tiny-thumb', array( 'alt' =>  $alttext )) . '</a>';
+						                echo '<a class="smallplay" href="' . get_permalink('') . '">' .  get_the_post_thumbnail($exclusives_query->post->ID, 'thumbnail', array( 'alt' =>  $alttext )) . '</a>';
 						            } /*elseif ( function_exists('get_video_thumbnail') && get_video_thumbnail() ) {
 						                $video_thumbnail = get_video_thumbnail($exclusives_query->post->ID);   
 						                echo '<a class="smallplay" href="' . get_permalink('') . '"><img src="'. $video_thumbnail . '" alt="' . $alttext . '" /></a>';
@@ -65,7 +65,7 @@ get_header();
 
 						$categories=get_categories($selected_categories);
 						if ($categories) {
-							echo '<div class="latestfromeach">';
+							echo '<div class="latestfromeach cf">';
 							echo '<ul>';
 
 							foreach($categories as $category) {
@@ -87,6 +87,7 @@ get_header();
 								if ($posts) {
 									
 									echo '<li class="blocks">';
+									echo '<div class="ctnr">';
 									echo '<h3 class="cattitle"><a href="' . get_category_link( $category->term_id ) . '">' . $category->name . '</a></h3>';
 								
 									foreach($posts as $post) {
@@ -99,13 +100,14 @@ get_header();
 										}
 
 										if ( has_post_thumbnail() ) { 
-							                echo '<a class="' . $class  . '" href="' . get_permalink('') . '">' .  get_the_post_thumbnail($post->ID, 'tiny-thumb', array( 'alt' =>  $alttext )) . '</a>';
+							                echo '<a class="' . $class  . '" href="' . get_permalink('') . '">' .  get_the_post_thumbnail($post->ID, 'thumbnail', array( 'alt' =>  $alttext )) . '</a>';
 							            } /*elseif ( function_exists('get_video_thumbnail') && get_video_thumbnail() ) {
 							                $video_thumbnail = get_video_thumbnail($post->ID);   
 							                echo '<a class="smallplay" href="' . get_permalink('') . '"><img src="'. $video_thumbnail . '" alt="' . $alttext . '" /></a>';
 							            } */
 							            echo '<h4><a href="'. get_permalink() . '">' . get_the_title() . '</a></h4>';
 									}
+									echo '</div>';
 									echo '</li>';
 									
 								}
@@ -150,10 +152,7 @@ get_header();
 
 								$posts=get_posts($post_args);
 								
-								if ($posts) {
-									
-									echo '<li class="blocks">';
-									
+								if ($posts) {									
 								
 									foreach($posts as $post) {
 										setup_postdata($post);
@@ -163,17 +162,17 @@ get_header();
 										} else {
 											$class = '';
 										}
-
+										echo '<li class="blocks">';
 										if ( has_post_thumbnail() ) { 
-							                echo '<a class="' . $class . '" href="' . get_permalink('') . '">' .  get_the_post_thumbnail($post->ID, 'tiny-thumb', array( 'alt' =>  $alttext )) . '</a>';
+							                echo '<a class="' . $class . '" href="' . get_permalink('') . '">' .  get_the_post_thumbnail($post->ID, 'thumbnail', array( 'alt' =>  $alttext )) . '</a>';
 							            } /* elseif ( function_exists('get_video_thumbnail') && get_video_thumbnail() ) {
 							                $video_thumbnail = get_video_thumbnail($post->ID);   
 							                echo '<a class="smallplay" href="' . get_permalink('') . '"><img src="'. $video_thumbnail . '" alt="' . $alttext . '" /></a>';
 							            } */
 							            echo '<h3 class="cattitle"><a href="' . get_category_link( $category->term_id ) . '">' . $category->name . '</a></h3>';
 							            echo '<h4><a href="'. get_permalink() . '">' . get_the_title() . '</a></h4>';
+							            echo '</li>';
 									}
-									echo '</li>';
 									
 								}
 								

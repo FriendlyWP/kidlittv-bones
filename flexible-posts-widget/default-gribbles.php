@@ -22,7 +22,7 @@ if( $flexible_posts->have_posts() ):
 <?php $alttext = the_title_attribute('echo=0'); ?>
 	<ul class="dpe-flexible-posts gribbles-widget">
 	<?php while( $flexible_posts->have_posts() ) : $flexible_posts->the_post(); global $post; ?>
-		<li id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+		<li id="post-<?php the_ID(); ?>" <?php post_class('cf'); ?>>
 			<h5 class="grib-title"><a href="<?php the_permalink(' ') ?>"><?php the_title(); ?></a></h5>
 				<?php
 					if( $thumbnail == true ) {

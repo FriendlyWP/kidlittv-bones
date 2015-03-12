@@ -66,6 +66,7 @@ add_filter( 'image_size_names_choose', 'bones_custom_image_sizes' );
 function bones_custom_image_sizes( $sizes ) {
     return array_merge( $sizes, array(
         'masonry-thumb' => __('412px wide'),
+        'tiny-thumb' => __('170px wide'),
         //'bones-thumb-300' => __('300px by 100px'),
     ) );
 }

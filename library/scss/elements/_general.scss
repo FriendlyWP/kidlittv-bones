@@ -54,6 +54,10 @@ body {
 		width: 1100px;
 	}
 
+	@include breakpoint(tv) {
+		width: 1300px;
+	}
+
 	.topbar & {
 		background-color:$purple;
 		position: relative;
@@ -110,7 +114,7 @@ body {
 		}
 
 		@include breakpoint(tv) {
-			/* width: 1260px; */
+			 width: 1312px; 
 		}
 
 		
@@ -192,7 +196,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9efcc', end
 		}
 
 		@include breakpoint(tv) {
-			/* width: 1270px; */
+			width: 1320px;
 		}
 }
 .footer-top {
@@ -220,7 +224,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9efcc', end
 		}
 
 		@include breakpoint(tv) {
-			/* width: 1261px; */
+			width: 1312px; 
 		}
 }
 .footer-swipe {
@@ -261,7 +265,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9efcc', end
 		}
 
 		@include breakpoint(tv) {
-			/* width: 1260px; */
+			width: 1310px; 
 		}
 
 	
@@ -315,7 +319,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9efcc', end
 		}
 
 		@include breakpoint(tv) {
-			/* width: 1270px; */
+			width: 1320px; 
 		}
 		
 
@@ -399,23 +403,34 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f9efcc', end
 	display:inline-block;
 	width:98%;
 	color: #88857c;
-	font-family:$subtitle-family;
-	font-size:1.2em;
-	font-weight:300;
+	font-family: 'Amatic SC', cursive;
+	font-size:2em;
+	font-weight:700;
 	vertical-align:middle;
 	text-align:center;
+	line-height:1.1em;
 	padding:0 0 .75em;
 
 	@include breakpoint(tablet) {
-		width:38%;
+		width:40%;
 		text-align:left;
-		padding-top:3.5em;
+		padding-top:1.7em;
 		float:left;
 	}
 
 	@include breakpoint(laptop) {
-		width:23%;
+		width:25%;
 		float:none;
+		padding-top:1.5em;
+	}
+
+	@include breakpoint(desktop) {
+		padding-top:1em;
+		width:28%;
+	}
+
+	@include breakpoint(tv) {
+		padding-top:1.8em;
 	}
 }
 
@@ -627,16 +642,35 @@ POSTS & CONTENT STYLES
 	font-style:italic;
 }
 
+
 .ssba {
 	width:100%;
 	display:block;
 	text-align:center;
 
 	@include breakpoint(tablet) {
-		display: inline-block;
-		width:50%;
-		float:right;
-		text-align:left;
+		.main-content & {
+			display: inline-block;
+			width:50%;
+			float:right;
+			text-align:left;	
+		}
+	}
+
+	.sidebar & {
+		@include breakpoint(tablet) {
+			img {
+				width: 35px !important;
+				padding:6px 3px !important;
+			}
+		}
+
+		@include breakpoint(laptop) {
+			img {
+				width: 45px !important;
+				padding:6px 3px !important;
+			}
+		}
 	}
 }
 
@@ -1364,13 +1398,15 @@ FOOTER STYLES
 	li {
 		display: block;
 		vertical-align: top;
+		margin-bottom: 1em;
 		
-		@include breakpoint(tablet) {
+		@include breakpoint(phablet) {
 			display: inline-block;
-			width:22.7%;
+			/* width:22.7%; 4 across */
+			width:31.333333%;
 			margin-right:3%;
 
-			&:nth-of-type(4n) {
+			&:nth-of-type(3n) {
 				margin-right:0;
 			}
 		}
@@ -1391,36 +1427,41 @@ FOOTER STYLES
 }
 
 .latestfromeach {
-
-	h4 {
-		width:50%;
-		float:left;
-	}
+	display:block;
+	width:100%;
+	height:auto;
+	
 	img {
 		box-shadow: 2px 3px $light-gray;
 	}
 	ul {
 		list-style: none;
 		margin:0;
+		width:100%;
 	}
 
 	li {
 		display: inline-block;
+		float:left;
 		width:100%;
-		padding:1em 1.677em;
+		padding:1.677em;
 		border:1px solid $light-gray;
 		border-top: none;
 		vertical-align: top;
 		
 
-		@include breakpoint(tablet) {
-			min-height: 240px;
+		@include breakpoint(phablet) {
 			width:50%;
 			&:nth-of-type(2n) {
 				border-left:none;
 			}
 		}
 
+		> div {
+			width:75%;
+			display: block;
+			margin:0 auto;
+		}
 
 		&:nth-of-type(2n) {
 
@@ -1466,9 +1507,6 @@ FOOTER STYLES
 
 	.imglink {
 
-		width:44%;
-		float:left;
-		margin-right: 6%;
 		line-height: 0;
 		
 	}

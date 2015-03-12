@@ -1,10 +1,10 @@
 /* IMPORT ONLY NEEDED STYLES */
 @import url(http://fonts.googleapis.com/css?family=Rancho|Oswald:300,400);
 
-@import "global/colors";
-/* @import "global/mixins"; */
-@import "global/breakpoints";
-@import "global/typography";
-/* @import "global/buttons"; */
+@import "elements/colors";
+/* @import "elements/mixins"; */
+@import "elements/breakpoints";
+@import "elements/typography";
+/* @import "elements/buttons"; */
 
-@import "areas/flexslider-styles";
+@import "elements/flexslider-styles";
